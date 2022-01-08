@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
+   <children>
+      <Button layoutX="274.0" layoutY="175.0" mnemonicParsing="false" text="Idź do kas" />
+      <Button fx:id="ToOffice" layoutX="274.0" layoutY="83.0" mnemonicParsing="false" onAction="#switchToBiura" text="Idź do biór" />
+      <Button fx:id="Exit" layoutX="283.0" layoutY="267.0" mnemonicParsing="false" onAction="#exit" text="Wyjdź " />
+      <TextField layoutX="96.0" layoutY="35.0" prefHeight="32.0" prefWidth="435.0" text="Stoisz w holu banku. Słyszysz znajomą muzykę. Po chwili decydujesz co zrobić." />
+   </children>
+</AnchorPane>

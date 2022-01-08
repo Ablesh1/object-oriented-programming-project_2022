@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
+   <children>
+      <TextArea editable="false" layoutX="28.0" layoutY="10.0" prefHeight="101.0" prefWidth="558.0" text="Postawnawiasz przejrzeć rachunki banku. " />
+      <Button layoutX="234.0" layoutY="146.0" mnemonicParsing="false" onAction="#OnClicked" text="Raport rachunków klientów" />
+      <Button layoutX="240.0" layoutY="208.0" mnemonicParsing="false" onAction="#OnClicked" text="Raport rachunków banku" />
+      <Button layoutX="284.0" layoutY="326.0" mnemonicParsing="false" onAction="#switchToBiura" text="To biura" />
+   </children>
+</AnchorPane>
