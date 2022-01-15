@@ -1,0 +1,374 @@
+Index: .idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml	(revision 4783fb2ab5f05f69be64fa4b48129ecaf6fdd795)
++++ /dev/null	(revision 4783fb2ab5f05f69be64fa4b48129ecaf6fdd795)
+@@ -1,9 +0,0 @@
+-<changelist name="Uncommitted_changes_before_rebase_[Changes]" date="1641675176855" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
+-  <binary>
+-    <option name="BEFORE_PATH" value="x" />
+-    <option name="AFTER_PATH" />
+-    <option name="SHELVED_PATH" />
+-  </binary>
+-</changelist>
+\ No newline at end of file
+Index: target/classes/com/example/po/CurrencyRate.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n\r\n<?import javafx.scene.control.TextArea?>\r\n<AnchorPane prefHeight=\"400.0\" prefWidth=\"600.0\" xmlns=\"http://javafx.com/javafx/17\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.po.SceneController\">\r\n    <children>\r\n        <Button fx:id=\"ToCounters\" layoutX=\"262\" layoutY=\"300\" mnemonicParsing=\"false\" onAction=\"#switchToCounters\" text=\"To counters\" />\r\n        <TextField editable=\"false\" layoutX=\"100\" layoutY=\"10\" prefHeight=\"40\" prefWidth=\"400\" text=\"You are standing in front of the board. You see currency rates displayed.\" />\r\n        <TextArea fx:id=\"CurrenciesArea\" editable=\"false\" layoutX=\"200\" layoutY=\"75\" prefHeight=\"200\" prefWidth=\"200\" />\r\n        <!--\r\n\r\n        --><Button fx:id=\"Show\" layoutX=\"280\" layoutY=\"200\" mnemonicParsing=\"false\" onAction=\"#ShowCurrencies\" text=\"Show\" />\r\n    </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/classes/com/example/po/CurrencyRate.fxml b/target/classes/com/example/po/CurrencyRate.fxml
+--- a/target/classes/com/example/po/CurrencyRate.fxml	(revision 4783fb2ab5f05f69be64fa4b48129ecaf6fdd795)
++++ b/target/classes/com/example/po/CurrencyRate.fxml	(date 1642280752749)
+@@ -1,17 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-
+ <?import javafx.scene.control.Button?>
+ <?import javafx.scene.control.TextField?>
+ <?import javafx.scene.layout.AnchorPane?>
+-
+ <?import javafx.scene.control.TextArea?>
++
+ <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
+     <children>
+-        <Button fx:id="ToCounters" layoutX="262" layoutY="300" mnemonicParsing="false" onAction="#switchToCounters" text="To counters" />
+-        <TextField editable="false" layoutX="100" layoutY="10" prefHeight="40" prefWidth="400" text="You are standing in front of the board. You see currency rates displayed." />
+-        <TextArea fx:id="CurrenciesArea" editable="false" layoutX="200" layoutY="75" prefHeight="200" prefWidth="200" />
+-        <!--
+-
+-        --><Button fx:id="Show" layoutX="280" layoutY="200" mnemonicParsing="false" onAction="#ShowCurrencies" text="Show" />
++        <Button   fx:id="ToCounters" layoutX="262" layoutY="300" mnemonicParsing="false" onAction="#switchToCounters" text="To counters" />
++        <TextArea fx:id="CurrenciesArea" layoutX="200" layoutY="75"  prefHeight="200" prefWidth="200" editable="false"/>
++        <Button   fx:id="Show"       layoutX="280" layoutY="250" mnemonicParsing="false" onAction="#ShowCurrencies" text="Show" />
++        <TextField editable="false"  layoutX="100" layoutY="10"  prefHeight="40" prefWidth="400" text="You are standing in front of the board. You see currency rates displayed." />
+     </children>
+ </AnchorPane>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"a2980a33-5c4b-4b01-958b-ad9e1c264c35\" name=\"Changes\" comment=\"Target commit\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/example/po/SceneController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/example/po/SceneController.class\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaFXApplication\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"FxmlFile\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"new-Michał\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"23I33LMGuzFUYSDJbYJnxUrYry1\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"org.jetbrains.plugins.github.ui.GithubSettingsConfigurable\" />\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Hall\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.example.po.Hall\" />\r\n      <module name=\"Programowanie-Obiektowe-Projekt_2\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.example.po.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Hall\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"a2980a33-5c4b-4b01-958b-ad9e1c264c35\" name=\"Changes\" comment=\"\" />\r\n      <created>1641407577321</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1641407577321</updated>\r\n      <workItem from=\"1641407578619\" duration=\"968000\" />\r\n      <workItem from=\"1641409896157\" duration=\"3208000\" />\r\n      <workItem from=\"1641465807900\" duration=\"7382000\" />\r\n      <workItem from=\"1641589289608\" duration=\"112000\" />\r\n      <workItem from=\"1641669641489\" duration=\"97000\" />\r\n      <workItem from=\"1641683812168\" duration=\"592000\" />\r\n      <workItem from=\"1641916216816\" duration=\"10000\" />\r\n      <workItem from=\"1642244676506\" duration=\"9470000\" />\r\n      <workItem from=\"1642258868972\" duration=\"32000\" />\r\n      <workItem from=\"1642259337060\" duration=\"95000\" />\r\n      <workItem from=\"1642261999551\" duration=\"194000\" />\r\n      <workItem from=\"1642262400274\" duration=\"3493000\" />\r\n      <workItem from=\"1642266077248\" duration=\"5469000\" />\r\n      <workItem from=\"1642271730034\" duration=\"971000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Initial commit\">\r\n      <created>1641675284391</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1641675284391</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Initial commit\">\r\n      <created>1641675516278</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1641675516278</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Unversioned files\">\r\n      <created>1642252618347</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1642252618347</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Change of class and methods names to English\">\r\n      <created>1642252712146</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1642252712146</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Change of class and methods names to English\">\r\n      <created>1642252743105</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1642252743105</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Add Counters.java Class\">\r\n      <created>1642252810399</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1642252810399</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Add Counters.fxml\">\r\n      <created>1642252831462</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1642252831462</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Change of class and methods names to English, add Counters.java Class elements\">\r\n      <created>1642252886217</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1642252886217</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Rebuild GUI, add Counters.java Class elements\">\r\n      <created>1642252936549</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1642252936549</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Rebuild GUI\">\r\n      <created>1642252954101</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1642252954101</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Target commit\">\r\n      <created>1642252993055</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1642252993055</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Target commit\">\r\n      <created>1642253010539</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1642253010539</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Target commit\">\r\n      <created>1642274544699</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1642274544699</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"14\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Initial commit\" />\r\n    <MESSAGE value=\"Unversioned files\" />\r\n    <MESSAGE value=\"Change of class and methods names to English\" />\r\n    <MESSAGE value=\"Add Counters.java Class\" />\r\n    <MESSAGE value=\"Add Counters.fxml\" />\r\n    <MESSAGE value=\"Change of class and methods names to English, add Counters.java Class elements\" />\r\n    <MESSAGE value=\"Rebuild GUI, add Counters.java Class elements\" />\r\n    <MESSAGE value=\"Rebuild GUI\" />\r\n    <MESSAGE value=\"Target commit\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Target commit\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/PO$Hol.ic\" NAME=\"Hol Coverage Results\" MODIFIED=\"1641468694821\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>com.example.po.*</FILTER>\r\n    </SUITE>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4783fb2ab5f05f69be64fa4b48129ecaf6fdd795)
++++ b/.idea/workspace.xml	(date 1642283442243)
+@@ -4,7 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="Target commit">
++    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/Programowanie-Obiektowe-Projekt.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
+@@ -17,33 +21,11 @@
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="JavaFXApplication" />
+-        <option value="Class" />
+-        <option value="FxmlFile" />
+-      </list>
+-    </option>
+   </component>
+   <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="new-Michał" />
+-      </map>
+-    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitSEFilterConfiguration">
+-    <file-type-list>
+-      <filtered-out-file-type name="LOCAL_BRANCH" />
+-      <filtered-out-file-type name="REMOTE_BRANCH" />
+-      <filtered-out-file-type name="TAG" />
+-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+-    </file-type-list>
+-  </component>
+-  <component name="ProjectId" id="23I33LMGuzFUYSDJbYJnxUrYry1" />
++  <component name="ProjectId" id="23kURNTwFnTPdYkwyqzyFOt9Eua" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+@@ -53,16 +35,11 @@
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+-    <property name="node.js.detected.package.eslint" value="true" />
+-    <property name="node.js.detected.package.tslint" value="true" />
+-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+   </component>
+   <component name="RunManager">
+     <configuration name="Hall" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="com.example.po.Hall" />
+-      <module name="Programowanie-Obiektowe-Projekt_2" />
++      <module name="Programowanie-Obiektowe-Projekt" />
+       <extension name="coverage">
+         <pattern>
+           <option name="PATTERN" value="com.example.po.*" />
+@@ -82,118 +59,14 @@
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="" />
+-      <created>1641407577321</created>
++      <changelist id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="" />
++      <created>1642277569307</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+-      <updated>1641407577321</updated>
+-      <workItem from="1641407578619" duration="968000" />
+-      <workItem from="1641409896157" duration="3208000" />
+-      <workItem from="1641465807900" duration="7382000" />
+-      <workItem from="1641589289608" duration="112000" />
+-      <workItem from="1641669641489" duration="97000" />
+-      <workItem from="1641683812168" duration="592000" />
+-      <workItem from="1641916216816" duration="10000" />
+-      <workItem from="1642244676506" duration="9470000" />
+-      <workItem from="1642258868972" duration="32000" />
+-      <workItem from="1642259337060" duration="95000" />
+-      <workItem from="1642261999551" duration="194000" />
+-      <workItem from="1642262400274" duration="3493000" />
+-      <workItem from="1642266077248" duration="5469000" />
+-      <workItem from="1642271730034" duration="971000" />
+-    </task>
+-    <task id="LOCAL-00001" summary="Initial commit">
+-      <created>1641675284391</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1641675284391</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="Initial commit">
+-      <created>1641675516278</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1641675516278</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="Unversioned files">
+-      <created>1642252618347</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1642252618347</updated>
+-    </task>
+-    <task id="LOCAL-00004" summary="Change of class and methods names to English">
+-      <created>1642252712146</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1642252712146</updated>
+-    </task>
+-    <task id="LOCAL-00005" summary="Change of class and methods names to English">
+-      <created>1642252743105</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1642252743105</updated>
+-    </task>
+-    <task id="LOCAL-00006" summary="Add Counters.java Class">
+-      <created>1642252810399</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1642252810399</updated>
+-    </task>
+-    <task id="LOCAL-00007" summary="Add Counters.fxml">
+-      <created>1642252831462</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1642252831462</updated>
+-    </task>
+-    <task id="LOCAL-00008" summary="Change of class and methods names to English, add Counters.java Class elements">
+-      <created>1642252886217</created>
+-      <option name="number" value="00008" />
+-      <option name="presentableId" value="LOCAL-00008" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1642252886217</updated>
+-    </task>
+-    <task id="LOCAL-00009" summary="Rebuild GUI, add Counters.java Class elements">
+-      <created>1642252936549</created>
+-      <option name="number" value="00009" />
+-      <option name="presentableId" value="LOCAL-00009" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1642252936549</updated>
+-    </task>
+-    <task id="LOCAL-00010" summary="Rebuild GUI">
+-      <created>1642252954101</created>
+-      <option name="number" value="00010" />
+-      <option name="presentableId" value="LOCAL-00010" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1642252954101</updated>
+-    </task>
+-    <task id="LOCAL-00011" summary="Target commit">
+-      <created>1642252993055</created>
+-      <option name="number" value="00011" />
+-      <option name="presentableId" value="LOCAL-00011" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1642252993055</updated>
+-    </task>
+-    <task id="LOCAL-00012" summary="Target commit">
+-      <created>1642253010539</created>
+-      <option name="number" value="00012" />
+-      <option name="presentableId" value="LOCAL-00012" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1642253010539</updated>
+-    </task>
+-    <task id="LOCAL-00013" summary="Target commit">
+-      <created>1642274544699</created>
+-      <option name="number" value="00013" />
+-      <option name="presentableId" value="LOCAL-00013" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1642274544699</updated>
++      <updated>1642277569307</updated>
++      <workItem from="1642277570551" duration="3554000" />
++      <workItem from="1642283379149" duration="63000" />
+     </task>
+-    <option name="localTasksCounter" value="14" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -211,25 +84,4 @@
+     </option>
+     <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="Initial commit" />
+-    <MESSAGE value="Unversioned files" />
+-    <MESSAGE value="Change of class and methods names to English" />
+-    <MESSAGE value="Add Counters.java Class" />
+-    <MESSAGE value="Add Counters.fxml" />
+-    <MESSAGE value="Change of class and methods names to English, add Counters.java Class elements" />
+-    <MESSAGE value="Rebuild GUI, add Counters.java Class elements" />
+-    <MESSAGE value="Rebuild GUI" />
+-    <MESSAGE value="Target commit" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Target commit" />
+-  </component>
+-  <component name="XSLT-Support.FileAssociations.UIState">
+-    <expand />
+-    <select />
+-  </component>
+-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/PO$Hol.ic" NAME="Hol Coverage Results" MODIFIED="1641468694821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+-      <FILTER>com.example.po.*</FILTER>
+-    </SUITE>
+-  </component>
+ </project>
+\ No newline at end of file
+Index: .idea/Programowanie-Obiektowe-Projekt.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/Programowanie-Obiektowe-Projekt.iml b/.idea/Programowanie-Obiektowe-Projekt.iml
+new file mode 100644
+--- /dev/null	(date 1642277665205)
++++ b/.idea/Programowanie-Obiektowe-Projekt.iml	(date 1642277665205)
+@@ -0,0 +1,39 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_16">
++    <output url="file://$MODULE_DIR$/target/classes" />
++    <output-test url="file://$MODULE_DIR$/target/test-classes" />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
++      <excludeFolder url="file://$MODULE_DIR$/target" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:win:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:win:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:win:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:win:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-web:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-web:win:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-media:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-media:win:17-ea+11" level="project" />
++    <orderEntry type="library" name="Maven: org.controlsfx:controlsfx:11.1.0" level="project" />
++    <orderEntry type="library" name="Maven: com.dlsc.formsfx:formsfx-core:11.3.2" level="project" />
++    <orderEntry type="library" name="Maven: net.synedra:validatorfx:0.1.13" level="project" />
++    <orderEntry type="library" name="Maven: org.kordamp.ikonli:ikonli-javafx:12.2.0" level="project" />
++    <orderEntry type="library" name="Maven: org.kordamp.ikonli:ikonli-core:12.2.0" level="project" />
++    <orderEntry type="library" name="Maven: org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0" level="project" />
++    <orderEntry type="library" name="Maven: eu.hansolo:tilesfx:11.48" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.7.1" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.7.1" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.1" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.1" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"Programowanie-Obiektowe-Projekt_2\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n    <bytecodeTargetLevel>\r\n      <module name=\"Programowanie-Obiektowe-Projekt_2\" target=\"16\" />\r\n    </bytecodeTargetLevel>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision 4783fb2ab5f05f69be64fa4b48129ecaf6fdd795)
++++ b/.idea/compiler.xml	(date 1642277665251)
+@@ -6,11 +6,11 @@
+         <sourceOutputDir name="target/generated-sources/annotations" />
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
+-        <module name="Programowanie-Obiektowe-Projekt_2" />
++        <module name="Programowanie-Obiektowe-Projekt" />
+       </profile>
+     </annotationProcessing>
+     <bytecodeTargetLevel>
+-      <module name="Programowanie-Obiektowe-Projekt_2" target="16" />
++      <module name="Programowanie-Obiektowe-Projekt" target="16" />
+     </bytecodeTargetLevel>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/Programowanie-Obiektowe-Projekt_2.iml\" filepath=\"$PROJECT_DIR$/.idea/Programowanie-Obiektowe-Projekt_2.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	(revision 4783fb2ab5f05f69be64fa4b48129ecaf6fdd795)
++++ b/.idea/modules.xml	(date 1642277665216)
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/Programowanie-Obiektowe-Projekt_2.iml" filepath="$PROJECT_DIR$/.idea/Programowanie-Obiektowe-Projekt_2.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/Programowanie-Obiektowe-Projekt.iml" filepath="$PROJECT_DIR$/.idea/Programowanie-Obiektowe-Projekt.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+diff --git a/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch
+deleted file mode 100644
