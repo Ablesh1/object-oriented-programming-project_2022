@@ -60,14 +60,14 @@ public class CurrencyRate extends Department{
                 int target = line.indexOf(key);
                 int deci = line.indexOf(".", target);
                 int start = deci;
-                while(line.charAt(start) != '\"') {
+                while(line.charAt(start) != '[') {
                     start --;
                 }
-                price = line.substring(start + 10, deci + 5);
+                price = line.substring(start + 1, deci + 5);
             }
             line = bufferedReader.readLine();
         }
-        price = (key.substring(1, 10) + " " + price);
+        price = (key.substring(1, 4) + " to " + key.substring(7, 10) + " " + price);
         return price;
     }
 
@@ -99,3 +99,6 @@ public class CurrencyRate extends Department{
         this.currencyDataBase[5] = CurrencyRates(keyINR, urlINR);
     }
 }
+
+
+
