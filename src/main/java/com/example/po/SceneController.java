@@ -100,10 +100,12 @@ public class SceneController {
 
     public void ShowCurrencies() throws IOException {
         String[] Binder = this.currencyRate.getCurrencyDataBase();
-        CurrenciesArea.setText(Binder[0] + "\n" + Binder[1]);
-        CurrenciesArea.appendText("\n" + Binder[3] + "\n" + Binder[4]);
-        CurrenciesArea.appendText("\n" + Binder[5]);
-
+        CurrenciesArea.setText(  "\n\n\t     " + Binder[0] + "\n");
+        CurrenciesArea.appendText("\t     " + Binder[1] + "\n");
+        CurrenciesArea.appendText("\t     " + Binder[2] + "\n");
+        CurrenciesArea.appendText("\t     " + Binder[3] + "\n");
+        CurrenciesArea.appendText("\t     " + Binder[4] + "\n");
+        CurrenciesArea.appendText("\t     " + Binder[5] + "\n");
     }
 
     //Wychodzenie z programu
