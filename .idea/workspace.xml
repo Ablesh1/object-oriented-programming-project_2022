@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="Target commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +21,9 @@
         <option value="FxmlFile" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/new-Kuba" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -69,6 +67,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Programowanie-Obiektowe-Projekt_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Programowanie-Obiektowe-Projekt_2" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -221,7 +232,8 @@
     <MESSAGE value="Rebuild GUI, add Counters.java Class elements" />
     <MESSAGE value="Rebuild GUI" />
     <MESSAGE value="Target commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Target commit" />
+    <MESSAGE value="Unversioned commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unversioned commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
