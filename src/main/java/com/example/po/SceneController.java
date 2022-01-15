@@ -15,73 +15,74 @@ public class SceneController {
     private Parent root;
 
     //Kontrolne do wyłączania
-    private Przelewy przelewy;
-    private Rachunki rachunki;
-    private Raporty raporty;
-    private Biura biura;
+    private Transfers transfers;
+    private Accounts accounts;
+    private Reports reports;
+    private Office office;
+    private Counters counters;
 
     //Kontroler SceneController odpala się za każdym
     //Przejściem między scenami
     //Uwaga
 
-    public void switchToBiura(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Biura.fxml"));
+    public void switchToHall(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Hall.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void switchToHol(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Hol.fxml"));
+    public void switchToOffice(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Office.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
     }
 
-    public void switchToPrzelewy(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Przelewy.fxml"));
+    public void switchToCounters(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Counters.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
-
     }
 
-    public void switchToRaporty(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Raporty.fxml"));
+    public void switchToTransfers(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Transfers.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
-
     }
 
-    public void switchToRachunki(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Rachunki.fxml"));
+    public void switchToReports(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Reports.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
 
-
-
-
+    public void switchToAccounts(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Accounts.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void OnClicked(ActionEvent event) throws IOException {
-        System.out.println("Coś się stało");
+        System.out.println("Something happened");
     }
 
     //Wychodzenie z programu
     public void exit(ActionEvent event){
         System.exit(2137);
-        rachunki.kill();
-        przelewy.kill();
-        raporty.kill();
+        accounts.kill();
+        transfers.kill();
+        reports.kill();
+        counters.kill();
     }
 }
