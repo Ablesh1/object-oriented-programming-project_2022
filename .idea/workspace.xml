@@ -4,7 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="Initial commit" />
+    <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Counters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Biura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Office.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Departament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Hol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Hall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Przelewy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Transfers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Rachunki.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Raporty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Biura.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Office.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Hol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Hall.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Przelewy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Transfers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Rachunki.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Accounts.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Raporty.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Reports.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Biura.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Biura.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Departament$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Departament.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hol.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Przelewy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Przelewy.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Rachunki.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Rachunki.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Raporty.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Raporty.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,16 +43,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
         <option value="JavaFXApplication" />
+        <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="new-master" />
+        <entry key="$PROJECT_DIR$" value="new-Michał" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,8 +82,8 @@
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration name="Hol" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.po.Hol" />
+    <configuration name="Hall" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.po.Hall" />
       <module name="PO" />
       <extension name="coverage">
         <pattern>
@@ -67,6 +97,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Hall" />
         <item itemvalue="Application.Hol" />
         <item itemvalue="Application.Hol" />
       </list>
@@ -85,6 +116,9 @@
       <workItem from="1641465807900" duration="7382000" />
       <workItem from="1641589289608" duration="112000" />
       <workItem from="1641669641489" duration="97000" />
+      <workItem from="1641683812168" duration="592000" />
+      <workItem from="1641916216816" duration="10000" />
+      <workItem from="1642244676506" duration="7793000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1641675284391</created>
@@ -126,7 +160,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/po/Departament.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/po/Department.java</url>
           <line>18</line>
           <properties method="run">
             <option name="EMULATED" value="true" />
