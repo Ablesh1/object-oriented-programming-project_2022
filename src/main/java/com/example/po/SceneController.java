@@ -1,10 +1,13 @@
 package com.example.po;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
@@ -15,6 +18,8 @@ import java.net.URLConnection;
 import java.util.Arrays;
 
 public class SceneController {
+    @FXML
+    TextArea CurrenciesArea;
 
     CurrencyRate currencyRate = new CurrencyRate();
 
@@ -94,7 +99,11 @@ public class SceneController {
     }
 
     public void ShowCurrencies() throws IOException {
-        System.out.println(Arrays.toString(this.currencyRate.getCurrencyDataBase()));
+        String[] Binder = this.currencyRate.getCurrencyDataBase();
+        CurrenciesArea.setText(Binder[0] + "\n" + Binder[1]);
+        CurrenciesArea.appendText("\n" + Binder[3] + "\n" + Binder[4]);
+        CurrenciesArea.appendText("\n" + Binder[5]);
+
     }
 
     //Wychodzenie z programu

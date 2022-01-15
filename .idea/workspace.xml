@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+    <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="Target commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="new-master" />
+        <entry key="$PROJECT_DIR$" value="new-Michał" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,15 +57,12 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="Hall" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.po.Hall" />
-      <module name="PO" />
+      <module name="Programowanie-Obiektowe-Projekt_2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.po.*" />
@@ -78,7 +75,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Hall" />
         <item itemvalue="Application.Hall" />
       </list>
     </recent_temporary>
@@ -105,7 +101,6 @@
       <workItem from="1642262400274" duration="3493000" />
       <workItem from="1642266077248" duration="5469000" />
       <workItem from="1642271730034" duration="971000" />
-      <workItem from="1642275806491" duration="368000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1641675284391</created>
@@ -191,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642253010539</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Target commit">
+      <created>1642274544699</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1642274544699</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
