@@ -5,11 +5,14 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
     <children>
-        <Button fx:id="ToHell"      layoutX="275" layoutY="100" mnemonicParsing="false" onAction="#switchToHall" text="To hall"  />
-        <Button fx:id="ToReports"   layoutX="90" layoutY="200"  mnemonicParsing="false" onAction="#OnClicked"    text="Deposit money" />
-        <Button fx:id="ToAccounts"  layoutX="239" layoutY="200" mnemonicParsing="false" onAction="#OnClicked"    text="Check your account" />
-        <Button fx:id="ToTransfers" layoutX="410" layoutY="200" mnemonicParsing="false" onAction="#OnClicked"    text="Withdraw money" />
-        <Button fx:id="ToHall"      layoutX="275" layoutY="300" mnemonicParsing="false" onAction="#switchToHall" text="To hall"  />
-        <TextField editable="false" layoutX="110" layoutY="10"  prefHeight="40" prefWidth="380" text="You are standing in front of the counters. What do you want to do?" />
+        <Button fx:id="ToCurrency"   layoutX="238" layoutY="100" mnemonicParsing="false" onAction="#switchToCurrencyRate" text="Check currency rate"  />
+        <!---
+        <Button fx:id="ToCurrency"   layoutX="238" layoutY="100" mnemonicParsing="false" onAction="#ShowCurrencies" text="Check currency rate" />
+      -->
+        <Button fx:id="Deposit"      layoutX="90" layoutY="200"  mnemonicParsing="false" onAction="#OnClicked"    text="Deposit money" />
+        <Button fx:id="CheckAccount" layoutX="239" layoutY="200" mnemonicParsing="false" onAction="#OnClicked"    text="Check your account" />
+        <Button fx:id="Withdraw"     layoutX="410" layoutY="200" mnemonicParsing="false" onAction="#OnClicked"    text="Withdraw money" />
+        <Button fx:id="ToHall"       layoutX="275" layoutY="300" mnemonicParsing="false" onAction="#switchToHall" text="To hall"  />
+        <TextField editable="false"  layoutX="110" layoutY="10"  prefHeight="40" prefWidth="380" text="You are standing in front of the counters. What do you want to do?" />
     </children>
 </AnchorPane>

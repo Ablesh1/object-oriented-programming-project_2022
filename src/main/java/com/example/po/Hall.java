@@ -19,6 +19,7 @@ public class Hall extends Application {
         Accounts accounts = new Accounts();
         Reports reports = new Reports();
         Counters counters = new Counters();
+        CurrencyRate currencyRate = new CurrencyRate();
     }
 
  //   public static void main(String[] args) {

@@ -8,6 +8,6 @@
       <Button fx:id="ClientsRep"  layoutX="236" layoutY="100" mnemonicParsing="false" onAction="#OnClicked"        text="Client transfers report" />
       <Button fx:id="BankRep"     layoutX="238" layoutY="200" mnemonicParsing="false" onAction="#OnClicked"        text="Bank transfers report" />
       <Button fx:id="ToOffice"    layoutX="272" layoutY="300" mnemonicParsing="false" onAction="#switchToOffice"   text="To office" />
-      <TextField editable="false" layoutX="210" layoutY="10.0" prefHeight="40" prefWidth="180" text="You decide to check transfers." />
+      <TextField editable="false" layoutX="210" layoutY="10" prefHeight="40" prefWidth="180" text="You decide to check transfers." />
    </children>
 </AnchorPane>

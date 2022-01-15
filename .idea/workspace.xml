@@ -4,36 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Counters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+    <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="Target commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Biura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Office.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Departament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Hol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Hall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Przelewy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Transfers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Rachunki.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Accounts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Raporty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Hall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Hall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Biura.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Office.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Hol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Hall.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Przelewy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Transfers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Rachunki.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Accounts.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Raporty.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Reports.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Biura.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Biura.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Departament$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Departament.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hol.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hol.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Przelewy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Przelewy.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Rachunki.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Rachunki.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Raporty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Raporty.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Department$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Department$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Hall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hall.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Hall.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Transfers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Transfers.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,8 +83,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Hall" />
-        <item itemvalue="Application.Hol" />
-        <item itemvalue="Application.Hol" />
       </list>
     </recent_temporary>
   </component>
@@ -118,7 +101,13 @@
       <workItem from="1641669641489" duration="97000" />
       <workItem from="1641683812168" duration="592000" />
       <workItem from="1641916216816" duration="10000" />
-      <workItem from="1642244676506" duration="7793000" />
+      <workItem from="1642244676506" duration="9470000" />
+      <workItem from="1642258868972" duration="32000" />
+      <workItem from="1642259337060" duration="95000" />
+      <workItem from="1642261999551" duration="194000" />
+      <workItem from="1642262400274" duration="3493000" />
+      <workItem from="1642266077248" duration="5469000" />
+      <workItem from="1642271730034" duration="971000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1641675284391</created>
@@ -134,7 +123,77 @@
       <option name="project" value="LOCAL" />
       <updated>1641675516278</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Unversioned files">
+      <created>1642252618347</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642252618347</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Change of class and methods names to English">
+      <created>1642252712146</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642252712146</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Change of class and methods names to English">
+      <created>1642252743105</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642252743105</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add Counters.java Class">
+      <created>1642252810399</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642252810399</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add Counters.fxml">
+      <created>1642252831462</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642252831462</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Change of class and methods names to English, add Counters.java Class elements">
+      <created>1642252886217</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642252886217</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Rebuild GUI, add Counters.java Class elements">
+      <created>1642252936549</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642252936549</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Rebuild GUI">
+      <created>1642252954101</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642252954101</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Target commit">
+      <created>1642252993055</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642252993055</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Target commit">
+      <created>1642253010539</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1642253010539</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,21 +213,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/po/Department.java</url>
-          <line>18</line>
-          <properties method="run">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Unversioned files" />
+    <MESSAGE value="Change of class and methods names to English" />
+    <MESSAGE value="Add Counters.java Class" />
+    <MESSAGE value="Add Counters.fxml" />
+    <MESSAGE value="Change of class and methods names to English, add Counters.java Class elements" />
+    <MESSAGE value="Rebuild GUI, add Counters.java Class elements" />
+    <MESSAGE value="Rebuild GUI" />
+    <MESSAGE value="Target commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Target commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

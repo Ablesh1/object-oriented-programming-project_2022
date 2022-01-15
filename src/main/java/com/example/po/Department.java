@@ -22,7 +22,7 @@ public abstract class Department extends Application{
                     refresh();
                     Thread.sleep(200);
                 }
-                catch(InterruptedException interruptedException){
+                catch(InterruptedException | IOException interruptedException){
                     System.out.println("AAAAAAA");
                     return;
                 }
@@ -42,7 +42,7 @@ public abstract class Department extends Application{
     //Tutaj panele będą się aktualizować oraz zbierać dane z innych klas
     //Które będą cały czas działały w tle
     //Np. Bazy danych klinetów
-    public void refresh(){
+    public void refresh() throws IOException {
         System.out.println("Bruh");
         //Do something
         ;
