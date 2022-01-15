@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="Target commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Hall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Hall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Department$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Department$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Department.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Hall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hall.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Hall.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Transfers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Transfers.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="ZABIJCIEMNIE" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +54,7 @@
   <component name="RunManager">
     <configuration name="Hall" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.po.Hall" />
-      <module name="PO" />
+      <module name="Programowanie-Obiektowe-Projekt_2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.po.*" />
