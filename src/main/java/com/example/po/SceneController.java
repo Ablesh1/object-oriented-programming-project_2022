@@ -18,10 +18,14 @@ import java.net.URLConnection;
 import java.util.Arrays;
 
 public class SceneController {
+
     @FXML
-    TextArea CurrenciesArea;
+    TextArea CurrencyArea;
+    @FXML
+    TextArea StockArea;
 
     CurrencyRate currencyRate = new CurrencyRate();
+    StockRate stockRate = new StockRate();
 
     private Stage stage;
     private Scene scene;
@@ -70,6 +74,14 @@ public class SceneController {
         stage.show();
     }
 
+    public void switchToStockRate(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("StockRate.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void switchToTransfers(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Transfers.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -98,14 +110,27 @@ public class SceneController {
         System.out.println("Something happened");
     }
 
-    public void ShowCurrencies() throws IOException {
+    public void ShowCurrency() throws IOException {
         String[] Binder = this.currencyRate.getCurrencyDataBase();
-        CurrenciesArea.setText(  "\n\n\t     " + Binder[0] + "\n");
-        CurrenciesArea.appendText("\t     " + Binder[1] + "\n");
-        CurrenciesArea.appendText("\t     " + Binder[2] + "\n");
-        CurrenciesArea.appendText("\t     " + Binder[3] + "\n");
-        CurrenciesArea.appendText("\t     " + Binder[4] + "\n");
-        CurrenciesArea.appendText("\t     " + Binder[5] + "\n");
+        CurrencyArea.setText(    "\n     " + Binder[0] + "\n");
+        CurrencyArea.appendText("     " + Binder[1] + "\n");
+        CurrencyArea.appendText("     " + Binder[2] + "\n");
+        CurrencyArea.appendText("     " + Binder[3] + "\n");
+        CurrencyArea.appendText("     " + Binder[4] + "\n");
+        CurrencyArea.appendText("     " + Binder[5] + "\n");
+        CurrencyArea.appendText("     " + Binder[6] + "\n");
+        CurrencyArea.appendText("     " + Binder[7] + "\n");
+    }
+    public void ShowStock() throws IOException {
+        String[] Binder = this.stockRate.getStockDataBase();
+        StockArea.setText(    "\n     " + Binder[0] + "\n");
+        StockArea.appendText("     " + Binder[1] + "\n");
+        StockArea.appendText("     " + Binder[2] + "\n");
+        StockArea.appendText("     " + Binder[3] + "\n");
+        StockArea.appendText("     " + Binder[4] + "\n");
+        StockArea.appendText("     " + Binder[5] + "\n");
+        StockArea.appendText("     " + Binder[6] + "\n");
+        StockArea.appendText("     " + Binder[7] + "\n");
     }
 
     //Wychodzenie z programu
