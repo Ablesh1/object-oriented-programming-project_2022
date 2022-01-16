@@ -17,7 +17,7 @@ import java.net.URLConnection;
 
 public class CurrencyRate extends Department{
 
-    private final String[] currencyDataBase = new String[6];
+    private final String[] currencyDataBase = new String[8];
     public String[] getCurrencyDataBase() {
         return currencyDataBase;
     }
@@ -67,7 +67,7 @@ public class CurrencyRate extends Department{
             }
             line = bufferedReader.readLine();
         }
-        price = (key.substring(1, 4) + " to " + key.substring(7, 10) + " " + price);
+        price = (key.substring(1, 4) + "\t--> PLN\t\t" + price);
         return price;
     }
 
@@ -91,12 +91,20 @@ public class CurrencyRate extends Department{
         String keyINR = "\"INR / PLN\"";
         String urlINR = "https://www.google.com/finance/quote/INR-PLN";
 
+        String keyCNY = "\"CNY / PLN\"";
+        String urlCNY = "https://www.google.com/finance/quote/CNY-PLN";
+
+        String keyAUD = "\"AUD / PLN\"";
+        String urlAUD = "https://www.google.com/finance/quote/AUD-PLN";
+
         this.currencyDataBase[0] = CurrencyRates(keyUSD, urlUSD);
         this.currencyDataBase[1] = CurrencyRates(keyEUR, urlEUR);
         this.currencyDataBase[2] = CurrencyRates(keyGBP, urlGBP);
         this.currencyDataBase[3] = CurrencyRates(keyCHF, urlCHF);
         this.currencyDataBase[4] = CurrencyRates(keyJPY, urlJPY);
         this.currencyDataBase[5] = CurrencyRates(keyINR, urlINR);
+        this.currencyDataBase[6] = CurrencyRates(keyCNY, urlCNY);
+        this.currencyDataBase[7] = CurrencyRates(keyAUD, urlAUD);
     }
 }
 
