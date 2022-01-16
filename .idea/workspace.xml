@@ -4,14 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="Target commit">
+    <list default="true" id="a2980a33-5c4b-4b01-958b-ad9e1c264c35" name="Changes" comment="Wyświetlanie wartości">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Accounts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Accounts.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Counters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Department$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Department.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hall.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Office.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Office.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Reports.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Reports.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Transfers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Transfers.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +117,8 @@
       <workItem from="1642262400274" duration="3493000" />
       <workItem from="1642266077248" duration="5469000" />
       <workItem from="1642271730034" duration="971000" />
+      <workItem from="1642276853613" duration="642000" />
+      <workItem from="1642277774587" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1641675284391</created>
@@ -193,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642274544699</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Wyświetlanie wartości">
+      <created>1642276219850</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1642276219850</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +246,8 @@
     <MESSAGE value="Rebuild GUI, add Counters.java Class elements" />
     <MESSAGE value="Rebuild GUI" />
     <MESSAGE value="Target commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Target commit" />
+    <MESSAGE value="Wyświetlanie wartości" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wyświetlanie wartości" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
