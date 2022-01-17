@@ -4,7 +4,7 @@ package com.example.po;
 //We will put some special NPCs in different classes
 public class NPC extends Thread{
 
-    private Integer id;
+    private Integer persId;
     private String name;
     private String surname;
     private Integer pesel;
@@ -13,8 +13,12 @@ public class NPC extends Thread{
     private String character;
     private int iWantToDie;
 
+    public Integer getPersId() {
+        return persId;
+    }
+
     public NPC(Integer idNumber, String name, String surname, Integer pesel){
-        this.id = idNumber;
+        this.persId = idNumber;
         this.name = name;
         this.surname = surname;
         this.pesel = pesel;;
@@ -42,7 +46,7 @@ public class NPC extends Thread{
     //Yes, this is the first funciton I wrote
     //Yes, it`s only to show that we know how to do it
     public int Suicide(){
-        System.out.println(this.id + "FUCKING KILLED HIMSELF");
+        System.out.println(this.persId + "FUCKING KILLED HIMSELF");
         this.interrupt();
         return 1;
     }
