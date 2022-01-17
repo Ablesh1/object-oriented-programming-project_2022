@@ -11,6 +11,7 @@ public class NPC extends Thread{
     private String surname;
     private Integer pesel;
     private NPCaccount npcAccount;
+    private double persBelongings;
 
     //Character describes how the NPC behaves
     private String character;
@@ -20,13 +21,23 @@ public class NPC extends Thread{
         return persId;
     }
 
-    public NPC(Integer idNumber, String name, String surname, Integer pesel, double debit, BankBackend bankBackend){
+    //Ile masz przy sobie?
+    public double getPersBelongings() {
+        return persBelongings;
+    }
+
+    public void setPersBelongings(double persBelongings) {
+        this.persBelongings -= persBelongings;
+    }
+
+    public NPC(Integer idNumber, String name, String surname, Integer pesel, double debit, BankBackend bankBackend, double persBelongings){
         this.persId = idNumber;
         this.name = name;
         this.surname = surname;
         this.pesel = pesel;
         this.bankBackend = bankBackend;
         this.npcAccount = new NPCaccount(this, debit, bankBackend);
+        this.persBelongings = persBelongings;
 
         //Not yet
         this.iWantToDie = 0;
@@ -45,6 +56,14 @@ public class NPC extends Thread{
 
         this.Suicide();
 
+    }
+
+    public void deposit(double deposit){
+        npcAccount.depositOnAccount(deposit);
+    }
+
+    public double howMuchMoney(){
+        return this.npcAccount.currentMoney();
     }
 
     //Suicide method kills the NPC

@@ -4,25 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Wstępny backend banku">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/AccountsDepBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CountersDepBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDepBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/ReportsDepBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/StockRateDepBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/TransfersDepBack.java" afterDir="false" />
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Deposit.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/AccountsDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/AccountsDep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/BankBackend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CountersDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CountersDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/ReportsDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/ReportsDep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCaccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCaccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/StockRateDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/StockRateDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/TransfersDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/TransfersDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -113,7 +103,7 @@
       <workItem from="1642288975206" duration="555000" />
       <workItem from="1642289608440" duration="130000" />
       <workItem from="1642289874813" duration="1778000" />
-      <workItem from="1642430264538" duration="9063000" />
+      <workItem from="1642430264538" duration="12823000" />
     </task>
     <task id="LOCAL-00001" summary="Wstęp do bazy i NPC">
       <created>1642431352140</created>
@@ -143,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642435949997</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="POTĘZNY REFACTORING&#10;BACK OZNACZA BACKEND - TAM BĘDĄ WSZYSTKIE OBLICZENIA">
+      <created>1642439512719</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642439512719</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactoring">
+      <created>1642439622009</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642439622009</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,11 +180,14 @@
     <MESSAGE value="Some refactoring mostly" />
     <MESSAGE value="Doing God`s work" />
     <MESSAGE value="Wstępny backend banku" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wstępny backend banku" />
+    <MESSAGE value="POTĘZNY REFACTORING&#10;BACK OZNACZA BACKEND - TAM BĘDĄ WSZYSTKIE OBLICZENIA" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="javafx.event.ActionEvent" memberName="source" />
         <PinnedItemInfo parentTag="java.lang.Integer" memberName="value" />
       </pinned-members>
     </pin-to-top-manager>

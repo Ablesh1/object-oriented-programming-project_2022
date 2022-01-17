@@ -8,6 +8,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.Button;
 
 import java.io.IOException;
 
@@ -17,10 +21,12 @@ public class SceneController {
     TextArea CurrencyArea;
     @FXML
     TextArea StockArea;
-
-    public BankBackend getBankBackend() {
-        return bankBackend;
-    }
+    @FXML
+    TextField DepositTextArea;
+    @FXML
+    TextField CurrentMoneyArea1;
+    @FXML
+    Button DepositButton;
 
 
     CurrencyRateDep currencyRate = new CurrencyRateDep();
@@ -106,6 +112,39 @@ public class SceneController {
 
     public void switchToAccounts(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Accounts.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void updateCurrentMoney(){
+        NPC player = bankBackend.getClient(1);
+        CurrentMoneyArea1.setText(String.valueOf(player.howMuchMoney()));
+    }
+
+    public void deposit(ActionEvent event) throws IOException{
+        NPC player = bankBackend.getClient(1);
+        try{
+        player.deposit(Integer.valueOf(DepositTextArea.getText()));}
+        catch(NumberFormatException e){
+            ;
+        }
+        updateCurrentMoney();
+    }
+    public void withdraw(ActionEvent event) throws IOException{
+        NPC player = bankBackend.getClient(1);
+        try{
+            player.deposit(Integer.valueOf(DepositTextArea.getText()) * -1);
+        }
+        catch(NumberFormatException e){
+            ;
+        }
+        updateCurrentMoney();
+    }
+
+    public void toDeposit(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("Deposit.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

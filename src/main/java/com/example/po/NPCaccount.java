@@ -16,4 +16,15 @@ public class NPCaccount {
         this.debit = 0;
         bankBackend = bankBackendPass;
     }
+
+    public void depositOnAccount(double todeposit){
+        if (owner.getPersBelongings() >= todeposit){
+        this.deposit += todeposit;
+        owner.setPersBelongings(todeposit);
+        }
+    }
+
+    public double currentMoney(){
+        return deposit;
+    }
 }
