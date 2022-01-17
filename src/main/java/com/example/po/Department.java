@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public abstract class Department extends Application{
+public abstract class Department{
 
     //Departemant musi wiedzieć w którym jest banku
     BankBackend bankBackend;
@@ -61,7 +61,7 @@ public abstract class Department extends Application{
         ;
     }
 
-    @Override
+    //@Override
     public void start(Stage primaryStage) throws IOException {
 
     }

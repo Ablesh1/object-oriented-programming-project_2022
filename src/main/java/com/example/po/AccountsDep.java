@@ -6,14 +6,14 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class AccountsDep extends Department{
-    @Override
+  /*  @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HallGUI.class.getResource("Accounts.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Bank Visual Novel");
         stage.setScene(scene);
         stage.show();
-    }
+    }*/
 
     public AccountsDep(){
         super();

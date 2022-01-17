@@ -1,12 +1,6 @@
 package com.example.po;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-import java.io.IOException;
-
-public class ReportsDep extends Department{
+public class ReportsDepBack extends Department{
     /*@Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HallGUI.class.getResource("Reports.fxml"));
@@ -16,7 +10,7 @@ public class ReportsDep extends Department{
         stage.show();
     }*/
 
-    public ReportsDep(){
+    public ReportsDepBack(){
         super();
     }
 

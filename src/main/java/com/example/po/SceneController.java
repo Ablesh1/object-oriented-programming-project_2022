@@ -22,7 +22,6 @@ public class SceneController {
         return bankBackend;
     }
 
-    BankBackend bankBackend;
 
     CurrencyRateDep currencyRate = new CurrencyRateDep();
     StockRateDep stockRate = new StockRateDep();
@@ -31,6 +30,9 @@ public class SceneController {
     private Scene scene;
     private Parent root;
 
+    //This is the least convoluted and safest way of
+    //Assigning the bank to the GUI
+    private BankBackend bankBackend;
     //Kontrolne do wyłączania
     private TransfersDep transfers;
     private AccountsDep accounts;
@@ -41,6 +43,10 @@ public class SceneController {
     //Kontroler SceneController odpala się za każdym
     //Przejściem między scenami
     //Uwaga
+
+    public SceneController(){
+        bankBackend = new BankBackend();
+    }
 
     public void switchToHall(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Hall.fxml"));

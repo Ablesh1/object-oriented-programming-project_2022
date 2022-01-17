@@ -7,17 +7,18 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class TransfersDep extends Department{
-    @Override
-    public void start(Stage stage) throws IOException {
+    //@Override
+    /*public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HallGUI.class.getResource("Transfers.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Bank Visual Novel");
         stage.setScene(scene);
         stage.show();
-    }
+    }*/
 
     public TransfersDep() {
         super();
+        //System.out.println("Włąmczyłęm sięm");
     }
 
     @Override

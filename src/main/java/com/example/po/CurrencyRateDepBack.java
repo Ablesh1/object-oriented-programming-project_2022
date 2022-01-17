@@ -1,16 +1,12 @@
 package com.example.po;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class CurrencyRateDep extends Department{
+public class CurrencyRateDepBack extends Department{
 
     private final String[] currencyDataBase = new String[8];
     public String[] getCurrencyDataBase() {
@@ -26,7 +22,7 @@ public class CurrencyRateDep extends Department{
         stage.show();
     }*/
 
-    public CurrencyRateDep() {
+    public CurrencyRateDepBack() {
         super();
     }
 
