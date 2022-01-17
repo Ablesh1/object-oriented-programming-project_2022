@@ -34,9 +34,10 @@ public abstract class Department extends Application{
         thread.start();
     }
 
-    public void kill(){
+    public int kill(){
         thread.interrupt();
         System.out.println("Thread killed");
+        return 0;
     }
 
     //Tutaj panele będą się aktualizować oraz zbierać dane z innych klas

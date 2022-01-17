@@ -24,7 +24,7 @@ public class Counters extends Department{
     @Override
     public void refresh(){
         try{
-            System.out.println("Counters do calculations");
+            //System.out.println("Counters do calculations");
             Thread.sleep(2600);
         } catch (InterruptedException interruptedException) {
             return;

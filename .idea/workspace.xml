@@ -5,20 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/StockRate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/StockRate.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/BankBackend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2022_22_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2022_22_52__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_01_2022_01_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_01_2022_01_23__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Counters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Counters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Hall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Hall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Transfers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Transfers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Hall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -54,6 +54,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration name="Hall" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -65,19 +69,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Programowanie-Obiektowe-Projekt_2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Programowanie-Obiektowe-Projekt_2" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,6 +95,7 @@
       <workItem from="1642288975206" duration="555000" />
       <workItem from="1642289608440" duration="130000" />
       <workItem from="1642289874813" duration="1778000" />
+      <workItem from="1642430264538" duration="1059000" />
     </task>
     <servers />
   </component>

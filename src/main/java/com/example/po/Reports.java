@@ -25,7 +25,7 @@ public class Reports extends Department{
     @Override
     public void refresh(){
         try{
-            System.out.println("Reports do calculations");
+            //System.out.println("Reports do calculations");
             Thread.sleep(2600);
         } catch (InterruptedException interruptedException) {
             interruptedException.printStackTrace();

@@ -39,7 +39,7 @@ public class CurrencyRate extends Department{
     public void refresh() throws IOException {
         this.CurrencyReader();
         try{
-            System.out.println("Counters do calculations");
+            //System.out.println("Counters do calculations");
             Thread.sleep(2600);
         } catch (InterruptedException interruptedException) {
             return;

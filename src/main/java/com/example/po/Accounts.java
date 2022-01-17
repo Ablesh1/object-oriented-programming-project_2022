@@ -24,7 +24,7 @@ public class Accounts extends Department{
     @Override
     public void refresh(){
         try{
-            System.out.println("Accounts do calculations");
+            //System.out.println("Accounts do calculations");
             Thread.sleep(2600);
         } catch (InterruptedException interruptedException) {
             return;

@@ -5,7 +5,8 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
     <children>
-        <Button fx:id="ToCurrency"   layoutX="238" layoutY="100" mnemonicParsing="false" onAction="#switchToCurrencyRate" text="Check currency rate"  />
+        <Button fx:id="ToCurrency"   layoutX="238" layoutY="80" mnemonicParsing="false" onAction="#switchToCurrencyRate" text="Check currency rate"  />
+        <Button fx:id="ToStock"      layoutX="247" layoutY="140" mnemonicParsing="false" onAction="#switchToStockRate" text="Check stock rate"  />
         <Button fx:id="Deposit"      layoutX="90" layoutY="200"  mnemonicParsing="false" onAction="#OnClicked"    text="Deposit money" />
         <Button fx:id="CheckAccount" layoutX="239" layoutY="200" mnemonicParsing="false" onAction="#OnClicked"    text="Check your account" />
         <Button fx:id="Withdraw"     layoutX="410" layoutY="200" mnemonicParsing="false" onAction="#OnClicked"    text="Withdraw money" />
