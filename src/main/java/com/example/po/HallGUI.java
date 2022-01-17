@@ -20,11 +20,12 @@ public class HallGUI extends Application {
         AccountsDep accounts = new AccountsDep();
         ReportsDep reports = new ReportsDep();
         CountersDep counters = new CountersDep();
-        CurrencyRate currencyRate = new CurrencyRate();
+        CurrencyRateDep currencyRate = new CurrencyRateDep();
         StockRateDep stockRate = new StockRateDep();
     }
 
- //   public static void main(String[] args) {
- //       launch();
- //   }
+    //W holu program się zaczyna
+    public static void main(String[] args) {
+        launch();
+    }
 }

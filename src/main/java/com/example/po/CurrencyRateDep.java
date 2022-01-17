@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class CurrencyRate extends Department{
+public class CurrencyRateDep extends Department{
 
     private final String[] currencyDataBase = new String[8];
     public String[] getCurrencyDataBase() {
@@ -26,7 +26,7 @@ public class CurrencyRate extends Department{
         stage.show();
     }
 
-    public CurrencyRate() {
+    public CurrencyRateDep() {
         super();
     }
 

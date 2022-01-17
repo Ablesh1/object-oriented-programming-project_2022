@@ -18,7 +18,13 @@ public class SceneController {
     @FXML
     TextArea StockArea;
 
-    CurrencyRate currencyRate = new CurrencyRate();
+    public BankBackend getBankBackend() {
+        return bankBackend;
+    }
+
+    BankBackend bankBackend;
+
+    CurrencyRateDep currencyRate = new CurrencyRateDep();
     StockRateDep stockRate = new StockRateDep();
 
     private Stage stage;
@@ -113,8 +119,8 @@ public class SceneController {
         CurrencyArea.appendText("     " + Binder[4] + "\n");
         CurrencyArea.appendText("     " + Binder[5] + "\n");
         CurrencyArea.appendText("     " + Binder[6] + "\n");
-        CurrencyArea.appendText("     " + Binder[7] + "\n");
-    }
+        CurrencyArea.appendText("     " + Binder[7] + "\n");}
+
     public void ShowStock() throws IOException {
         String[] Binder = this.stockRate.getStockDataBase();
         StockArea.setText(    "\n     " + Binder[0] + "\n");

@@ -4,10 +4,13 @@ package com.example.po;
 //We will put some special NPCs in different classes
 public class NPC extends Thread{
 
+    BankBackend bankBackend;
+
     private Integer persId;
     private String name;
     private String surname;
     private Integer pesel;
+    private NPCaccount npcAccount;
 
     //Character describes how the NPC behaves
     private String character;
@@ -17,11 +20,13 @@ public class NPC extends Thread{
         return persId;
     }
 
-    public NPC(Integer idNumber, String name, String surname, Integer pesel){
+    public NPC(Integer idNumber, String name, String surname, Integer pesel, double debit, BankBackend bankBackend){
         this.persId = idNumber;
         this.name = name;
         this.surname = surname;
-        this.pesel = pesel;;
+        this.pesel = pesel;
+        this.bankBackend = bankBackend;
+        this.npcAccount = new NPCaccount(this, debit, bankBackend);
 
         //Not yet
         this.iWantToDie = 0;

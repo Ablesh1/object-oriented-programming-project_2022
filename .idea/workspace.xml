@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Some refactoring mostly">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCaccount.java" afterDir="false" />
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Doing God`s work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/BankBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/SceneController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/SceneController.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +96,7 @@
       <workItem from="1642288975206" duration="555000" />
       <workItem from="1642289608440" duration="130000" />
       <workItem from="1642289874813" duration="1778000" />
-      <workItem from="1642430264538" duration="3965000" />
+      <workItem from="1642430264538" duration="5360000" />
     </task>
     <task id="LOCAL-00001" summary="Wstęp do bazy i NPC">
       <created>1642431352140</created>
@@ -109,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642433082841</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Doing God`s work">
+      <created>1642434274441</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642434274441</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +150,8 @@
     <MESSAGE value="Unversioned commit" />
     <MESSAGE value="Wstęp do bazy i NPC" />
     <MESSAGE value="Some refactoring mostly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some refactoring mostly" />
+    <MESSAGE value="Doing God`s work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Doing God`s work" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
