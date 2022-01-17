@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
+   <children>
+      <Button fx:id="Clients"     layoutX="257" layoutY="100" mnemonicParsing="false" onAction="#OnClicked"      text="Clients report" />
+      <Button fx:id="StockMarket" layoutX="242" layoutY="200" mnemonicParsing="false" onAction="#OnClicked"      text="Stock market report" />
+      <Button fx:id="ToOffice"    layoutX="272" layoutY="300" mnemonicParsing="false" onAction="#switchToOffice" text="To office" />
+      <TextField editable="false" layoutX="200" layoutY="10" prefHeight="40" prefWidth="200" text="You decide to check bank reports. " />
+   </children>
+</AnchorPane>

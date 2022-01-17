@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Deposit.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/BankBackend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCaccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCaccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
-    </list>
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Dodawanie i usuwanie pieniędzy do kąta gracza" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +93,7 @@
       <workItem from="1642288975206" duration="555000" />
       <workItem from="1642289608440" duration="130000" />
       <workItem from="1642289874813" duration="1778000" />
-      <workItem from="1642430264538" duration="12823000" />
+      <workItem from="1642430264538" duration="13314000" />
     </task>
     <task id="LOCAL-00001" summary="Wstęp do bazy i NPC">
       <created>1642431352140</created>
@@ -147,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642439622009</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Dodawanie i usuwanie pieniędzy do kąta gracza">
+      <created>1642443304184</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642443304184</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +179,8 @@
     <MESSAGE value="Wstępny backend banku" />
     <MESSAGE value="POTĘZNY REFACTORING&#10;BACK OZNACZA BACKEND - TAM BĘDĄ WSZYSTKIE OBLICZENIA" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Dodawanie i usuwanie pieniędzy do kąta gracza" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodawanie i usuwanie pieniędzy do kąta gracza" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
