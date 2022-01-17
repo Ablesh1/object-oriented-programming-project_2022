@@ -13,15 +13,6 @@ public class CurrencyRateDepBack extends Department{
         return currencyDataBase;
     }
 
-   /* @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HallGUI.class.getResource("CurrencyRate.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Bank Visual Novel");
-        stage.setScene(scene);
-        stage.show();
-    }*/
-
     public CurrencyRateDepBack() {
         super();
     }

@@ -1,18 +1,9 @@
 package com.example.po;
 
 public class TransfersDepBack extends Department{
-    //@Override
-    /*public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HallGUI.class.getResource("Transfers.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Bank Visual Novel");
-        stage.setScene(scene);
-        stage.show();
-    }*/
 
     public TransfersDepBack() {
         super();
-        //System.out.println("Włąmczyłęm sięm");
     }
 
     @Override
