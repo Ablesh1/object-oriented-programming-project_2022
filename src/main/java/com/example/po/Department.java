@@ -12,6 +12,13 @@ import java.io.IOException;
 
 public abstract class Department extends Application{
 
+    //Departemant musi wiedzieć w którym jest banku
+    BankBackend bankBackend;
+
+    public BankBackend getBankBackend() {
+        return bankBackend;
+    }
+
     //Każdy departament ma własny wątek
     //Nie dziedziczymy po thread bo już dziedziczymy po Application
     private Thread thread = new Thread(new Runnable() {
@@ -31,6 +38,11 @@ public abstract class Department extends Application{
     });
 
     public Department(){
+        thread.start();
+    }
+
+    public Department(BankBackend bankBackend){
+        this.bankBackend = bankBackend;
         thread.start();
     }
 

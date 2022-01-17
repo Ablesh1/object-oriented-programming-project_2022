@@ -10,6 +10,10 @@ public class BankBackend {
     //We can assume that the player will be the first client
     private HashMap<Integer, NPC> Database;
 
+    public BankBackend setBankBackend(){
+        return this;
+    }
+
 
     public BankBackend(){
         this.Database = new HashMap<Integer, NPC>();

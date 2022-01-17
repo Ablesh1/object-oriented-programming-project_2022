@@ -1,13 +1,7 @@
 package com.example.po;
 
-import javafx.application.Application;
-import javafx.beans.binding.When;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
@@ -16,7 +10,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class StockRate extends Department{
+public class StockRateDep extends Department{
 
     private final String[] stockDataBase = new String[8];
     public String[] getStockDataBase() {
@@ -25,14 +19,14 @@ public class StockRate extends Department{
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Hall.class.getResource("StockRate.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HallGUI.class.getResource("StockRate.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Bank Visual Novel");
         stage.setScene(scene);
         stage.show();
     }
 
-    public StockRate() {
+    public StockRateDep() {
         super();
     }
 

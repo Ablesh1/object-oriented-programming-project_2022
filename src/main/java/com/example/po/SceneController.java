@@ -7,15 +7,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.Arrays;
 
 public class SceneController {
 
@@ -25,18 +19,18 @@ public class SceneController {
     TextArea StockArea;
 
     CurrencyRate currencyRate = new CurrencyRate();
-    StockRate stockRate = new StockRate();
+    StockRateDep stockRate = new StockRateDep();
 
     private Stage stage;
     private Scene scene;
     private Parent root;
 
     //Kontrolne do wyłączania
-    private Transfers transfers;
-    private Accounts accounts;
-    private Reports reports;
-    private Office office;
-    private Counters counters;
+    private TransfersDep transfers;
+    private AccountsDep accounts;
+    private ReportsDep reports;
+    private OfficeGUI office;
+    private CountersDep counters;
 
     //Kontroler SceneController odpala się za każdym
     //Przejściem między scenami
