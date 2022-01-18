@@ -21,9 +21,9 @@ public class SceneController{
     @FXML
     TextArea StockArea;
     @FXML
-    TextField DepositTextArea;
+    TextField ATMArea;
     @FXML
-    TextField CurrentMoneyArea1;
+    TextField CurrentMoneyArea;
     @FXML
     Button DepositButton;
 
@@ -119,13 +119,13 @@ public class SceneController{
 
     public void updateCurrentMoney(){
         NPC player = bankBackend.getClient(1);
-        CurrentMoneyArea1.setText(String.valueOf(player.howMuchMoney()));
+        CurrentMoneyArea.setText(String.valueOf(player.howMuchMoney()));
     }
 
     public void deposit(ActionEvent event) throws IOException{
         NPC player = bankBackend.getClient(1);
         try{
-        player.deposit(Integer.valueOf(DepositTextArea.getText()));}
+        player.deposit(Integer.valueOf(ATMArea.getText()));}
         catch(NumberFormatException e){
             ;
         }
@@ -134,7 +134,7 @@ public class SceneController{
     public void withdraw(ActionEvent event) throws IOException{
         NPC player = bankBackend.getClient(1);
         try{
-            player.deposit(Integer.valueOf(DepositTextArea.getText()) * -1);
+            player.deposit(Integer.valueOf(ATMArea.getText()) * -1);
         }
         catch(NumberFormatException e){
             ;
@@ -142,9 +142,8 @@ public class SceneController{
         updateCurrentMoney();
     }
 
-    //Add toWithdraw
-    public void toDeposit(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("Deposit.fxml"));
+    public void toATM(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("ATM.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
