@@ -12,7 +12,7 @@ public class NPC extends Thread{
     private String name;
     private String surname;
     private NPCAccount npcAccount;
-    private double personBelongings;
+    private Double personBelongings;
 
     //Character describes how the NPC behaves
     private String character;
@@ -45,7 +45,7 @@ public class NPC extends Thread{
     }
 
     public void setPersonBelongings(double personBelongings) {
-        this.personBelongings -= personBelongings;
+        this.personBelongings = personBelongings;
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -60,13 +60,16 @@ public class NPC extends Thread{
         return 1;
     }
 
-    //Add withdraw
     public void deposit(double deposit){
         npcAccount.depositOnAccount(deposit);
     }
 
-    public Double howMuchMoney(){
-        return this.npcAccount.currentMoney();
+    public void withdraw(double withdraw) {
+        npcAccount.withdrawFromAccount(withdraw);
+    }
+
+    public Double getAccountMoneyAI(){
+        return this.npcAccount.getAccountMoney();
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////

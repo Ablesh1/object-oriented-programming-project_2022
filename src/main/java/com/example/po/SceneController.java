@@ -25,8 +25,11 @@ public class SceneController{
     @FXML
     TextField CurrentMoneyArea;
     @FXML
+    TextField BelongingsArea;
+    @FXML
     Button DepositButton;
-
+    @FXML
+    Button WithdrawButton;
 
     //private CurrencyRateDepBack currencyRate;
     //private StockRateDepBack stockRate;
@@ -119,27 +122,36 @@ public class SceneController{
 
     public void updateCurrentMoney(){
         NPC player = bankBackend.getClient(1);
-        CurrentMoneyArea.setText(String.valueOf(player.howMuchMoney()));
+        CurrentMoneyArea.setText(String.valueOf(player.getAccountMoneyAI()));
+    }
+
+    public void updatePersonBelongings() {
+        NPC player = bankBackend.getClient(1);
+        BelongingsArea.setText(String.valueOf(player.getPersonBelongings()));
     }
 
     public void deposit(ActionEvent event) throws IOException{
         NPC player = bankBackend.getClient(1);
         try{
-        player.deposit(Integer.valueOf(ATMArea.getText()));}
+            player.deposit(Integer.valueOf(ATMArea.getText()));
+        }
         catch(NumberFormatException e){
             ;
         }
         updateCurrentMoney();
+        updatePersonBelongings();
     }
+
     public void withdraw(ActionEvent event) throws IOException{
         NPC player = bankBackend.getClient(1);
         try{
-            player.deposit(Integer.valueOf(ATMArea.getText()) * -1);
+            player.withdraw(Integer.valueOf(ATMArea.getText()));
         }
         catch(NumberFormatException e){
             ;
         }
         updateCurrentMoney();
+        updatePersonBelongings();
     }
 
     public void toATM(ActionEvent event) throws IOException{

@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Refactoring">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Fxml refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Deposit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/ATM.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Deposit.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/ATM.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/ATM.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642530784630</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fxml refactoring">
+      <created>1642533537782</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1642533537782</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +258,8 @@
     <MESSAGE value="Poprawiona kreacja klas" />
     <MESSAGE value="Szybka giełda" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Fxml refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fxml refactoring" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
