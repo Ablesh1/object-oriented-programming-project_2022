@@ -1,16 +1,18 @@
 package com.example.po;
 
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import com.example.po.backends.BankBackend;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public abstract class Department extends Application{
+public abstract class Department{
+
+    //Departemant musi wiedzieć w którym jest banku
+    BankBackend bankBackend;
+
+    public BankBackend getBankBackend() {
+        return bankBackend;
+    }
 
     //Każdy departament ma własny wątek
     //Nie dziedziczymy po thread bo już dziedziczymy po Application
@@ -34,9 +36,15 @@ public abstract class Department extends Application{
         thread.start();
     }
 
-    public void kill(){
+    public Department(BankBackend bankBackend){
+        this.bankBackend = bankBackend;
+        thread.start();
+    }
+
+    public int kill(){
         thread.interrupt();
         System.out.println("Thread killed");
+        return 0;
     }
 
     //Tutaj panele będą się aktualizować oraz zbierać dane z innych klas
@@ -48,7 +56,7 @@ public abstract class Department extends Application{
         ;
     }
 
-    @Override
+    //@Override
     public void start(Stage primaryStage) throws IOException {
 
     }

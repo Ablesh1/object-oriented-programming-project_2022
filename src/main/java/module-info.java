@@ -9,7 +9,10 @@ module com.example.po {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.logging;
 
     opens com.example.po to javafx.fxml;
     exports com.example.po;
+    exports com.example.po.backends;
+    opens com.example.po.backends to javafx.fxml;
 }

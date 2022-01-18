@@ -4,8 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Szybka giełda">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/AccountsDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/AccountsDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CountersDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CountersDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CurrencyRateDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCaccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCaccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/ReportsDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/ReportsDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/StockRateDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/StockRateDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/TransfersDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/TransfersDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/AccountsDepBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/BankBackend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CountersDepBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRateDepBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Department$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Department$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/HallGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/HallGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPCaccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPCaccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/ReportsDepBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/StockRateDepBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/TransfersDepBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -26,10 +54,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="new-master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="23kURNTwFnTPdYkwyqzyFOt9Eua" />
   <component name="ProjectViewState">
@@ -41,14 +77,28 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager">
-    <configuration name="Hall" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.po.Hall" />
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.po.backends" />
+      <recent name="com.example.po" />
+      <recent name="com.example.po.GUI" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.po" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.HallGUI (1)">
+    <configuration name="HallGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.po.GUI.HallGUI" />
       <module name="Programowanie-Obiektowe-Projekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.po.*" />
+          <option name="PATTERN" value="com.example.po.backends.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -56,25 +106,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Programowanie-Obiektowe-Projekt_2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Programowanie-Obiektowe-Projekt_2" />
-      <option name="filePath" />
+    <configuration name="HallGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.po.HallGUI" />
+      <module name="Programowanie-Obiektowe-Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.po.backends.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Hall" />
-        <item itemvalue="Application.Hall" />
-        <item itemvalue="Application.Hall" />
-        <item itemvalue="Application.Hall" />
+        <item itemvalue="Application.HallGUI (1)" />
+        <item itemvalue="Application.HallGUI" />
+        <item itemvalue="Application.HallGUI" />
+        <item itemvalue="Application.HallGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -92,20 +142,89 @@
       <workItem from="1642288975206" duration="555000" />
       <workItem from="1642289608440" duration="130000" />
       <workItem from="1642289874813" duration="1778000" />
-      <workItem from="1642345928425" duration="264000" />
-      <workItem from="1642349716475" duration="1539000" />
-      <workItem from="1642363508107" duration="3000" />
-      <workItem from="1642441185805" duration="454000" />
-      <workItem from="1642441713240" duration="87000" />
+      <workItem from="1642430264538" duration="13331000" />
+      <workItem from="1642499423101" duration="962000" />
+      <workItem from="1642507319740" duration="5330000" />
+      <workItem from="1642518672660" duration="2645000" />
     </task>
-    <task id="LOCAL-00001" summary="Unversioned commit">
-      <created>1642292924501</created>
+    <task id="LOCAL-00001" summary="Wstęp do bazy i NPC">
+      <created>1642431352140</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1642292924501</updated>
+      <updated>1642431352140</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Some refactoring mostly">
+      <created>1642433082841</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642433082841</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Doing God`s work">
+      <created>1642434274441</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642434274441</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Wstępny backend banku">
+      <created>1642435949997</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642435949997</updated>
+    </task>
+    <task id="LOCAL-00005" summary="POTĘZNY REFACTORING&#10;BACK OZNACZA BACKEND - TAM BĘDĄ WSZYSTKIE OBLICZENIA">
+      <created>1642439512719</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642439512719</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactoring">
+      <created>1642439622009</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642439622009</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Dodawanie i usuwanie pieniędzy do kąta gracza">
+      <created>1642443304184</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642443304184</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Dodawanie i usuwanie pieniędzy do kąta gracza">
+      <created>1642443691501</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642443691501</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Lepsze samobójstwo">
+      <created>1642500362733</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642500362733</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Poprawiona kreacja klas">
+      <created>1642511298815</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642511298815</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Szybka giełda">
+      <created>1642520255602</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642520255602</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +253,25 @@
     <MESSAGE value="Rebuild GUI" />
     <MESSAGE value="Target commit" />
     <MESSAGE value="Unversioned commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unversioned commit" />
+    <MESSAGE value="Wstęp do bazy i NPC" />
+    <MESSAGE value="Some refactoring mostly" />
+    <MESSAGE value="Doing God`s work" />
+    <MESSAGE value="Wstępny backend banku" />
+    <MESSAGE value="POTĘZNY REFACTORING&#10;BACK OZNACZA BACKEND - TAM BĘDĄ WSZYSTKIE OBLICZENIA" />
+    <MESSAGE value="Refactoring" />
+    <MESSAGE value="Dodawanie i usuwanie pieniędzy do kąta gracza" />
+    <MESSAGE value="Lepsze samobójstwo" />
+    <MESSAGE value="Poprawiona kreacja klas" />
+    <MESSAGE value="Szybka giełda" />
+    <option name="LAST_COMMIT_MESSAGE" value="Szybka giełda" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="javafx.event.ActionEvent" memberName="source" />
+        <PinnedItemInfo parentTag="java.lang.Integer" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

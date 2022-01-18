@@ -1,37 +1,23 @@
-package com.example.po;
+package com.example.po.backends;
 
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
+import com.example.po.Department;
+import javafx.fxml.Initializable;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ResourceBundle;
 
-public class CurrencyRate extends Department{
+public class CurrencyRateDepBack extends Department {
 
     private final String[] currencyDataBase = new String[8];
     public String[] getCurrencyDataBase() {
         return currencyDataBase;
     }
 
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Hall.class.getResource("CurrencyRate.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Bank Visual Novel");
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public CurrencyRate() {
+    public CurrencyRateDepBack() {
         super();
     }
 
@@ -39,8 +25,8 @@ public class CurrencyRate extends Department{
     public void refresh() throws IOException {
         this.CurrencyReader();
         try{
-            System.out.println("Counters do calculations");
-            Thread.sleep(2600);
+            //System.out.println("Counters do calculations");
+            Thread.sleep(5);
         } catch (InterruptedException interruptedException) {
             return;
         }

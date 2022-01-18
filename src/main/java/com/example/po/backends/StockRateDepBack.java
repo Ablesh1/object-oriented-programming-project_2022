@@ -1,14 +1,6 @@
-package com.example.po;
+package com.example.po.backends;
 
-import javafx.application.Application;
-import javafx.beans.binding.When;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
+import com.example.po.Department;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,23 +8,14 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class StockRate extends Department{
+public class StockRateDepBack extends Department {
 
     private final String[] stockDataBase = new String[8];
     public String[] getStockDataBase() {
         return stockDataBase;
     }
 
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Hall.class.getResource("StockRate.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Bank Visual Novel");
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public StockRate() {
+    public StockRateDepBack() {
         super();
     }
 
@@ -41,7 +24,7 @@ public class StockRate extends Department{
         this.StockReader();
         try{
             System.out.println("Counters do calculations");
-            Thread.sleep(2600);
+            Thread.sleep(5);
         } catch (InterruptedException interruptedException) {
             return;
         }
@@ -121,7 +104,6 @@ public class StockRate extends Department{
         this.stockDataBase[5] = StockRates(keyKO, urlKO);
         this.stockDataBase[6] = StockRates(keyGOOG, urlGOOG);
         this.stockDataBase[7] = StockRates(keyCSCO, urlCSCO);
-
     }
 }
 
