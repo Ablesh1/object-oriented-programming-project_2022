@@ -22,7 +22,7 @@ public class StockRateDepBack extends Department{
         this.StockReader();
         try{
             System.out.println("Counters do calculations");
-            Thread.sleep(2600);
+            Thread.sleep(5);
         } catch (InterruptedException interruptedException) {
             return;
         }
@@ -102,7 +102,6 @@ public class StockRateDepBack extends Department{
         this.stockDataBase[5] = StockRates(keyKO, urlKO);
         this.stockDataBase[6] = StockRates(keyGOOG, urlGOOG);
         this.stockDataBase[7] = StockRates(keyCSCO, urlCSCO);
-
     }
 }
 

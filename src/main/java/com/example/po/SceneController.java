@@ -14,8 +14,10 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 
-public class SceneController {
+public class SceneController{
 
     @FXML
     TextArea CurrencyArea;
@@ -40,11 +42,11 @@ public class SceneController {
     //Assigning the bank to the GUI
     private BankBackend bankBackend;
     //Kontrolne do wyłączania
-    private TransfersDep transfers;
-    private AccountsDep accounts;
-    private ReportsDep reports;
+    private TransfersDepBack transfers;
+    private AccountsDepBack accounts;
+    private ReportsDepBack reports;
     private OfficeGUI office;
-    private CountersDep counters;
+    private CountersDepBack counters;
 
     //Kontroler SceneController odpala się za każdym
     //Przejściem między scenami
@@ -54,10 +56,6 @@ public class SceneController {
         this.bankBackend = Global.bankBackend;
 
     }
-
-   /* public void setBankBackend(BankBackend bankBackend){
-        this.bankBackend = bankBackend;
-    } */
 
     public void switchToHall(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Hall.fxml"));
@@ -160,29 +158,65 @@ public class SceneController {
         System.out.println("Something happened");
     }
 
-    public void ShowCurrency() throws IOException {
-        CurrencyRateDepBack HelperCurrency = bankBackend.getCurrencyRate();
-        String[] Binder = HelperCurrency.getCurrencyDataBase();
-        CurrencyArea.setText(    "\n     " + Binder[0] + "\n");
-        CurrencyArea.appendText("     " + Binder[1] + "\n");
-        CurrencyArea.appendText("     " + Binder[2] + "\n");
-        CurrencyArea.appendText("     " + Binder[3] + "\n");
-        CurrencyArea.appendText("     " + Binder[4] + "\n");
-        CurrencyArea.appendText("     " + Binder[5] + "\n");
-        CurrencyArea.appendText("     " + Binder[6] + "\n");
-        CurrencyArea.appendText("     " + Binder[7] + "\n");}
+    //Wyświetlanie obecnej giełdy spółek i walut
+    public void ShowCurrency() throws IOException{
+        Thread threadCurrency = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                CurrencyRateDepBack HelperCurrency = bankBackend.getCurrencyRate();
+                String[] Binder = HelperCurrency.getCurrencyDataBase();
+                while(Binder[7] == null){
+                    try{
+                        Thread.sleep(10);
+                        System.out.println("Bruh");
+                    }
+                    catch (InterruptedException i){
+                        ;
+                    }
+                }
+
+                CurrencyArea.setText(    "\n     " + Binder[0] + "\n");
+                CurrencyArea.appendText("     " + Binder[1] + "\n");
+                CurrencyArea.appendText("     " + Binder[2] + "\n");
+                CurrencyArea.appendText("     " + Binder[3] + "\n");
+                CurrencyArea.appendText("     " + Binder[4] + "\n");
+                CurrencyArea.appendText("     " + Binder[5] + "\n");
+                CurrencyArea.appendText("     " + Binder[6] + "\n");
+                CurrencyArea.appendText("     " + Binder[7] + "\n");
+
+            }
+        });
+
+        threadCurrency.start();
+        }
 
     public void ShowStock() throws IOException {
-        StockRateDepBack HelperStock = bankBackend.getStockRate();
-        String[] Binder = HelperStock.getStockDataBase();
-        StockArea.setText(    "\n     " + Binder[0] + "\n");
-        StockArea.appendText("     " + Binder[1] + "\n");
-        StockArea.appendText("     " + Binder[2] + "\n");
-        StockArea.appendText("     " + Binder[3] + "\n");
-        StockArea.appendText("     " + Binder[4] + "\n");
-        StockArea.appendText("     " + Binder[5] + "\n");
-        StockArea.appendText("     " + Binder[6] + "\n");
-        StockArea.appendText("     " + Binder[7] + "\n");
+        Thread threadStock = new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                StockRateDepBack HelperStock = bankBackend.getStockRate();
+                String[] Binder = HelperStock.getStockDataBase();
+                while(Binder[7] == null){
+                    try{
+                        Thread.sleep(10);
+                    }
+                    catch (InterruptedException i){
+                        ;
+                    }
+                }
+
+                StockArea.setText(    "\n     " + Binder[0] + "\n");
+                StockArea.appendText("     " + Binder[1] + "\n");
+                StockArea.appendText("     " + Binder[2] + "\n");
+                StockArea.appendText("     " + Binder[3] + "\n");
+                StockArea.appendText("     " + Binder[4] + "\n");
+                StockArea.appendText("     " + Binder[5] + "\n");
+                StockArea.appendText("     " + Binder[6] + "\n");
+                StockArea.appendText("     " + Binder[7] + "\n");
+            }
+        });
+        threadStock.start();
     }
 
     //Wychodzenie z programu

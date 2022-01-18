@@ -1,10 +1,13 @@
 package com.example.po;
 
+import javafx.fxml.Initializable;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ResourceBundle;
 
 public class CurrencyRateDepBack extends Department{
 
@@ -22,7 +25,7 @@ public class CurrencyRateDepBack extends Department{
         this.CurrencyReader();
         try{
             //System.out.println("Counters do calculations");
-            Thread.sleep(2600);
+            Thread.sleep(5);
         } catch (InterruptedException interruptedException) {
             return;
         }

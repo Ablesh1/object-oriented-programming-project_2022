@@ -4,18 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Lepsze samobójstwo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Global.java" afterDir="false" />
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Poprawiona kreacja klas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/BankBackend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCaccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCaccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/AccountsDep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CountersDep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/ReportsDep.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/BankBackend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/BankBackend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/HallGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/HallGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPCaccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPCaccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/StockRateDep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/StockRateDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/StockRateDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/TransfersDep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/StockRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/StockRate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/AccountsDep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CountersDep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRateDep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRateDepBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRateDepBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/ReportsDep.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/StockRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/StockRate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/StockRateDep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/StockRateDepBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/StockRateDepBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/TransfersDep.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +119,8 @@
       <workItem from="1642289874813" duration="1778000" />
       <workItem from="1642430264538" duration="13331000" />
       <workItem from="1642499423101" duration="962000" />
-      <workItem from="1642507319740" duration="3766000" />
+      <workItem from="1642507319740" duration="5330000" />
+      <workItem from="1642518672660" duration="1317000" />
     </task>
     <task id="LOCAL-00001" summary="Wstęp do bazy i NPC">
       <created>1642431352140</created>
@@ -172,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642500362733</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Poprawiona kreacja klas">
+      <created>1642511298815</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642511298815</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +229,8 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Dodawanie i usuwanie pieniędzy do kąta gracza" />
     <MESSAGE value="Lepsze samobójstwo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lepsze samobójstwo" />
+    <MESSAGE value="Poprawiona kreacja klas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poprawiona kreacja klas" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
