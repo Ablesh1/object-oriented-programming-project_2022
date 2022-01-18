@@ -2,7 +2,6 @@ package com.example.po;
 
 import com.example.po.backends.BankBackend;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public abstract class Department{
@@ -41,10 +40,9 @@ public abstract class Department{
         thread.start();
     }
 
-    public int kill(){
-        thread.interrupt();
-        System.out.println("Thread killed");
-        return 0;
+    //@Override
+    public void start(Stage primaryStage) throws IOException {
+
     }
 
     //Tutaj panele będą się aktualizować oraz zbierać dane z innych klas
@@ -56,8 +54,9 @@ public abstract class Department{
         ;
     }
 
-    //@Override
-    public void start(Stage primaryStage) throws IOException {
-
+    public int kill(){
+        thread.interrupt();
+        System.out.println("Thread killed");
+        return 0;
     }
 }

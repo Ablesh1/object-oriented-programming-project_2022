@@ -6,6 +6,5 @@ import javafx.stage.Stage;
 public class OfficeGUI extends Application {
     @Override
     public void start(Stage primaryStage) {
-
     }
 }

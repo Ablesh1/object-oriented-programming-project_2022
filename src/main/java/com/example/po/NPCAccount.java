@@ -1,10 +1,8 @@
 package com.example.po;
-
-
 import com.example.po.backends.BankBackend;
 
 //Each NPC has his own account
-public class NPCaccount {
+public class NPCAccount {
     NPC owner;
     BankBackend bankBackend;
 
@@ -15,17 +13,18 @@ public class NPCaccount {
     //Balance will be handy when doing AI
     private double balance;
 
-    public NPCaccount(NPC npc, double deposit, BankBackend bankBackendPass){
+    public NPCAccount(NPC npc, double deposit, BankBackend bankBackendPass){
         owner = npc;
         this.deposit = deposit;
         this.credit = 0;
         bankBackend = bankBackendPass;
     }
 
-    public void depositOnAccount(double todeposit){
-        if (owner.getPersBelongings() >= todeposit){
-        this.deposit += todeposit;
-        owner.setPersBelongings(todeposit);
+    //Add withdrawFromAccount
+    public void depositOnAccount(double toDeposit){
+        if (owner.getPersonBelongings() >= toDeposit){
+        this.deposit += toDeposit;
+        owner.setPersonBelongings(toDeposit);
         }
     }
 

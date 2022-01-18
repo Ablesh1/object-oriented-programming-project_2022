@@ -51,7 +51,6 @@ public class SceneController{
 
     public SceneController(){
         this.bankBackend = Global.bankBackend;
-
     }
 
     public void switchToHall(ActionEvent event) throws IOException {
@@ -143,6 +142,7 @@ public class SceneController{
         updateCurrentMoney();
     }
 
+    //Add toWithdraw
     public void toDeposit(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("Deposit.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -160,6 +160,7 @@ public class SceneController{
         Thread threadCurrency = new Thread(new Runnable() {
             @Override
             public void run() {
+
                 CurrencyRateDepBack HelperCurrency = bankBackend.getCurrencyRate();
                 String[] Binder = HelperCurrency.getCurrencyDataBase();
                 while(Binder[7] == null){
@@ -171,7 +172,6 @@ public class SceneController{
                         ;
                     }
                 }
-
                 CurrencyArea.setText(    "\n     " + Binder[0] + "\n");
                 CurrencyArea.appendText("     " + Binder[1] + "\n");
                 CurrencyArea.appendText("     " + Binder[2] + "\n");
@@ -180,10 +180,8 @@ public class SceneController{
                 CurrencyArea.appendText("     " + Binder[5] + "\n");
                 CurrencyArea.appendText("     " + Binder[6] + "\n");
                 CurrencyArea.appendText("     " + Binder[7] + "\n");
-
             }
         });
-
         threadCurrency.start();
         }
 
@@ -202,7 +200,6 @@ public class SceneController{
                         ;
                     }
                 }
-
                 StockArea.setText(    "\n     " + Binder[0] + "\n");
                 StockArea.appendText("     " + Binder[1] + "\n");
                 StockArea.appendText("     " + Binder[2] + "\n");
