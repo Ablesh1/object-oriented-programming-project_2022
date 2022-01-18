@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Fxml refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/ATM.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/ATM.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +250,8 @@
     <MESSAGE value="Szybka giełda" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Fxml refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fxml refactoring" />
+    <MESSAGE value="Pusheł" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pusheł" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
