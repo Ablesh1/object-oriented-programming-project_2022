@@ -21,12 +21,15 @@ public class SceneController{
     @FXML
     TextArea StockArea;
     @FXML
-    TextField DepositTextArea;
+    TextField ATMArea;
     @FXML
-    TextField CurrentMoneyArea1;
+    TextField CurrentMoneyArea;
+    @FXML
+    TextField BelongingsArea;
     @FXML
     Button DepositButton;
-
+    @FXML
+    Button WithdrawButton;
 
     //private CurrencyRateDepBack currencyRate;
     //private StockRateDepBack stockRate;
@@ -119,32 +122,40 @@ public class SceneController{
 
     public void updateCurrentMoney(){
         NPC player = bankBackend.getClient(1);
-        CurrentMoneyArea1.setText(String.valueOf(player.howMuchMoney()));
+        CurrentMoneyArea.setText(String.valueOf(player.getAccountMoneyAI()));
+    }
+
+    public void updatePersonBelongings() {
+        NPC player = bankBackend.getClient(1);
+        BelongingsArea.setText(String.valueOf(player.getPersonBelongings()));
     }
 
     public void deposit(ActionEvent event) throws IOException{
         NPC player = bankBackend.getClient(1);
         try{
-        player.deposit(Integer.valueOf(DepositTextArea.getText()));}
+            player.deposit(Integer.valueOf(ATMArea.getText()));
+        }
         catch(NumberFormatException e){
             ;
         }
         updateCurrentMoney();
+        updatePersonBelongings();
     }
+
     public void withdraw(ActionEvent event) throws IOException{
         NPC player = bankBackend.getClient(1);
         try{
-            player.deposit(Integer.valueOf(DepositTextArea.getText()) * -1);
+            player.withdraw(Integer.valueOf(ATMArea.getText()));
         }
         catch(NumberFormatException e){
             ;
         }
         updateCurrentMoney();
+        updatePersonBelongings();
     }
 
-    //Add toWithdraw
-    public void toDeposit(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("Deposit.fxml"));
+    public void toATM(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("ATM.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

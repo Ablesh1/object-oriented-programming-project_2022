@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Backend w pakiecie">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Fxml refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/ATM.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/ATM.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,26 +74,13 @@
       <recent name="com.example.po" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HallGUI (1)">
-    <configuration name="HallGUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="HallGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.po.HallGUI" />
       <module name="Programowanie-Obiektowe-Projekt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.po.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HallGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.po.GUI.HallGUI" />
-      <module name="Programowanie-Obiektowe-Projekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.po.backends.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,7 +103,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HallGUI (1)" />
         <item itemvalue="Application.HallGUI" />
         <item itemvalue="Application.HallGUI" />
         <item itemvalue="Application.HallGUI" />
@@ -209,7 +205,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642520255602</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Refactoring">
+      <created>1642530784630</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1642530784630</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fxml refactoring">
+      <created>1642533537782</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1642533537782</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,12 +253,13 @@
     <MESSAGE value="Doing God`s work" />
     <MESSAGE value="Wstępny backend banku" />
     <MESSAGE value="POTĘZNY REFACTORING&#10;BACK OZNACZA BACKEND - TAM BĘDĄ WSZYSTKIE OBLICZENIA" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="Dodawanie i usuwanie pieniędzy do kąta gracza" />
     <MESSAGE value="Lepsze samobójstwo" />
     <MESSAGE value="Poprawiona kreacja klas" />
     <MESSAGE value="Szybka giełda" />
-    <option name="LAST_COMMIT_MESSAGE" value="Szybka giełda" />
+    <MESSAGE value="Refactoring" />
+    <MESSAGE value="Fxml refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fxml refactoring" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
