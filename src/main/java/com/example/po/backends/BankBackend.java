@@ -1,5 +1,7 @@
 package com.example.po.backends;
 import com.example.po.NPC;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 
 //This class is about keeping database of clients
@@ -32,6 +34,54 @@ public class BankBackend {
 
     public void removeClient(Integer personID){
         database.remove(personID);
+    }
+
+    //It must do on a separate thread
+    //Otherwise might cause bottlenecks
+    public void transferMoney(Integer from, Integer to, double howMuchFrom){
+        Thread transferThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                NPC giver = getClient(from);
+                NPC reciever = getClient(to);
+                ArrayList<Integer> overseer = new ArrayList<Integer>();
+
+                //0 means that we have not received money
+                //1 means that transaction is ready from one side
+                overseer.add(0);
+                overseer.add(0);
+
+                if(overseer.get(0) == 0){
+
+                    //First step - gather the right amount of money
+                    double containerFrom = howMuchFrom;
+                    overseer.set(0, 1);
+
+                    if(overseer.get(1) == 0){
+                        //Second step - take the money from giver
+                        giver.withdraw(howMuchFrom);
+                        overseer.set(1, 1);
+
+                        if(overseer.get(0) == 1 && overseer.get(1) == 1){
+                            //Third step - give the money to reciever
+                            reciever.deposit(howMuchFrom);
+                            return;
+                        }
+                        else{
+                            //We have to undo the previous move if something happens
+                            giver.deposit(howMuchFrom);
+                            return;
+                        }
+                    }
+
+                    else{
+                        //Here nothing happened yet thankfully
+                        return;
+                    }
+                }
+            }
+        });
+
     }
 
     public NPC getClient(Integer personID){
