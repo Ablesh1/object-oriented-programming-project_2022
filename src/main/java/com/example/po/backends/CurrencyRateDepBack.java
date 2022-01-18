@@ -1,14 +1,11 @@
 package com.example.po.backends;
 
 import com.example.po.Department;
-import javafx.fxml.Initializable;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ResourceBundle;
 
 public class CurrencyRateDepBack extends Department {
 
@@ -19,6 +16,7 @@ public class CurrencyRateDepBack extends Department {
 
     public CurrencyRateDepBack() {
         super();
+        System.out.println("Bruuuh");
     }
 
     @Override

@@ -1,11 +1,11 @@
 package com.example.po.backends;
-
 import com.example.po.Department;
 
 public class ReportsDepBack extends Department {
 
     public ReportsDepBack(){
         super();
+        //System.out.println("Bruuuh");
     }
 
     @Override

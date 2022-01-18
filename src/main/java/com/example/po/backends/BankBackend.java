@@ -1,9 +1,6 @@
 package com.example.po.backends;
-
 import com.example.po.NPC;
-
 import java.util.HashMap;
-
 
 //This class is about keeping database of clients
 public class BankBackend {
@@ -13,23 +10,10 @@ public class BankBackend {
     private ReportsDepBack reportsDep;
     private TransfersDepBack transfersDep;
 
-    public CurrencyRateDepBack getCurrencyRate() {
-        return currencyRate;
-    }
-
-    public StockRateDepBack getStockRate() {
-        return stockRate;
-    }
-
     //We can use HashMap to catalogue NPCs
     //This way it will work faster
     //We can assume that the player will be the first client
     private HashMap<Integer, NPC> database;
-
-    public BankBackend setBankBackend(){
-        return this;
-    }
-
 
     public BankBackend(){
         currencyRate = new CurrencyRateDepBack();
@@ -43,14 +27,22 @@ public class BankBackend {
 
     //Dodawanie i usuwanie NPC
     public void addClient(NPC npc){
-        database.put(npc.getPersId(), npc);
+        database.put(npc.getPersonID(), npc);
     }
 
-    public void removeCliend(Integer persid){
-        database.remove(persid);
+    public void removeClient(Integer personID){
+        database.remove(personID);
     }
 
-    public NPC getClient(Integer persid){
-        return database.get(persid);
+    public NPC getClient(Integer personID){
+        return database.get(personID);
+    }
+
+    public CurrencyRateDepBack getCurrencyRate() {
+        return currencyRate;
+    }
+
+    public StockRateDepBack getStockRate() {
+        return stockRate;
     }
 }

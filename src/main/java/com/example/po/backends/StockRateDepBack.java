@@ -1,7 +1,6 @@
 package com.example.po.backends;
 
 import com.example.po.Department;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,13 +16,14 @@ public class StockRateDepBack extends Department {
 
     public StockRateDepBack() {
         super();
+        //System.out.println("Bruuuh");
     }
 
     @Override
     public void refresh() throws IOException {
         this.StockReader();
         try{
-            System.out.println("Counters do calculations");
+            //System.out.println("Counters do calculations");
             Thread.sleep(5);
         } catch (InterruptedException interruptedException) {
             return;

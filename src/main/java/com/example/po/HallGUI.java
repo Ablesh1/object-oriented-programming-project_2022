@@ -29,6 +29,5 @@ public class HallGUI extends Application {
     //W holu program się zaczyna
     public static void main(String[] args) {
         launch();
-
     }
 }
