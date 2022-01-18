@@ -14,6 +14,7 @@ public class HallGUI extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Bank Visual Novel");
         stage.setScene(scene);
+        Global global = new Global(new BankBackend());
         stage.show();
 
 /*        TransfersDep transfers = new TransfersDep();
@@ -27,5 +28,6 @@ public class HallGUI extends Application {
     //W holu program się zaczyna
     public static void main(String[] args) {
         launch();
+
     }
 }

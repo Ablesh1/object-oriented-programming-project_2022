@@ -29,8 +29,8 @@ public class SceneController {
     Button DepositButton;
 
 
-    CurrencyRateDep currencyRate = new CurrencyRateDep();
-    StockRateDep stockRate = new StockRateDep();
+    //private CurrencyRateDepBack currencyRate;
+    //private StockRateDepBack stockRate;
 
     private Stage stage;
     private Scene scene;
@@ -51,8 +51,13 @@ public class SceneController {
     //Uwaga
 
     public SceneController(){
-        bankBackend = new BankBackend();
+        this.bankBackend = Global.bankBackend;
+
     }
+
+   /* public void setBankBackend(BankBackend bankBackend){
+        this.bankBackend = bankBackend;
+    } */
 
     public void switchToHall(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Hall.fxml"));
@@ -156,7 +161,8 @@ public class SceneController {
     }
 
     public void ShowCurrency() throws IOException {
-        String[] Binder = this.currencyRate.getCurrencyDataBase();
+        CurrencyRateDepBack HelperCurrency = bankBackend.getCurrencyRate();
+        String[] Binder = HelperCurrency.getCurrencyDataBase();
         CurrencyArea.setText(    "\n     " + Binder[0] + "\n");
         CurrencyArea.appendText("     " + Binder[1] + "\n");
         CurrencyArea.appendText("     " + Binder[2] + "\n");
@@ -167,7 +173,8 @@ public class SceneController {
         CurrencyArea.appendText("     " + Binder[7] + "\n");}
 
     public void ShowStock() throws IOException {
-        String[] Binder = this.stockRate.getStockDataBase();
+        StockRateDepBack HelperStock = bankBackend.getStockRate();
+        String[] Binder = HelperStock.getStockDataBase();
         StockArea.setText(    "\n     " + Binder[0] + "\n");
         StockArea.appendText("     " + Binder[1] + "\n");
         StockArea.appendText("     " + Binder[2] + "\n");

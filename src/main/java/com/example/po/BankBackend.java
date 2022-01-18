@@ -6,10 +6,18 @@ import java.util.HashMap;
 //This class is about keeping database of clients
 public class BankBackend {
 
-    CurrencyRateDepBack currencyRate;
-    StockRateDepBack stockRate;
-    ReportsDepBack reportsDep;
-    TransfersDepBack transfersDep;
+    private CurrencyRateDepBack currencyRate;
+    private StockRateDepBack stockRate;
+    private ReportsDepBack reportsDep;
+    private TransfersDepBack transfersDep;
+
+    public CurrencyRateDepBack getCurrencyRate() {
+        return currencyRate;
+    }
+
+    public StockRateDepBack getStockRate() {
+        return stockRate;
+    }
 
     //We can use HashMap to catalogue NPCs
     //This way it will work faster
