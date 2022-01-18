@@ -26,10 +26,6 @@ public class BankBackend {
     //We can assume that the player will be the first client
     private HashMap<Integer, NPC> database;
 
-    public BankBackend setBankBackend(){
-        return this;
-    }
-
 
     public BankBackend(){
         currencyRate = new CurrencyRateDepBack();
