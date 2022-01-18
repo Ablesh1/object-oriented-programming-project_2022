@@ -1,4 +1,6 @@
-package com.example.po;
+package com.example.po.backends;
+
+import com.example.po.NPC;
 
 import java.util.HashMap;
 

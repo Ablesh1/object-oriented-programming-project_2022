@@ -1,4 +1,6 @@
-package com.example.po;
+package com.example.po.backends;
+
+import com.example.po.Department;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +8,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class StockRateDepBack extends Department{
+public class StockRateDepBack extends Department {
 
     private final String[] stockDataBase = new String[8];
     public String[] getStockDataBase() {

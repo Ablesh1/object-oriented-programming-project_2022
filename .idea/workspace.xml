@@ -4,30 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Poprawiona kreacja klas">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Szybka giełda">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/AccountsDep.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CountersDep.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDep.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDepBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/ReportsDep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/AccountsDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/AccountsDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CountersDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CountersDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/CurrencyRateDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CurrencyRateDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCaccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCaccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/ReportsDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/ReportsDepBack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/StockRateDep.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/StockRateDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/StockRateDepBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/TransfersDep.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/StockRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/StockRate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/AccountsDep.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CountersDep.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRateDep.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRateDepBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRateDepBack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/ReportsDep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/StockRateDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/StockRateDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/TransfersDepBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/TransfersDepBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/AccountsDepBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/BankBackend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CountersDepBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRateDepBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Department$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Department$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/HallGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/HallGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPCaccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPCaccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/ReportsDepBack.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/StockRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/StockRate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/StockRateDep.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/StockRateDepBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/StockRateDepBack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/TransfersDep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/StockRateDepBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/TransfersDepBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,17 +83,35 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.po.backends" />
+      <recent name="com.example.po" />
+      <recent name="com.example.po.GUI" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.po" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HallGUI (1)">
+    <configuration name="HallGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.po.GUI.HallGUI" />
+      <module name="Programowanie-Obiektowe-Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.po.backends.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HallGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.po.HallGUI" />
       <module name="Programowanie-Obiektowe-Projekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.po.*" />
+          <option name="PATTERN" value="com.example.po.backends.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,6 +121,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HallGUI (1)" />
         <item itemvalue="Application.HallGUI" />
         <item itemvalue="Application.HallGUI" />
         <item itemvalue="Application.HallGUI" />
@@ -120,7 +145,7 @@
       <workItem from="1642430264538" duration="13331000" />
       <workItem from="1642499423101" duration="962000" />
       <workItem from="1642507319740" duration="5330000" />
-      <workItem from="1642518672660" duration="1317000" />
+      <workItem from="1642518672660" duration="2645000" />
     </task>
     <task id="LOCAL-00001" summary="Wstęp do bazy i NPC">
       <created>1642431352140</created>
@@ -192,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642511298815</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Szybka giełda">
+      <created>1642520255602</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642520255602</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +262,8 @@
     <MESSAGE value="Dodawanie i usuwanie pieniędzy do kąta gracza" />
     <MESSAGE value="Lepsze samobójstwo" />
     <MESSAGE value="Poprawiona kreacja klas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Poprawiona kreacja klas" />
+    <MESSAGE value="Szybka giełda" />
+    <option name="LAST_COMMIT_MESSAGE" value="Szybka giełda" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

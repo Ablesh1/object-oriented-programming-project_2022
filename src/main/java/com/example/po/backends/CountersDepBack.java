@@ -1,7 +1,9 @@
-package com.example.po;
+package com.example.po.backends;
+
+import com.example.po.Department;
 
 //extends Department
-public class CountersDepBack extends Department{
+public class CountersDepBack extends Department {
 
 
     public CountersDepBack() {

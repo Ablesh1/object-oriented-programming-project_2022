@@ -1,15 +1,17 @@
-package com.example.po;
+package com.example.po.backends;
 
-public class TransfersDepBack extends Department{
+import com.example.po.Department;
 
-    public TransfersDepBack() {
+public class ReportsDepBack extends Department {
+
+    public ReportsDepBack(){
         super();
     }
 
     @Override
     public void refresh(){
         try{
-            //System.out.println("Transfers do calculations");
+            //System.out.println("Reports do calculations");
             Thread.sleep(2600);
         } catch (InterruptedException interruptedException) {
             interruptedException.printStackTrace();

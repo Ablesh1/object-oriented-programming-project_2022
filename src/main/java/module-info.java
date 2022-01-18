@@ -13,4 +13,6 @@ module com.example.po {
 
     opens com.example.po to javafx.fxml;
     exports com.example.po;
+    exports com.example.po.backends;
+    opens com.example.po.backends to javafx.fxml;
 }

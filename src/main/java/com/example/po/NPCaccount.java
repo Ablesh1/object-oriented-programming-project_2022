@@ -1,6 +1,8 @@
 package com.example.po;
 
 
+import com.example.po.backends.BankBackend;
+
 //Each NPC has his own account
 public class NPCaccount {
     NPC owner;
@@ -9,6 +11,8 @@ public class NPCaccount {
     //Account tracks how indebt or rich is NPC
     private double deposit;
     private double credit;
+
+    //Balance will be handy when doing AI
     private double balance;
 
     public NPCaccount(NPC npc, double deposit, BankBackend bankBackendPass){

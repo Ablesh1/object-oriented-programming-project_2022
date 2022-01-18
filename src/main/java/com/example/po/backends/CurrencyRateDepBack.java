@@ -1,5 +1,6 @@
-package com.example.po;
+package com.example.po.backends;
 
+import com.example.po.Department;
 import javafx.fxml.Initializable;
 
 import java.io.BufferedReader;
@@ -9,7 +10,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ResourceBundle;
 
-public class CurrencyRateDepBack extends Department{
+public class CurrencyRateDepBack extends Department {
 
     private final String[] currencyDataBase = new String[8];
     public String[] getCurrencyDataBase() {

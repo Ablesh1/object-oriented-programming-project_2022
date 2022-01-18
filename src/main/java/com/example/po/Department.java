@@ -1,11 +1,6 @@
 package com.example.po;
 
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import com.example.po.backends.BankBackend;
 import javafx.stage.Stage;
 
 import java.io.IOException;

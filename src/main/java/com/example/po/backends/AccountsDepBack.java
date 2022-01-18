@@ -1,6 +1,8 @@
-package com.example.po;
+package com.example.po.backends;
 
-public class AccountsDepBack extends Department{
+import com.example.po.Department;
+
+public class AccountsDepBack extends Department {
 
     public AccountsDepBack(){
         super();

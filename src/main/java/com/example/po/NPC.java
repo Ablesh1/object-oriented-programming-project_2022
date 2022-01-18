@@ -1,5 +1,7 @@
 package com.example.po;
 
+import com.example.po.backends.BankBackend;
+
 //Here be general NPC and their behaviours
 //We will put some special NPCs in different classes
 public class NPC extends Thread{
@@ -76,7 +78,6 @@ public class NPC extends Thread{
     public int Suicide(){
         System.out.println(this.persId + "FUCKING KILLED HIMSELF");
         this.bankBackend.removeCliend(this.persId);
-        this.interrupt();
         return 1;
     }
 }
