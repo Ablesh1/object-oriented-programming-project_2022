@@ -41,6 +41,8 @@ public class NPC extends Thread{
 
         //Not yet
         this.iWantToDie = 0;
+
+        this.start();
     }
 
 
@@ -48,7 +50,9 @@ public class NPC extends Thread{
         while (iWantToDie != 1){
             //Do something
             try{
-            Thread.sleep(3600);}
+            Thread.sleep(3600);
+            System.out.println(this.npcAccount.checkCredit());
+            }
             catch(InterruptedException e){
                 continue;
                 }
@@ -71,6 +75,7 @@ public class NPC extends Thread{
     //Yes, it`s only to show that we know how to do it
     public int Suicide(){
         System.out.println(this.persId + "FUCKING KILLED HIMSELF");
+        this.bankBackend.removeCliend(this.persId);
         this.interrupt();
         return 1;
     }

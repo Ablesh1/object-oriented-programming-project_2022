@@ -8,12 +8,12 @@ public class NPCaccount {
 
     //Account tracks how indebt or rich is NPC
     private double deposit;
-    private double debit;
+    private double credit;
 
     public NPCaccount(NPC npc, double deposit, BankBackend bankBackendPass){
         owner = npc;
         this.deposit = deposit;
-        this.debit = 0;
+        this.credit = 0;
         bankBackend = bankBackendPass;
     }
 
@@ -22,6 +22,10 @@ public class NPCaccount {
         this.deposit += todeposit;
         owner.setPersBelongings(todeposit);
         }
+    }
+
+    public double checkCredit(){
+        return this.credit;
     }
 
     public double currentMoney(){
