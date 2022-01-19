@@ -1,8 +1,10 @@
 package com.example.po.NPChandling;
 import com.example.po.backends.BankBackend;
 
+import java.io.Serializable;
+
 //Each NPC has his own account
-public class NPCAccount {
+public class NPCAccount implements Serializable {
     NPC owner;
     BankBackend bankBackend;
 
@@ -42,6 +44,13 @@ public class NPCAccount {
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////
+    //Dopierdol tu co się stanie jak zapłacisz więcej niż masz
+    public void payment(double howMuch){
+        this.accountMoney -= howMuch;
+    }
+    ////////////////////////////////////////////////////////////
 
     public Double getBankInvestment() {
         return bankInvestment;

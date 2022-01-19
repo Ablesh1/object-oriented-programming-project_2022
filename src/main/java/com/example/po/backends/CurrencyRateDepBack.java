@@ -4,10 +4,11 @@ import com.example.po.Department;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class CurrencyRateDepBack extends Department {
+public class CurrencyRateDepBack extends Department{
 
     private final String[] currencyDataBase = new String[8];
     public String[] getCurrencyDataBase() {
@@ -16,7 +17,7 @@ public class CurrencyRateDepBack extends Department {
 
     public CurrencyRateDepBack() {
         super();
-        System.out.println("Bruuuh");
+        //System.out.println("Bruuuh");
     }
 
     @Override

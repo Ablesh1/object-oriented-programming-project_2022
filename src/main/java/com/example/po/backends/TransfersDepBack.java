@@ -1,7 +1,9 @@
 package com.example.po.backends;
 import com.example.po.Department;
 
-public class TransfersDepBack extends Department {
+import java.io.Serializable;
+
+public class TransfersDepBack extends Department{
 
     public TransfersDepBack() {
         super();
