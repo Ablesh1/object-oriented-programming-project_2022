@@ -29,7 +29,9 @@ public class BankBackend {
         transfersDep = new TransfersDepBack();
         this.database = new HashMap<Integer, NPC>();
         //NPC(Integer idNumber, String name, String surname, Integer pesel, double Debit)
-        addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 100000.0,0.0, 0,0.0, 0, this, 10000.0, "Character"));
+        addClient(new NPC(1, "Morshu", "Easter Egg", 2137213721, 100000.0,0.0, 0,0.0, 0, this, 10000.0, "charitable", 213777));
+        addClient(new NPC(2, "Anon", "Anonimowy", 2137213721, 1000.0,0.0, 0,0.0, 0, this, 10000.0, "character", 213777));
+
     }
 
     //Dodawanie i usuwanie NPC
@@ -98,6 +100,7 @@ public class BankBackend {
 
 
     //I habe no heart to try if this abomination works
+    //I lied. It actually works pretty well
     public Integer askforPoor(){
         Thread poorThread = new Thread(new Runnable() {
             @Override
@@ -105,12 +108,20 @@ public class BankBackend {
                 HashMap<Double, Integer> poorClients = new HashMap();
 
                 //For lambdas there are some points too
-                database.forEach((k,v) -> poorClients.put(v.getActualDebt(), k));
-
+                database.forEach((k,v) -> poorClients.put(v.getAccountMoneyAI(), k));
                 //FOR COLLECTIONS TOO
-                Double min = Collections.min(poorClients.keySet());
-                thePoorOne = database.get(min).getPersonID();
 
+                //Big brain time so large I can`t comperhend
+                //Thanks Tzzentch
+                Double min = Collections.min(poorClients.keySet());
+                Integer minId = poorClients.get(min);
+                NPC thePoorOneNpc = database.get(minId);
+                thePoorOne = thePoorOneNpc.getPersonID();
+
+                if(thePoorOne == null){
+                    //Warning - potential money laundring
+                    return;
+                }
                 }
         });
         poorThread.start();

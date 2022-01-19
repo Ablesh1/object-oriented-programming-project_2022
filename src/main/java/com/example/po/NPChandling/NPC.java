@@ -130,6 +130,7 @@ public class NPC extends Thread{
                     //Bacause you send money to ID not person themself
                     //Max 80% of what the person have
                     this.bankBackend.transferMoney(this.personID, thePoorestOne, random.nextDouble(this.npcAccount.getAccountMoney() * 0.8));
+                    //System.out.println("Przekazano piniąże temu typowi: " + thePoorestOne);
                 }
                 else if(whatToDo > 6 && whatToDo < 8){
 
@@ -174,6 +175,11 @@ public class NPC extends Thread{
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void run(){
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            ;
+        }
         while (iWantToDie != 1){
             //Do something
             try{
