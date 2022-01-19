@@ -13,7 +13,7 @@ public class BankBackend {
     private TransfersDepBack transfersDep;
 
     //We can use HashMap to catalogue NPCs
-    //This way it will work faster
+    //This way it will work fasters
     //We can assume that the player will be the first client
     private HashMap<Integer, NPC> database;
 
