@@ -18,13 +18,13 @@ public class NPC extends Thread{
     private String character;
     private int iWantToDie;
 
-    public NPC(Integer idNumber, String name, String surname, Integer pesel, double debit, BankBackend bankBackend, double personBelongings){
+    public NPC(Integer idNumber, String name, String surname, Integer pesel, Double accountMoney, Double bankLoan, Integer installmentNumber, Double bankInvestment, Integer investmentDuration, BankBackend bankBackend, Double personBelongings){
         this.personID = idNumber;
         this.name = name;
         this.surname = surname;
         this.pesel = pesel;
         this.bankBackend = bankBackend;
-        this.npcAccount = new NPCAccount(this, debit, bankBackend);
+        this.npcAccount = new NPCAccount(this, accountMoney, bankLoan, installmentNumber, bankInvestment, investmentDuration, bankBackend);
         this.personBelongings = personBelongings;
 
         //Not yet
@@ -48,6 +48,22 @@ public class NPC extends Thread{
         this.personBelongings = personBelongings;
     }
 
+    public Double getAccountMoneyAI() {
+        return this.npcAccount.getAccountMoney();
+    }
+
+    public Double getInstallmentAmount() {
+        return this.npcAccount.getInstallmentAmount();
+    }
+
+    public Double getActualDebt() {
+        return this.npcAccount.getActualDebt();
+    }
+
+    public Double getBankInvestment() {
+        return this.npcAccount.getBankInvestment();
+    }
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -68,8 +84,20 @@ public class NPC extends Thread{
         npcAccount.withdrawFromAccount(withdraw);
     }
 
-    public Double getAccountMoneyAI(){
-        return this.npcAccount.getAccountMoney();
+    public void takeLoan(double loan, int number) {
+        npcAccount.takeBankLoan(loan, number);
+    }
+
+    public void payLoan() {
+        npcAccount.payInstallment();
+    }
+
+    public void makeInvestment(double investment, int number) {
+        npcAccount.makeBankInvestment(investment, number);
+    }
+
+    public void closeInvestment() {
+        npcAccount.closeInvestment();
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -80,6 +108,7 @@ public class NPC extends Thread{
             //Do something
             try{
                 Thread.sleep(3600);
+                //Chce to zmienic bo usuwam metode checkCredit
                 System.out.println(this.npcAccount.checkCredit());
             }
             catch(InterruptedException e){

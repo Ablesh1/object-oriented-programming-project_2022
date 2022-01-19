@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="TransferMoney">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -118,7 +118,6 @@
       <workItem from="1642499423101" duration="962000" />
       <workItem from="1642507319740" duration="5330000" />
       <workItem from="1642518672660" duration="2645000" />
-      <workItem from="1642542281090" duration="1222000" />
     </task>
     <task id="LOCAL-00001" summary="Wstęp do bazy i NPC">
       <created>1642431352140</created>
@@ -211,14 +210,63 @@
       <option name="project" value="LOCAL" />
       <updated>1642533537782</updated>
     </task>
-    <task id="LOCAL-00014" summary="TransferMoney">
-      <created>1642541533342</created>
+    <task id="LOCAL-00014" summary="Add Loan and Investment mechanics">
+      <created>1642557682680</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1642541533342</updated>
+      <updated>1642557682680</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add special getters for Loan and Investment variables, upgrade constructor">
+      <created>1642557745186</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1642557745186</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Upgrade constructor">
+      <created>1642557760826</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1642557760826</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add complete BankLoan.fxml">
+      <created>1642557801650</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1642557801650</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add incomplete BankInvestment.fxml">
+      <created>1642557826946</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1642557826946</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add access to Loan and Investment fxml files">
+      <created>1642557884561</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1642557884561</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Adjust SceneController to new mechanics - plenty of Loan and Investment methods added">
+      <created>1642557975808</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1642557975808</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Unversioned commit">
+      <created>1642557990597</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1642557990597</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,16 +285,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial commit" />
-    <MESSAGE value="Unversioned files" />
-    <MESSAGE value="Change of class and methods names to English" />
-    <MESSAGE value="Add Counters.java Class" />
     <MESSAGE value="Add Counters.fxml" />
     <MESSAGE value="Change of class and methods names to English, add Counters.java Class elements" />
     <MESSAGE value="Rebuild GUI, add Counters.java Class elements" />
     <MESSAGE value="Rebuild GUI" />
     <MESSAGE value="Target commit" />
-    <MESSAGE value="Unversioned commit" />
     <MESSAGE value="Wstęp do bazy i NPC" />
     <MESSAGE value="Some refactoring mostly" />
     <MESSAGE value="Doing God`s work" />
@@ -259,8 +302,15 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Fxml refactoring" />
     <MESSAGE value="Pusheł" />
-    <MESSAGE value="TransferMoney" />
-    <option name="LAST_COMMIT_MESSAGE" value="TransferMoney" />
+    <MESSAGE value="Add Loan and Investment mechanics" />
+    <MESSAGE value="Add special getters for Loan and Investment variables, upgrade constructor" />
+    <MESSAGE value="Upgrade constructor" />
+    <MESSAGE value="Add complete BankLoan.fxml" />
+    <MESSAGE value="Add incomplete BankInvestment.fxml" />
+    <MESSAGE value="Add access to Loan and Investment fxml files" />
+    <MESSAGE value="Adjust SceneController to new mechanics - plenty of Loan and Investment methods added" />
+    <MESSAGE value="Unversioned commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unversioned commit" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
