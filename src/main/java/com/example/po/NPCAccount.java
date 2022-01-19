@@ -115,15 +115,15 @@ public class NPCAccount {
     }
 
     public void payInstallment() {
-        if (this.accountMoney > 0 &&this.actualDebt > 0 && this.counter < this.installmentNumber) {
+        if (this.accountMoney - getInstallmentAmount() >= 0 &&this.actualDebt > 0 && this.counter < this.installmentNumber) {
             this.accountMoney -= getInstallmentAmount();
             this.actualDebt -= getInstallmentAmount();
             this.counter ++;
-            if (this.actualDebt < 0.01) {
+            if (this.actualDebt < 0.001) {
                 this.actualDebt = 0;
             }
         }
-        else {
+        else if((this.actualDebt < 0.01 && this.actualDebt > 0.001) || this.actualDebt == 0){
             this.actualDebt = 0;
             this.counter = 0;
             this.trust = true;
