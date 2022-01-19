@@ -1,4 +1,4 @@
-package com.example.po;
+package com.example.po.NPChandling;
 import com.example.po.backends.BankBackend;
 
 //Each NPC has his own account

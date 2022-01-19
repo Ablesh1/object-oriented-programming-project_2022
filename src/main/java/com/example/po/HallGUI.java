@@ -17,13 +17,6 @@ public class HallGUI extends Application {
         stage.setScene(scene);
         Global global = new Global(new BankBackend());
         stage.show();
-
-/*        TransfersDep transfers = new TransfersDep();
-        AccountsDep accounts = new AccountsDep();
-        ReportsDep reports = new ReportsDep();
-        CountersDep counters = new CountersDep();
-        CurrencyRateDep currencyRate = new CurrencyRateDep();
-        StockRateDep stockRate = new StockRateDep();*/
     }
 
     //W holu program się zaczyna

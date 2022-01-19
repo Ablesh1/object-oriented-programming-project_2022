@@ -1,5 +1,6 @@
 package com.example.po;
 
+import com.example.po.NPChandling.NPC;
 import com.example.po.backends.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

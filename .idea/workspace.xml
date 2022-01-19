@@ -6,7 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPCAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/HallGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/HallGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPCaccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +72,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.po.NPChandling" />
       <recent name="com.example.po.backends" />
       <recent name="com.example.po" />
       <recent name="com.example.po.GUI" />
@@ -71,7 +87,7 @@
       <module name="Programowanie-Obiektowe-Projekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.po.*" />
+          <option name="PATTERN" value="com.example.po.NPChandling.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

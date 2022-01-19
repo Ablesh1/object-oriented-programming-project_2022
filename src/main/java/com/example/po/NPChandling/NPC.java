@@ -1,5 +1,8 @@
-package com.example.po;
+package com.example.po.NPChandling;
 import com.example.po.backends.BankBackend;
+
+import java.util.Random;
+
 
 //Here be general NPC and their behaviours
 //We will put some special NPCs in different classes
@@ -13,12 +16,13 @@ public class NPC extends Thread{
     private String surname;
     private NPCAccount npcAccount;
     private Double personBelongings;
+    private double monthlyIncome;
 
     //Character describes how the NPC behaves
-    private String character;
+    private String personality;
     private int iWantToDie;
 
-    public NPC(Integer idNumber, String name, String surname, Integer pesel, Double accountMoney, Double bankLoan, Integer installmentNumber, Double bankInvestment, Integer investmentDuration, BankBackend bankBackend, Double personBelongings){
+    public NPC(Integer idNumber, String name, String surname, Integer pesel, Double accountMoney, Double bankLoan, Integer installmentNumber, Double bankInvestment, Integer investmentDuration, BankBackend bankBackend, Double personBelongings, String personality, double monthlyIncome){
         this.personID = idNumber;
         this.name = name;
         this.surname = surname;
@@ -26,6 +30,8 @@ public class NPC extends Thread{
         this.bankBackend = bankBackend;
         this.npcAccount = new NPCAccount(this, accountMoney, bankLoan, installmentNumber, bankInvestment, investmentDuration, bankBackend);
         this.personBelongings = personBelongings;
+        this.personality = personality;
+        this.monthlyIncome = monthlyIncome;
 
         //Not yet
         this.iWantToDie = 0;
@@ -100,6 +106,70 @@ public class NPC extends Thread{
         npcAccount.closeInvestment();
     }
 
+    public void incrasePersonBelongings(Double income) {
+        this.personBelongings += income;
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //AI be here
+    //My intention here is to write the AI so bad I will never be allowed to work with it ever again
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public void npcBehaviour(NPC npc){
+        Random random = new Random();
+        //AI will want to do thing based on this variable
+        int whatToDo = random.nextInt(10);
+
+        //I HATE YANDEREDEV
+        switch (personality){
+            case("charitable"):
+                if(whatToDo == 0){
+                }
+                else if (whatToDo > 0 && whatToDo <= 6){
+                    Integer thePoorestOne = lookforpoorestclient();
+                    //Bacause you send money to ID not person themself
+                    //Max 80% of what the person have
+                    this.bankBackend.transferMoney(this.personID, thePoorestOne, random.nextDouble(this.npcAccount.getAccountMoney() * 0.8));
+                }
+                else if(whatToDo > 6 && whatToDo < 8){
+
+                    double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.6);
+                    this.npcAccount.withdrawFromAccount(thisMonthRandExpenses);
+                    this.personBelongings -= thisMonthRandExpenses;
+                    }
+                else{
+                    double thisMonthIncomeExtra = random.nextDouble(2500);
+                    this.npcAccount.setBankInvestment(thisMonthIncomeExtra);
+                }
+                this.incrasePersonBelongings(monthlyIncome);
+
+                //Dodaj może że te inwestycyjne oddają kasę automatycznie po trzech miesiącach bo nie chce mi się
+                //Tego programować
+
+                break;
+
+            case("investor"):
+            ;
+            case("normie"):
+                break
+                ;
+
+            //Testing
+            case("testificate"):
+                break
+            ;
+
+            //We won`t be doing stuff for the player
+            case("Character"):
+                break;
+        };
+    }
+
+    //This will return id of poorest person in bank
+    public Integer lookforpoorestclient(){
+        return bankBackend.askforPoor();
+    }
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -107,7 +177,15 @@ public class NPC extends Thread{
         while (iWantToDie != 1){
             //Do something
             try{
-                Thread.sleep(3600);
+
+                //Moving the code to differend function
+                //Bare in mind that it may be suboptimal as invoking a function can be CPU deamnding\
+                //But in this case it may help with code-readability
+                npcBehaviour(this);
+                //////////////////////////////////////////////
+                //Let`s assume it`s how long one month takes//
+                //////////////////////////////////////////////
+                Thread.sleep(8600);
                 //Chce to zmienic bo usuwam metode checkCredit
                 System.out.println(this.npcAccount.checkCredit());
             }

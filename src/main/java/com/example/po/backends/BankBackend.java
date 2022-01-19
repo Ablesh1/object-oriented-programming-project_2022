@@ -1,7 +1,8 @@
 package com.example.po.backends;
-import com.example.po.NPC;
+import com.example.po.NPChandling.NPC;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 //This class is about keeping database of clients
@@ -12,10 +13,14 @@ public class BankBackend {
     private ReportsDepBack reportsDep;
     private TransfersDepBack transfersDep;
 
+
     //We can use HashMap to catalogue NPCs
     //This way it will work fasters
     //We can assume that the player will be the first client
     private HashMap<Integer, NPC> database;
+
+    //I hate it. I really do.
+    private Integer thePoorOne;
 
     public BankBackend(){
         currencyRate = new CurrencyRateDepBack();
@@ -24,7 +29,7 @@ public class BankBackend {
         transfersDep = new TransfersDepBack();
         this.database = new HashMap<Integer, NPC>();
         //NPC(Integer idNumber, String name, String surname, Integer pesel, double Debit)
-        addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 100000.0,0.0, 0,0.0, 0, this, 10000.0));
+        addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 100000.0,0.0, 0,0.0, 0, this, 10000.0, "Character"));
     }
 
     //Dodawanie i usuwanie NPC
@@ -84,8 +89,37 @@ public class BankBackend {
 
     }
 
+    public void investMoney(){}
+
+
     public NPC getClient(Integer personID){
         return database.get(personID);
+    };
+
+
+    //I habe no heart to try if this abomination works
+    public Integer askforPoor(){
+        Thread poorThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                HashMap<Double, Integer> poorClients = new HashMap();
+
+                //For lambdas there are some points too
+                database.forEach((k,v) -> poorClients.put(v.getActualDebt(), k));
+
+                //FOR COLLECTIONS TOO
+                Double min = Collections.min(poorClients.keySet());
+                thePoorOne = database.get(min).getPersonID();
+
+                }
+        });
+        poorThread.start();
+        return this.thePoorOne;
+    }
+
+    //It`s effectively a getter just for one funciton only
+    public Integer tellThePoor(Integer key){
+        return key;
     }
 
     public CurrencyRateDepBack getCurrencyRate() {
