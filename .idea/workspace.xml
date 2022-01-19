@@ -5,8 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Fxml refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/BankInvestment.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/BankLoan.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPCAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Counters.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Counters.fxml~a83ac3598aa9c5c331ce87c6717ca655968cbfc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.class~a83ac3598aa9c5c331ce87c6717ca655968cbfc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/CurrencyRate.fxml~a83ac3598aa9c5c331ce87c6717ca655968cbfc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Hall.class~a83ac3598aa9c5c331ce87c6717ca655968cbfc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPCaccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPCaccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class~a83ac3598aa9c5c331ce87c6717ca655968cbfc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
