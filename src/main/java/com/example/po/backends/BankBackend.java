@@ -24,7 +24,7 @@ public class BankBackend {
         transfersDep = new TransfersDepBack();
         this.database = new HashMap<Integer, NPC>();
         //NPC(Integer idNumber, String name, String surname, Integer pesel, double Debit)
-        addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 2137, this, 10000.0));
+        addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 100000.0,0.0, 0,0.0, 0, this, 10000.0));
     }
 
     //Dodawanie i usuwanie NPC
