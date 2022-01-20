@@ -3,9 +3,9 @@ import com.example.po.Department;
 
 import java.io.Serializable;
 
-public class CountersDepBack extends Department{
+public class CountersDep extends Department{
 
-    public CountersDepBack() {
+    public CountersDep() {
         super();
         //System.out.println("Bruuuh");
     }

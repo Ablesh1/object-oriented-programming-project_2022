@@ -7,10 +7,11 @@ import java.util.*;
 //This class is about keeping database of clients
 public class BankBackend implements Serializable{
 
-    private static CurrencyRateDepBack currencyRate;
-    private static StockRateDepBack stockRate;
-    private static ReportsDepBack reportsDep;
-    private static TransfersDepBack transfersDep;
+    private static CurrencyRateDep currencyRate;
+    private static StockRateDep stockRate;
+    private static ReportsDep reportsDep;
+    private static TransfersDep transfersDep;
+    private static Writer writter = new Writer();
 
     //We can use HashMap to catalogue NPCs
     //This way it will work fasters
@@ -22,10 +23,10 @@ public class BankBackend implements Serializable{
     private Integer randomClient;
 
     public BankBackend(){
-        currencyRate = new CurrencyRateDepBack();
-        stockRate = new StockRateDepBack();
-        reportsDep = new ReportsDepBack();
-        transfersDep = new TransfersDepBack();
+        currencyRate = new CurrencyRateDep();
+        stockRate = new StockRateDep();
+        reportsDep = new ReportsDep();
+        transfersDep = new TransfersDep();
         this.database = new HashMap<Integer, NPC>();
         this.randomClient = 2;
         this.thePoorOne = 2;
@@ -35,13 +36,13 @@ public class BankBackend implements Serializable{
         addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 1000.0,0.0, 0,0.0, 0, this, 10000.0, "character", 213777));
 
         //Ci klienci są już zapisani w Client.dat
-        //addClient(new NPC(2, "Jurij", "Owsienko", 797404004, 100000.0,0.0, 0,0.0, 0, this, 10000.0, "charitable", 213777));
-        //addClient(new NPC(3, "Morshu", "Easter Egg", 854627322, 999999.99,0.0, 0,0.0, 0, this, 99999.99, "normie", 999999));
-        //addClient(new NPC(4, "Pan", "Alber", 36452152, 142142.0,0.0, 0,0.0, 0, this, 48540.0, "normie", 16000.0));;
+        addClient(new NPC(2, "Jurij", "Owsienko", 797404004, 100000.0,0.0, 0,0.0, 0, this, 10000.0, "charitable", 213777));
+        addClient(new NPC(3, "Morshu", "Easter Egg", 854627322, 999999.99,0.0, 0,0.0, 0, this, 99999.99, "normie", 999999));
+        addClient(new NPC(4, "Pan", "Alber", 36452152, 142142.0,0.0, 0,0.0, 0, this, 48540.0, "normie", 16000.0));;
 
         addClient(new NPC(5, "Testificate", "Kaminari", 36452152, 142142.0,0.0, 0,0.0, 0, this, 48540.0, "testificate", 16000.0));
 
-        //saver(database);
+        saver(database);
 
         loader();
 
@@ -131,7 +132,6 @@ public class BankBackend implements Serializable{
     //It must do on a separate thread
     //Otherwise might cause bottlenecks
     public void transferMoney(Integer from, Integer to, double howMuchFrom){
-        System.out.println("Od " + from + " do " + to);
         Thread transferThread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -158,11 +158,21 @@ public class BankBackend implements Serializable{
                         if(overseer.get(0) == 1 && overseer.get(1) == 1){
                             //Third step - give the money to reciever
                             reciever.deposit(howMuchFrom);
+                            StringBuilder stringBuilder = new StringBuilder();
+                            stringBuilder.append("Od " + from + " do " + to + " " + howMuchFrom);
+                            String finalString = stringBuilder.toString();
+
+                            try {
+                                writter.writeTransfers(finalString);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                             return;
                         }
                         else{
                             //We have to undo the previous move if something happens
                             giver.deposit(howMuchFrom);
+
                             return;
                         }
                     }
@@ -174,7 +184,7 @@ public class BankBackend implements Serializable{
                 }
             }
         });
-
+        transferThread.start();
     }
 
     public Integer getRandomPerson(){
@@ -235,11 +245,11 @@ public class BankBackend implements Serializable{
         return key;
     }
 
-    public CurrencyRateDepBack getCurrencyRate() {
+    public CurrencyRateDep getCurrencyRate() {
         return currencyRate;
     }
 
-    public StockRateDepBack getStockRate() {
+    public StockRateDep getStockRate() {
         return stockRate;
     }
 }

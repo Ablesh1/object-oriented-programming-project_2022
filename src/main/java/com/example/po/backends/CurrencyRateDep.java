@@ -8,14 +8,14 @@ import java.io.Serializable;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class CurrencyRateDepBack extends Department{
+public class CurrencyRateDep extends Department{
 
     private final String[] currencyDataBase = new String[8];
     public String[] getCurrencyDataBase() {
         return currencyDataBase;
     }
 
-    public CurrencyRateDepBack() {
+    public CurrencyRateDep() {
         super();
         //System.out.println("Bruuuh");
     }

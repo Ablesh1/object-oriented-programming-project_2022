@@ -1,6 +1,7 @@
 package com.example.po.NPChandling;
 import com.example.po.backends.BankBackend;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 //Each NPC has his own account

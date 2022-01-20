@@ -68,11 +68,11 @@ public class SceneController{
     //Assigning the bank to the GUI
     private BankBackend bankBackend;
     //Kontrolne do wyłączania
-    private TransfersDepBack transfers;
-    private AccountsDepBack accounts;
-    private ReportsDepBack reports;
+    private TransfersDep transfers;
+    private AccountsDep accounts;
+    private ReportsDep reports;
     private OfficeGUI office;
-    private CountersDepBack counters;
+    private CountersDep counters;
 
     //Kontroler SceneController odpala się za każdym
     //Przejściem między scenami
@@ -288,7 +288,7 @@ public class SceneController{
             @Override
             public void run() {
 
-                CurrencyRateDepBack HelperCurrency = bankBackend.getCurrencyRate();
+                CurrencyRateDep HelperCurrency = bankBackend.getCurrencyRate();
                 String[] Binder = HelperCurrency.getCurrencyDataBase();
                 while(Binder[7] == null){
                     try{
@@ -317,7 +317,7 @@ public class SceneController{
             @Override
             public void run() {
 
-                StockRateDepBack HelperStock = bankBackend.getStockRate();
+                StockRateDep HelperStock = bankBackend.getStockRate();
                 String[] Binder = HelperStock.getStockDataBase();
                 while(Binder[7] == null){
                     try{

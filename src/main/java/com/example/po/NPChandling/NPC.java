@@ -1,5 +1,6 @@
 package com.example.po.NPChandling;
 import com.example.po.backends.BankBackend;
+import com.example.po.backends.Writer;
 
 import java.io.*;
 import java.util.logging.Level;
@@ -115,6 +116,18 @@ public class NPC extends Thread implements Serializable{
 
     public void withdraw(double withdraw) {
         npcAccount.withdrawFromAccount(withdraw);
+        Writer writter = new Writer();
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(this.getPersName() + " " + this.getPersName()
+        + " wybiera " + withdraw);
+        String finalString = stringBuilder.toString();
+
+        try {
+            writter.writeWithdraws(finalString);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void takeLoan(double loan, int number) {
@@ -191,7 +204,7 @@ public class NPC extends Thread implements Serializable{
                 else{
                     if(this.npcAccount.getAccountMoney() > 70000){
                         ////Did some taxes and bought 1kg of uranium
-                        this.npcAccount.withdrawFromAccount(50000.32);
+                        this.withdraw(50000.32);
                         this.personBelongings -= 50000;
 
                         logger.log(Level.INFO, "Charitable person" + this.getPersName() + " " + this.getSurname()
