@@ -103,7 +103,7 @@ public class NPC extends Thread implements Serializable{
     //Suicide method kills the NPC
     //Yes, this is the first function I wrote
     //Yes, it`s only to show that we know how to do it
-    public int Suicide(){
+    public int suicide(){
         System.out.println(this.getPersName() + " " + this.getSurname() + " FUCKING KILLED HIMSELF");
         this.bankBackend.removeClient(this.personID);
         this.iWantToDie = 1;
@@ -329,7 +329,7 @@ public class NPC extends Thread implements Serializable{
                 //////////////////////////////////////////////
                 //Let`s assume it`s how long one month takes//
                 //////////////////////////////////////////////
-                Thread.sleep(8600);
+                Thread.sleep(860);
                 //Chce to zmienic bo usuwam metode checkCredit
             }
             catch(InterruptedException e){

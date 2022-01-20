@@ -77,6 +77,10 @@ public class BankBackend implements Serializable{
 
     //I HATE THE ANTICHRIST
     //DON`T YOU EVER DARE TO LOOK HERE
+
+    //Pierwsze dwie linijki zczytują wartości z pliku i tworzą listę NPCtów
+    //Następnie każdy NPC jest dodawany do banku i agregujemy bank do NPC
+    //Na zaś zostaje odpalony wątek
     public void loader(){
         try {
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("Client.dat"));
