@@ -12,7 +12,6 @@ public class BankBackend implements Serializable{
     private static ReportsDepBack reportsDep;
     private static TransfersDepBack transfersDep;
 
-
     //We can use HashMap to catalogue NPCs
     //This way it will work fasters
     //We can assume that the player will be the first client
@@ -33,10 +32,16 @@ public class BankBackend implements Serializable{
 
         //NPC(Integer idNumber, String name, String surname, Integer pesel, double Debit)
 
-        addClient(new NPC(2, "Anon", "Anonimowy", 2137213721, 1000.0,0.0, 0,0.0, 0, this, 10000.0, "character", 213777));
-        addClient(new NPC(4, "Testificate", "Kaminari", 36452152, 142142.0,0.0, 0,0.0, 0, this, 48540.0, "testificate", 16000.0));
+        addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 1000.0,0.0, 0,0.0, 0, this, 10000.0, "character", 213777));
 
-        saver();
+        //Ci klienci są już zapisani w Client.dat
+        //addClient(new NPC(2, "Jurij", "Owsienko", 797404004, 100000.0,0.0, 0,0.0, 0, this, 10000.0, "charitable", 213777));
+        //addClient(new NPC(3, "Morshu", "Easter Egg", 854627322, 999999.99,0.0, 0,0.0, 0, this, 99999.99, "normie", 999999));
+        //addClient(new NPC(4, "Pan", "Alber", 36452152, 142142.0,0.0, 0,0.0, 0, this, 48540.0, "normie", 16000.0));;
+
+        addClient(new NPC(5, "Testificate", "Kaminari", 36452152, 142142.0,0.0, 0,0.0, 0, this, 48540.0, "testificate", 16000.0));
+
+        //saver(database);
 
         loader();
 
@@ -48,26 +53,18 @@ public class BankBackend implements Serializable{
     //Dodawanie i usuwanie NPC
 
 
-    public void saver(){
+    public void saver(HashMap<Integer, NPC> database){
         try (FileOutputStream fos = new FileOutputStream("Client.dat");
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
 
             ArrayList<NPC> saviour = new ArrayList<>();
 
-            // create a new user object
-            NPC npc1 = (new NPC(1, "Jurij", "Owsienko", 797404004, 100000.0,0.0, 0,0.0, 0, this, 10000.0, "charitable", 213777));
-            NPC npc3 = (new NPC(3, "Morshu", "Easter Egg", 854627322, 999999.99,0.0, 0,0.0, 0, this, 99999.99, "normie", 999999));
-            NPC npc4 = (new NPC(4, "Pan", "Alber", 36452152, 142142.0,0.0, 0,0.0, 0, this, 48540.0, "normie", 16000.0));;
+            database.forEach((k, v) -> {saviour.add(v); });
 
-            saviour.add(npc1);
-            saviour.add(npc3);
-            saviour.add(npc4);
+            saviour.remove(1);
 
             // write list of objects to file
             oos.writeObject(saviour);
-            npc1.Suicide();
-            npc3.Suicide();
-            npc4.Suicide();
             oos.close();
 
 
@@ -114,11 +111,21 @@ public class BankBackend implements Serializable{
     }
 
     public void addClient(NPC npc){
-        database.put(npc.getPersonID(), npc);
+        database.put(database.size() + 1, npc);
     }
 
     public void removeClient(Integer personID){
         database.remove(personID);
+        HashMap<Integer, NPC> replacer = new HashMap<>();
+
+        for(int j = 0; j < personID; j ++){
+            replacer.put(j, database.get(j));
+        }
+
+        for(int i = personID; i < database.size(); i ++){
+            database.get(i).setPersonID(database.get(i).getPersonID() - 1);
+            replacer.put(database.get(i).getPersonID(), database.get(i));
+        }
     }
 
     //It must do on a separate thread

@@ -23,10 +23,6 @@ public class NPC extends Thread implements Serializable{
     private static File fout;
     private static PrintWriter writer;
 
-    public void setBankBackend(BankBackend bankBackend) {
-        this.bankBackend = bankBackend;
-    }
-
     //Logging stuff
     private static Logger logger;
 
@@ -65,6 +61,14 @@ public class NPC extends Thread implements Serializable{
 
     public Integer getPersonID() {
         return personID;
+    }
+
+    public void setBankBackend(BankBackend bankBackend) {
+        this.bankBackend = bankBackend;
+    }
+
+    public void setPersonID(Integer personID) {
+        this.personID = personID;
     }
 
     //Ile masz przy sobie?
@@ -280,6 +284,7 @@ public class NPC extends Thread implements Serializable{
 
             //We won`t be doing stuff for the player
             case("Character"):
+                logger.log(Level.INFO, " Player kinda exist ");
                 break;
         };
     }
@@ -293,6 +298,7 @@ public class NPC extends Thread implements Serializable{
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void run(){
+        this.iWantToDie = 0;
         System.out.println("HAAAALO JEST TU KTO? " + this.getSurname());
         try {
             Thread.sleep(1200);
