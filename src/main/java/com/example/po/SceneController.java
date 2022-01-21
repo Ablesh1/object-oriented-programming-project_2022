@@ -293,7 +293,6 @@ public class SceneController{
                 while(Binder[7] == null){
                     try{
                         Thread.sleep(10);
-                        System.out.println("Bruh");
                     }
                     catch (InterruptedException i){
                         ;

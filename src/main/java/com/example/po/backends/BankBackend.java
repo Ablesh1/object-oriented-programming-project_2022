@@ -33,14 +33,14 @@ public class BankBackend implements Serializable{
 
         //NPC(Integer idNumber, String name, String surname, Integer pesel, double Debit)
 
-        addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 1000.0,0.0, 0,0.0, 0, this, 10000.0, "character", 213777));
+        addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 1000.0,0.0, 0,0.0, 0, this, 10000.0, "Character", 2137));
 
         //Ci klienci są już zapisani w Client.dat
-        addClient(new NPC(2, "Jurij", "Owsienko", 797404004, 100000.0,0.0, 0,0.0, 0, this, 10000.0, "charitable", 213777));
-        addClient(new NPC(3, "Morshu", "Easter Egg", 854627322, 999999.99,0.0, 0,0.0, 0, this, 99999.99, "normie", 999999));
-        addClient(new NPC(4, "Pan", "Alber", 36452152, 142142.0,0.0, 0,0.0, 0, this, 48540.0, "normie", 16000.0));;
+        addClient(new NPC(2, "Jurij", "Owsienko", 797404004, 4141.0,0.0, 0,0.0, 0, this, 1200.0, "charitable", 2500));
+        addClient(new NPC(3, "Morshu", "Easter Egg", 854627322, 1421.0,0.0, 0,0.0, 0, this, 600.99, "normie", 35000));
+        addClient(new NPC(4, "Pan", "Alber", 36452152, 21352.0,0.0, 0,0.0, 0, this, 62.0, "normie", 18600));;
 
-        addClient(new NPC(5, "Testificate", "Kaminari", 36452152, 142142.0,0.0, 0,0.0, 0, this, 48540.0, "testificate", 16000.0));
+        addClient(new NPC(5, "Testificate", "Kaminari", 36452152, 1400.0,0.0, 0,0.0, 0, this, 640.0, "testificate", 25.0));
 
         saver(database);
 
@@ -62,7 +62,7 @@ public class BankBackend implements Serializable{
 
             database.forEach((k, v) -> {saviour.add(v); });
 
-            saviour.remove(1);
+            saviour.remove(0);
 
             // write list of objects to file
             oos.writeObject(saviour);
