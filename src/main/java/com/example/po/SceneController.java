@@ -18,6 +18,9 @@ import java.io.IOException;
 public class SceneController{
 
     @FXML
+    Button UpdateButton;
+
+    @FXML
     TextArea CurrencyArea;
     @FXML
     TextArea StockArea;
@@ -100,6 +103,14 @@ public class SceneController{
 
     public void switchToCounters(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Counters.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToBankAccount(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("BankAccount.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -204,6 +215,16 @@ public class SceneController{
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public void updateEverything(ActionEvent event) throws IOException{
+        NPC player = bankBackend.getClient(1);
+        
+        updateCurrentMoney();
+        updateInvestment();
+        updateActualDebt();
+        //updatePersonBelongings();
+        //updateInstallmentAmount();
+    }
 
     public void deposit(ActionEvent event) throws IOException{
         NPC player = bankBackend.getClient(1);
