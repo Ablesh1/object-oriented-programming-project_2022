@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Add new clients">
-      <change beforePath="$PROJECT_DIR$/.idea/Programowanie-Obiektowe-Projekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Programowanie-Obiektowe-Projekt.iml" afterDir="false" />
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Add access to BankAccount.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Client.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPCAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPCAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPChandling/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPChandling/NPC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPChandling/NPCAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPChandling/NPCAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -361,7 +351,63 @@
       <option name="project" value="LOCAL" />
       <updated>1642802401656</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Add new clients">
+      <created>1642802458060</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1642802458060</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Add more features to NPCs, create abilities to pay taxes, to take loans, to invest, to close investment and to commit suicide">
+      <created>1642802582847</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1642802582847</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Upgrade some logic">
+      <created>1642802607086</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1642802607086</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Unversioned commit">
+      <created>1642802665221</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1642802665221</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Add BankAccount.fxml">
+      <created>1642807647516</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1642807647516</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Add features to check Bank Account">
+      <created>1642807705628</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1642807705628</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Change of details">
+      <created>1642807750222</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1642807750222</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Add access to BankAccount.fxml">
+      <created>1642807779083</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1642807779083</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,12 +427,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Some refactoring mostly" />
-    <MESSAGE value="Doing God`s work" />
-    <MESSAGE value="Wstępny backend banku" />
-    <MESSAGE value="POTĘZNY REFACTORING&#10;BACK OZNACZA BACKEND - TAM BĘDĄ WSZYSTKIE OBLICZENIA" />
-    <MESSAGE value="Dodawanie i usuwanie pieniędzy do kąta gracza" />
-    <MESSAGE value="Lepsze samobójstwo" />
     <MESSAGE value="Poprawiona kreacja klas" />
     <MESSAGE value="Szybka giełda" />
     <MESSAGE value="Refactoring" />
@@ -399,14 +439,20 @@
     <MESSAGE value="Add incomplete BankInvestment.fxml" />
     <MESSAGE value="Add access to Loan and Investment fxml files" />
     <MESSAGE value="Adjust SceneController to new mechanics - plenty of Loan and Investment methods added" />
-    <MESSAGE value="Unversioned commit" />
     <MESSAGE value="https://www.youtube.com/watch?v=enPpRFeQhh4" />
     <MESSAGE value="Sprawdź commity&#10;https://www.youtube.com/watch?v=enPpRFeQhh4&#10;Działa zapisywanie, wczytywanie i nienawidzę Antychrysta" />
     <MESSAGE value="Lepsze zapisywanie" />
     <MESSAGE value="Zapisywanie do plików" />
     <MESSAGE value="change of details" />
     <MESSAGE value="Add new clients" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new clients" />
+    <MESSAGE value="Add more features to NPCs, create abilities to pay taxes, to take loans, to invest, to close investment and to commit suicide" />
+    <MESSAGE value="Upgrade some logic" />
+    <MESSAGE value="Unversioned commit" />
+    <MESSAGE value="Add BankAccount.fxml" />
+    <MESSAGE value="Add features to check Bank Account" />
+    <MESSAGE value="Change of details" />
+    <MESSAGE value="Add access to BankAccount.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add access to BankAccount.fxml" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
