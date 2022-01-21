@@ -1,6 +1,6 @@
 package com.example.po.backends;
-import com.example.po.NPChandling.NPC;
 
+import com.example.po.NPChandling.NPC;
 import java.io.*;
 import java.util.*;
 
@@ -33,28 +33,29 @@ public class BankBackend implements Serializable{
 
         //NPC(Integer idNumber, String name, String surname, Integer pesel, double Debit)
 
-        addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 1000.0,0.0, 0,0.0, 0, this, 10000.0, "Character", 2137));
+        addClient(new NPC(1, "Karol", "WoiTiWa", 2137213721, 1000.0,1000.0, 10,true,0.0, 0, this, 10000.0, "Character", 2137.2137));
 
         //Ci klienci są już zapisani w Client.dat
-        addClient(new NPC(2, "Jurij", "Owsienko", 797404004, 4141.0,0.0, 0,0.0, 0, this, 1200.0, "charitable", 2500));
-        addClient(new NPC(3, "Morshu", "Easter Egg", 854627322, 1421.0,0.0, 0,0.0, 0, this, 600.99, "normie", 35000));
-        addClient(new NPC(4, "Pan", "Alber", 36452152, 21352.0,0.0, 0,0.0, 0, this, 62.0, "normie", 18600));;
+        addClient(new NPC(2, "Jurij", "Owsienko", 797404004, 41410.0,0.0, 0,true,0.0, 0, this, 1200.07, "Charitable", 25000.0));
+        addClient(new NPC(3, "Mr", "Two", 854627322, 14210.0,0.0, 0,true,0.0, 0, this, 3000.99, "Normal",     35000.0));
+        addClient(new NPC(4, "Mr", "Six", 364521527, 21352.0,0.0, 0,true,0.0, 0, this, 6200.01, "Normal",     18600.0));;
 
-        addClient(new NPC(5, "Testificate", "Kaminari", 36452152, 1400.0,0.0, 0,0.0, 0, this, 640.0, "testificate", 25.0));
+        addClient(new NPC(5, "Test", "Kaminari", 36452152, 1400.0,0.0, 0,true,0.0, 0, this, 640.0, "Test", 25.0));
+
+        addClient(new NPC(6, "Elon", "Musk", 111222333, 1000000000.0, 0.0, 0, true,0.0, 0, this, 10000.0, "Confident", -1000.0));
+        addClient(new NPC(7, "King of Rohan", "Theoden", 666666666, 66666.6, 0.0, 0, true,0.0, 0, this, 6666.6, "Evil", 100000.0));
+
+        addClient(new NPC(8, "John", "Debtor", 444555666, 0.0, 100000.0, 10, true,0.0, 0, this, 6666.6, "Evil", 100000.0));
 
         saver(database);
 
         loader();
-
-
-
     }
-
 
     //Dodawanie i usuwanie NPC
 
-
     public void saver(HashMap<Integer, NPC> database){
+
         try (FileOutputStream fos = new FileOutputStream("Client.dat");
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
 
@@ -68,8 +69,8 @@ public class BankBackend implements Serializable{
             oos.writeObject(saviour);
             oos.close();
 
-
-        } catch (IOException ex) {
+        }
+        catch (IOException ex) {
             ex.printStackTrace();
         }
     }
@@ -84,11 +85,11 @@ public class BankBackend implements Serializable{
     public void loader(){
         try {
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("Client.dat"));
-            ArrayList<NPC> retriver = (ArrayList<NPC>) inputStream.readObject();
-            for(int i = 0; i < retriver.size(); i++){
-                this.addClient(retriver.get(i));
-                retriver.get(i).setBankBackend(this);
-                retriver.get(i).start();
+            ArrayList<NPC> retriever = (ArrayList<NPC>) inputStream.readObject();
+            for(int i = 0; i < retriever.size(); i++){
+                this.addClient(retriever.get(i));
+                retriever.get(i).setBankBackend(this);
+                retriever.get(i).start();
             }
         } catch ( IOException e) {
             e.printStackTrace();
@@ -140,7 +141,7 @@ public class BankBackend implements Serializable{
             @Override
             public void run() {
                 NPC giver = getClient(from);
-                NPC reciever = getClient(to);
+                NPC receiver = getClient(to);
                 ArrayList<Integer> overseer = new ArrayList<Integer>();
 
                 //0 means that we have not received money
@@ -160,8 +161,8 @@ public class BankBackend implements Serializable{
                         overseer.set(1, 1);
 
                         if(overseer.get(0) == 1 && overseer.get(1) == 1){
-                            //Third step - give the money to reciever
-                            reciever.deposit(howMuchFrom);
+                            //Third step - give the money to receiver
+                            receiver.deposit(howMuchFrom);
                             StringBuilder stringBuilder = new StringBuilder();
                             stringBuilder.append("Od " + from + " do " + to + " " + howMuchFrom);
                             String finalString = stringBuilder.toString();
@@ -215,19 +216,19 @@ public class BankBackend implements Serializable{
     };
 
 
-    //I habe no heart to try if this abomination works
+    //I have no heart to try if this abomination works
     //I lied. It actually works pretty well
-    public Integer askforPoor(){
+    public Integer askForPoor(){
         Thread poorThread = new Thread(new Runnable() {
             @Override
             public void run() {
                 HashMap<Double, Integer> poorClients = new HashMap();
 
                 //For lambdas there are some points too
-                database.forEach((k,v) -> poorClients.put(v.getAccountMoneyAI(), k));
+                database.forEach((k,v) -> poorClients.put(v.getAccountMoney(), k));
                 //FOR COLLECTIONS TOO
 
-                //Big brain time so large I can`t comperhend
+                //Big brain time so large I can`t comprehend
                 //Thanks Tzzentch
                 Double min = Collections.min(poorClients.keySet());
                 Integer minId = poorClients.get(min);
@@ -235,7 +236,7 @@ public class BankBackend implements Serializable{
                 thePoorOne = thePoorOneNpc.getPersonID();
 
                 if(thePoorOne == null){
-                    //Warning - potential money laundring
+                    //Warning - potential money laundering
                     return;
                 }
                 }
@@ -244,7 +245,7 @@ public class BankBackend implements Serializable{
         return this.thePoorOne;
     }
 
-    //It`s effectively a getter just for one funciton only
+    //It`s effectively a getter just for one function only
     public Integer tellThePoor(Integer key){
         return key;
     }
