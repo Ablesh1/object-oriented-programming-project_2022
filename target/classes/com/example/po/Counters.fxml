@@ -9,7 +9,7 @@
         <Button fx:id="ToCurrency"   layoutX="238" layoutY="80"  mnemonicParsing="false" onAction="#switchToCurrencyRate" text="Check currency rate" />
         <Button fx:id="ToStock"      layoutX="247" layoutY="135" mnemonicParsing="false" onAction="#switchToStockRate" text="Check stock rate" />
         <Button fx:id="Deposit"      layoutX="219" layoutY="245" mnemonicParsing="false" onAction="#switchToATM" text="Deposit or withdraw money" />
-        <Button fx:id="CheckAccount" layoutX="239" layoutY="190" mnemonicParsing="false" onAction="#OnClicked" text="Check your account" />
+        <Button fx:id="CheckAccount" layoutX="239" layoutY="190" mnemonicParsing="false" onAction="#switchToBankAccount" text="Check your account" />
         <Button fx:id="ToHall"       layoutX="275" layoutY="300" mnemonicParsing="false" onAction="#switchToHall" text="To hall" />
         <TextField editable="false"  layoutX="110" layoutY="10" prefHeight="40" prefWidth="380" text="You are standing in front of the counters. What do you want to do?" />
 
