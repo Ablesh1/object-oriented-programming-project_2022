@@ -45,7 +45,7 @@ public class BankBackend implements Serializable{
         addClient(new NPC(6, "Elon", "Musk", 111222333, 1000000000.0, 0.0, 0, true,0.0, 0, this, 10000.0, "Confident", -1000.0));
         addClient(new NPC(7, "King of Rohan", "Theoden", 666666666, 66666.6, 0.0, 0, true,0.0, 0, this, 6666.6, "Evil", 100000.0));
 
-        addClient(new NPC(8, "John", "Debtor", 444555666, 0.0, 100000.0, 10, true,0.0, 0, this, 6666.6, "Evil", 100000.0));
+        addClient(new NPC(8, "John", "Debtor", 444555666, 0.0, 100000.0, 10, true,0.0, 0, this, 10.0, "Normal", 100.0));
 
         saver(database);
 
