@@ -11,10 +11,8 @@ public class NPCAccount implements Serializable {
 
     //Account tracks how in debt or rich is NPC
     private Double accountMoney;
-    private Double credit;
 
-    //Balance will be handy when doing AI
-    private double balance;
+    //Loan & investment stuff
 
     private Double bankLoan;
     private Integer installmentNumber;
@@ -22,36 +20,34 @@ public class NPCAccount implements Serializable {
     private Double bankInvestment;
     private Integer investmentDuration;
 
+    private Boolean trust;
     private int counter = 0;
-    private boolean trust = true;
     private double actualDebt = 0;
-    private double interestRate = 0.12;
+    private double loanInterestRate = 0.12;
+    private double investmentInterestRate = 0.01;
 
 
-    public NPCAccount(NPC npc, Double accountMoney, Double bankLoan, Integer installmentNumber, Double bankInvestment, Integer investmentDuration, BankBackend bankBackendPass){
+    public NPCAccount(NPC npc, Double accountMoney, Double bankLoan, Integer installmentNumber, Boolean trust, Double bankInvestment, Integer investmentDuration, BankBackend bankBackendPass){
         owner = npc;
         this.accountMoney = accountMoney;
         this.bankLoan = bankLoan;
         this.installmentNumber = installmentNumber;
+        this.trust = trust;
         this.bankInvestment = bankInvestment;
         this.investmentDuration = investmentDuration;
         bankBackend = bankBackendPass;
-        this.credit = 0.0;
     }
 
     public Double getAccountMoney() {
-        return accountMoney;
+        return this.accountMoney;
+    }
+
+    public void setAccountMoney(Double accountMoney) {
+        this.accountMoney = accountMoney;
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    ////////////////////////////////////////////////////////////
-    //Dopierdol tu co się stanie jak zapłacisz więcej niż masz//
-    public void payment(double howMuch){
-        this.accountMoney -= howMuch;
-    }
-    ////////////////////////////////////////////////////////////
 
     public Double getBankInvestment() {
         return bankInvestment;
@@ -74,9 +70,9 @@ public class NPCAccount implements Serializable {
 
     public Double getInstallmentAmount() {
 
-        if(this.installmentNumber > 0 && this.bankLoan > 0) {
+        if(this.installmentNumber > 0 && this.getBankLoan() > 0) {
 
-            double q = 1 + (this.interestRate/12);
+            double q = 1 + (this.loanInterestRate/12);
             double L = Math.pow(q, this.installmentNumber) * (q - 1);
             double M = Math.pow(q, this.installmentNumber) - 1;
 
@@ -87,6 +83,14 @@ public class NPCAccount implements Serializable {
 
     public double getActualDebt() {
         return actualDebt;
+    }
+
+    public Boolean getTrust() {
+        return trust;
+    }
+
+    public Double getBankLoan() {
+        return bankLoan;
     }
 
     public void setBankLoan(Double bankLoan) {
@@ -107,7 +111,7 @@ public class NPCAccount implements Serializable {
         }
     }
 
-    public void  withdrawFromAccount(Double toWithdraw) {
+    public void withdrawFromAccount(Double toWithdraw) {
         if (this.accountMoney - toWithdraw >= 0.0) {
             this.accountMoney -= toWithdraw;
             owner.setPersonBelongings(owner.getPersonBelongings() + toWithdraw);
@@ -116,27 +120,50 @@ public class NPCAccount implements Serializable {
 
     public void takeBankLoan(Double bankLoan, Integer installmentNumber) {
         if(this.trust) {
-            setBankLoan(bankLoan);
-            setInstallmentNumber(installmentNumber);
+            this.setBankLoan(this.getBankLoan() + bankLoan);
+            this.setInstallmentNumber(installmentNumber);
             this.accountMoney += this.bankLoan;
-            this.actualDebt = getInstallmentAmount() * this.installmentNumber;
+            this.actualDebt += this.getInstallmentAmount() * this.installmentNumber;
             this.trust = false;
         }
     }
 
     public void payInstallment() {
-        if (this.accountMoney - getInstallmentAmount() >= 0 &&this.actualDebt > 0 && this.counter < this.installmentNumber) {
-            this.accountMoney -= getInstallmentAmount();
-            this.actualDebt -= getInstallmentAmount();
+        if (this.accountMoney - this.getInstallmentAmount() >= 0 &&this.actualDebt > 0 && this.counter < this.installmentNumber) {
+            this.accountMoney -= this.getInstallmentAmount();
+            this.actualDebt -= this.getInstallmentAmount();
             this.counter ++;
             if (this.actualDebt < 0.001) {
                 this.actualDebt = 0;
             }
         }
+
+        else if (this.accountMoney - this.getInstallmentAmount() < 0 &&this.actualDebt > 0 && this.counter < this.installmentNumber) {
+            //Closes investment when does not have money for monthly installments
+            this.closeInvestment();
+            if(this.accountMoney - this.getInstallmentAmount() >= 0) {
+                this.accountMoney -= this.getInstallmentAmount();
+                this.actualDebt -= this.getInstallmentAmount();
+                this.counter++;
+                if (this.actualDebt < 0.001) {
+                    this.actualDebt = 0.0;
+                    this.bankLoan = 0.0;
+                }
+            }
+            else {
+                System.out.println("Ara ara, we are spending more mooney than we have");
+            }
+        }
+
         else if((this.actualDebt < 0.01 && this.actualDebt > 0.001) || this.actualDebt == 0){
-            this.actualDebt = 0;
+            this.actualDebt = 0.0;
+            this.bankLoan = 0.0;
             this.counter = 0;
             this.trust = true;
+        }
+
+        else{
+            System.out.println("Ara ara, we are having serious debt problems");
         }
     }
 
@@ -144,30 +171,19 @@ public class NPCAccount implements Serializable {
         if(this.accountMoney - bankInvestment >= 0) {
             this.accountMoney -= bankInvestment;
             this.bankInvestment += bankInvestment;
+            this.investmentDuration = investmentDuration;
         }
     }
 
     public void closeInvestment() {
-        this.accountMoney += bankInvestment;
+        this.accountMoney += bankInvestment * (1 + this.investmentInterestRate) * getInvestmentDuration();
         this.bankInvestment =  0.0;
     }
 
-
-
-    //Mogę to usunąć?
-    public Double checkCredit(){
-        if (this.accountMoney < 0) {
-            this.credit += this.accountMoney;
-            this.accountMoney = 0.0;
-        }
-
-        if (this.accountMoney > 0 && this.credit > 0){
-            this.balance = this.accountMoney - this.credit;
-            if (this.balance >= 0){
-                this.accountMoney = this.balance;
-                this.credit = 0.0;
-            }
-        }
-        return this.credit;
+    public void payTaxes(double taxes){
+        this.accountMoney -= taxes;
     }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
