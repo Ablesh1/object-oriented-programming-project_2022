@@ -1,9 +1,11 @@
 package com.example.po.backends;
 import com.example.po.Department;
 
-public class AccountsDepBack extends Department {
+import java.io.Serializable;
 
-    public AccountsDepBack(){
+public class AccountsDep extends Department{
+
+    public AccountsDep(){
         super();
         //System.out.println("Bruuuh");
     }

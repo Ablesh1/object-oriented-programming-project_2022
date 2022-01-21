@@ -1,9 +1,11 @@
 package com.example.po.backends;
 import com.example.po.Department;
 
-public class ReportsDepBack extends Department {
+import java.io.Serializable;
 
-    public ReportsDepBack(){
+public class TransfersDep extends Department{
+
+    public TransfersDep() {
         super();
         //System.out.println("Bruuuh");
     }
@@ -11,7 +13,7 @@ public class ReportsDepBack extends Department {
     @Override
     public void refresh(){
         try{
-            //System.out.println("Reports do calculations");
+            //System.out.println("Transfers do calculations");
             Thread.sleep(2600);
         } catch (InterruptedException interruptedException) {
             interruptedException.printStackTrace();
