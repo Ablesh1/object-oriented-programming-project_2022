@@ -179,7 +179,7 @@ public class SceneController{
 
     public void updateCurrentMoney(){
         NPC player = bankBackend.getClient(1);
-        CurrentMoneyArea.setText(String.valueOf(player.getAccountMoneyAI()));
+        CurrentMoneyArea.setText(String.valueOf(player.getAccountMoney()));
     }
 
     public void updatePersonBelongings() {
@@ -282,7 +282,7 @@ public class SceneController{
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //Wyświetlanie obecnej giełdy spółek i walut
+    //Display Stock and Currencies
     public void ShowCurrency() throws IOException{
         Thread threadCurrency = new Thread(new Runnable() {
             @Override
@@ -339,7 +339,7 @@ public class SceneController{
         threadStock.start();
     }
 
-    //Wychodzenie z programu
+    //Exit program
     public void exit(ActionEvent event){
         System.exit(2137);
         accounts.kill();
