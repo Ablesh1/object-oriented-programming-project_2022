@@ -300,11 +300,8 @@ public class SceneController{
         updateInvestment();
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     //Display Stock and Currencies
-    public void ShowCurrency() throws IOException{
+    public void showCurrency() throws IOException{
         Thread threadCurrency = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -330,9 +327,9 @@ public class SceneController{
             }
         });
         threadCurrency.start();
-        }
+    }
 
-    public void ShowStock() throws IOException {
+    public void showStock() throws IOException {
         Thread threadStock = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -359,6 +356,9 @@ public class SceneController{
         });
         threadStock.start();
     }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //Exit program
     public void exit(ActionEvent event){
