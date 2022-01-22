@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Funkcje readlastTransfers i readlastWithdraws czytają ostatnie linie plików Transfers.txt i Withdraws.txt">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/Writer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/Writer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/CurrencyRate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/StockRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/StockRate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/StockRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/StockRate.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -149,8 +148,6 @@
       <workItem from="1642689408289" duration="881000" />
       <workItem from="1642717033758" duration="678000" />
       <workItem from="1642755021822" duration="986000" />
-      <workItem from="1642857458145" duration="7000" />
-      <workItem from="1642874585434" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="Wstęp do bazy i NPC">
       <created>1642431352140</created>
@@ -446,21 +443,7 @@
       <option name="project" value="LOCAL" />
       <updated>1642807821303</updated>
     </task>
-    <task id="LOCAL-00043" summary="Funkcje readlastTransfers i readlastWithdraws czytają ostatnie linie plików Transfers.txt i Withdraws.txt">
-      <created>1642857150615</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1642857150615</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Funkcje readlastTransfers i readlastWithdraws czytają ostatnie linie plików Transfers.txt i Withdraws.txt">
-      <created>1642857164715</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1642857164715</updated>
-    </task>
-    <option name="localTasksCounter" value="45" />
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,6 +463,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Poprawiona kreacja klas" />
     <MESSAGE value="Szybka giełda" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Fxml refactoring" />
@@ -504,8 +488,7 @@
     <MESSAGE value="Change of details" />
     <MESSAGE value="Add access to BankAccount.fxml" />
     <MESSAGE value="Unversioned commit" />
-    <MESSAGE value="Funkcje readlastTransfers i readlastWithdraws czytają ostatnie linie plików Transfers.txt i Withdraws.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funkcje readlastTransfers i readlastWithdraws czytają ostatnie linie plików Transfers.txt i Withdraws.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unversioned commit" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -520,11 +503,11 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PO$Hol.ic" NAME="Hol Coverage Results" MODIFIED="1641468694821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.po.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/Programowanie_Obiektowe_Projekt_2$HallGUI.ic" NAME="HallGUI Coverage Results" MODIFIED="1642615150623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.po.NPChandling.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/PO$Hol.ic" NAME="Hol Coverage Results" MODIFIED="1641468694821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.po.*</FILTER>
     </SUITE>
   </component>
 </project>
