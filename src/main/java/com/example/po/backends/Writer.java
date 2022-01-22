@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Writer {
 
@@ -23,30 +24,31 @@ public class Writer {
         writer.close();
     }
 
-    public void readLastTransfers(){
+    public ArrayList<String> readLastTransfers(){
+        ArrayList<String> transfers = new ArrayList<>();
                 try{
                 File file = new File("Transfer.txt");
-                int n_lines = 10;
+                int n_lines = 14;
                 int counter = 0;
                 ReversedLinesFileReader object = null;
                 try {
                     object = new ReversedLinesFileReader(file);
                 } catch (IOException e) {
                     e.printStackTrace();
-                    return;
+                    return transfers;
                 }
                 while(counter < n_lines) {
                     try {
-                        System.out.println(object.readLine());
+                        transfers.add(object.readLine());
                     } catch (IOException e) {
                         e.printStackTrace();
-                        return;
+                        return transfers;
                     }
                     counter++;
                 }
-                return;}
+                return transfers;}
                 catch (NullPointerException n){
-                    return;
+                    return transfers;
                 }
     }
 

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.TextField?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
    <children>
-      <Button fx:id="ClientsRep"  layoutX="236" layoutY="100" mnemonicParsing="false" onAction="#OnClicked"        text="Client transfers report" />
-      <Button fx:id="BankRep"     layoutX="238" layoutY="200" mnemonicParsing="false" onAction="#OnClicked"        text="Bank transfers report" />
-      <Button fx:id="ToOffice"    layoutX="272" layoutY="300" mnemonicParsing="false" onAction="#switchToOffice"   text="To office" />
-      <TextField editable="false" layoutX="210" layoutY="10" prefHeight="40" prefWidth="180" text="You decide to check transfers." />
+      <Button layoutX="273.0" layoutY="330.0" mnemonicParsing="false" text="To Office" onAction="#switchToOffice" />
+      <Button fx:id="updateTransfersButton" layoutX="252.0" layoutY="269.0" mnemonicParsing="false" text="Update Transfers" onAction="#updateTransfers"/>
+      <TextArea fx:id="transfersTextArea" layoutX="153.0" layoutY="8.0" prefHeight="228.0" prefWidth="293.0" />
    </children>
 </AnchorPane>

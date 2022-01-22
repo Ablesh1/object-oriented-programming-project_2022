@@ -8,12 +8,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class SceneController{
 
@@ -59,6 +61,15 @@ public class SceneController{
     Button InvestmentButton;
     @FXML
     Button CloseInvestButton;
+
+
+    @FXML
+    TextArea transfersTextArea;
+
+    @FXML
+    ComboBox accountsComboBox;
+    @FXML
+    TextArea accountsTextArea;
 
     //private CurrencyRateDepBack currencyRate;
     //private StockRateDepBack stockRate;
@@ -197,6 +208,14 @@ public class SceneController{
         stage.show();
     }
 
+    public void switchToTansfersReports(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("transfersReport.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -227,6 +246,35 @@ public class SceneController{
     public void updateInvestment() {
         NPC player = bankBackend.getClient(1);
         InvestmentAmount.setText(String.valueOf(player.getBankInvestment()));
+    }
+
+    public void updateTransfers(){
+        transfersTextArea.clear();
+        ArrayList<String> transfers = bankBackend.getTransfersDep().showLastTransfers();
+        for(int i = 0; i < transfers.size(); i++){
+            transfersTextArea.appendText(transfers.get(i) + "\n");
+        }
+    }
+
+    public void updateAccounts(){
+        ArrayList<NPC> npcs= new ArrayList<>();
+        accountsComboBox.getItems().clear();
+        bankBackend.getDatabase().forEach((k, v) -> {npcs.add(v); });
+        for(int i = 0; i < npcs.size(); i++ ){
+            //NPC cNPC = npcs.get(i);
+            //accountsTextArea.appendText(cNPC.getPersonName() + " " + cNPC.getSurname() + " o id " + cNPC.getPersonID())
+            accountsComboBox.getItems().add(npcs.get(i).getPersonID());
+        }
+    }
+
+    @FXML
+    private void comboAction(ActionEvent event) {
+        NPC sNPC = bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem());
+        accountsTextArea.clear();
+        accountsTextArea.appendText("Pan/Pani " + sNPC.getPersonName() + " " + sNPC.getSurname()
+        + "\nPosiada na koncie " + Math.round(sNPC.getAccountMoney()) + "\nPosiada kredyt równy " + Math.round(sNPC.getActualDebt())
+        + "\nPosiada akcje o wartości " + sNPC.getBankInvestment()
+        );
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
