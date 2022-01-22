@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Add ClientReport.fxml">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/BigStockRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/BigStockRate.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -472,7 +468,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642876811437</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Add some methods for Reports">
+      <created>1642876852145</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1642876852145</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Unversioned commit">
+      <created>1642876864649</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1642876864649</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +502,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fxml refactoring" />
     <MESSAGE value="Pusheł" />
     <MESSAGE value="Add Loan and Investment mechanics" />
     <MESSAGE value="Add special getters for Loan and Investment variables, upgrade constructor" />
@@ -512,12 +521,13 @@
     <MESSAGE value="Add BankAccount.fxml" />
     <MESSAGE value="Add features to check Bank Account" />
     <MESSAGE value="Add access to BankAccount.fxml" />
-    <MESSAGE value="Unversioned commit" />
     <MESSAGE value="Change of details" />
     <MESSAGE value="Add BigStockRate.fxml" />
     <MESSAGE value="Add path BigStockRate.fxml" />
     <MESSAGE value="Add ClientReport.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ClientReport.fxml" />
+    <MESSAGE value="Add some methods for Reports" />
+    <MESSAGE value="Unversioned commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unversioned commit" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

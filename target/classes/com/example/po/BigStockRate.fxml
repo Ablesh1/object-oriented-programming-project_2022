@@ -10,8 +10,8 @@
         <Button fx:id="ToReports" layoutX="262" layoutY="300" mnemonicParsing="false" onAction="#switchToReports" text="To reports" />
         <TextArea fx:id="StockArea"    editable="false" layoutX="100" layoutY="75" prefHeight="200" prefWidth="200" text="Trwa ładowanie...&#10;" />
         <TextArea fx:id="CurrencyArea" editable="false" layoutX="300" layoutY="75" prefHeight="200" prefWidth="200" text="Trwa ładowanie..." />
-        <Button fx:id="ShowStock"    layoutX="180" layoutY="250" mnemonicParsing="false" onAction="#showStock" text="Show" />
+        <Button fx:id="ShowStock"    layoutX="180" layoutY="250" mnemonicParsing="false" onAction="#showStock"    text="Show" />
         <Button fx:id="ShowCurrency" layoutX="380" layoutY="250" mnemonicParsing="false" onAction="#showCurrency" text="Show" />
-        <TextField editable="false" layoutX="110" layoutY="10" prefHeight="40" prefWidth="380" text="You are standing in front of the board. You see stock rates displayed." />
+        <TextField editable="false"  layoutX="110" layoutY="10" prefHeight="40" prefWidth="380" text="You are standing in front of the board. You see stock rates displayed." />
     </children>
 </AnchorPane>
