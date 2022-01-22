@@ -316,7 +316,7 @@ public class NPC extends Thread implements Serializable{
             /////Normal is a balanced person that does not do any hardcore stuff
             /////He is much less charitable, may do some investing
             /////Sends money to family for e.g. and stuff
-            /////It usually takes have some pocket money with them
+            /////he usually takes have some pocket money with him
             case("Normal"):
                 if(whatToDo < 4){
 
@@ -386,6 +386,7 @@ public class NPC extends Thread implements Serializable{
                     writer.write("Normal person " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
                 }
 
+                //More investments
                 if(whatToDo == 8){
 
                     logger.log(Level.INFO, "Normal person " + this.getPersonName() + " " + this.getSurname() + " managed to earn some extra stuff this month");
@@ -397,13 +398,14 @@ public class NPC extends Thread implements Serializable{
                     logger.log(Level.INFO, "Normal person " + this.getPersonName() + " " + this.getSurname() + " managed to earn some extra stuff this month");
                 }
 
+                //Close an investment
                 if(whatToDo == 9){
 
                     logger.log(Level.INFO, "Normal person " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
 
                     this.npcAccount.closeInvestment();
 
-                    logger.log(Level.INFO, "Normal person " + this.getPersonName() + " " + this.getSurname() + " managed to earn some extra stuff this month");
+                    logger.log(Level.INFO, "Normal person " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
                 }
 
                 //Let them have some chance to earn more or less
@@ -417,6 +419,158 @@ public class NPC extends Thread implements Serializable{
                     this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
 
                     writer.write("Normal person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
+                }
+
+                break;
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            /////Evil is not balanced person that does do hardcore stuff
+            /////He is aggressive
+            /////Spends money on committing war crimes
+            /////He usually takes have some stolen money with him
+            case("Evil"):
+                if(whatToDo < 2){
+
+                    logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some stolen money");
+
+                    this.bankBackend.transferMoney(this.getPersonID(), this.bankBackend.getRandomPerson(), Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.4)));
+
+                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some stolen money");
+                }
+
+                //Payments - brutal
+                else if(whatToDo == 3){
+
+                    double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.6);
+
+                    //Pay if you can afford
+                    if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses){
+
+                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+
+                        this.npcAccount.payTaxes(thisMonthRandExpenses);
+
+                        writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                    }
+                    //Debts
+                    else{
+                        //Pay if you can take a loan
+                        if(this.npcAccount.getTrust()) {
+                            logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
+
+                            this.npcAccount.takeBankLoan(thisMonthRandExpenses - this.npcAccount.getAccountMoney() + 1000.0, 5);
+                            this.npcAccount.payTaxes(thisMonthRandExpenses);
+
+                            writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
+                        }
+                        //Die if you cant
+                        else{
+                            //An investment is your last chance
+                            this.npcAccount.closeInvestment();
+
+                            if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses) {
+
+                                logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+
+                                this.npcAccount.payTaxes(thisMonthRandExpenses);
+
+                                writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                            }
+                            else {
+                                logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
+
+                                this.suicide();
+
+                                logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
+                            }
+                        }
+                    }
+                }
+
+                //Invest some stolen money
+                if(whatToDo == 4){
+
+                    logger.log(Level.INFO, "Evil person " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
+
+                    Double thisMonthIncomeExtra = (double) Math.round(random.nextDouble(2500.0));
+
+                    this.npcAccount.makeBankInvestment(thisMonthIncomeExtra, 1);
+
+                    logger.log(Level.INFO, "Evil person " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
+                }
+
+                //Close an investment
+                if(whatToDo == 5){
+
+                    logger.log(Level.INFO, "Evil person " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
+
+                    this.npcAccount.closeInvestment();
+
+                    logger.log(Level.INFO, "Evil person " + this.getPersonName() + " " + this.getSurname() + "decided to close an investment this month");
+                }
+
+                //War crimes
+                if(whatToDo == 6){
+                    if(this.npcAccount.getAccountMoney() > 50000)
+
+                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " conquered Isengard");
+
+                    this.withdraw(30000.0);
+                    this.personBelongings -= 30000.0;
+
+                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " conquered Isengard");
+                }
+
+                //Cheating
+                if(whatToDo == 7){
+                    if(this.npcAccount.getAccountMoney() > 1000)
+
+                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " cheated in the casino");
+
+                    this.withdraw(1000.0);
+                    this.personBelongings += 30000.0;
+
+                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " cheated in the casino");
+                }
+
+                //Wasting money
+                if(whatToDo == 8){
+                    if(this.npcAccount.getAccountMoney() > 100000)
+
+                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " splurged money on stupid things");
+
+                    this.withdraw(100000.0);
+                    this.personBelongings -= 100000.0;
+
+                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " splurged money on stupid things");
+                }
+
+                //War crimes
+                if(whatToDo == 9){
+                    if(this.npcAccount.getAccountMoney() > 10000)
+
+                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
+
+                    this.withdraw(10000.0);
+                    this.personBelongings += 20000.0;
+
+                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
+                }
+
+                //Let them have some chance to earn more or less
+                //Taxes included so why bother
+                this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(2, 6)));
+
+                if(this.personBelongings >= 3600){
+
+                    logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
+
+                    this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
+
+                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
                 }
 
                 break;
