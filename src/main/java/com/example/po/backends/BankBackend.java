@@ -36,18 +36,18 @@ public class BankBackend implements Serializable{
         addClient(new NPC(1, "Karol", "WoiTiWa", 2137213721, 1000.0,1000.0, 10,true,0.0, 0, this, 10000.0, "Character", 2137.2137));
 
         //Ci klienci są już zapisani w Client.dat
-        addClient(new NPC(2, "Jurij", "Owsienko", 797404004, 41410.0,0.0, 0,true,0.0, 0, this, 1200.07, "Charitable", 25000.0));
-        addClient(new NPC(3, "Mr", "Two", 854627322, 14210.0,0.0, 0,true,0.0, 0, this, 3000.99, "Normal",     35000.0));
-        addClient(new NPC(4, "Mr", "Six", 364521527, 21352.0,0.0, 0,true,0.0, 0, this, 6200.01, "Normal",     18600.0));;
+        //addClient(new NPC(2, "Jurij", "Owsienko", 797404004, 41410.0,0.0, 0,true,0.0, 0, this, 1200.07, "Charitable", 25000.0));
+        //addClient(new NPC(3, "Mr", "Two", 854627322, 14210.0,0.0, 0,true,0.0, 0, this, 3000.99, "Normal",     35000.0));
+        //addClient(new NPC(4, "Mr", "Six", 364521527, 21352.0,0.0, 0,true,0.0, 0, this, 6200.01, "Normal",     18600.0));;
 
-        addClient(new NPC(5, "Test", "Kaminari", 36452152, 1400.0,0.0, 0,true,0.0, 0, this, 640.0, "Test", 25.0));
+        //addClient(new NPC(5, "Test", "Kaminari", 36452152, 1400.0,0.0, 0,true,0.0, 0, this, 640.0, "Test", 25.0));
 
-        addClient(new NPC(6, "Elon", "Musk", 111222333, 1000000000.0, 0.0, 0, true,0.0, 0, this, 10000.0, "Confident", -1000.0));
-        addClient(new NPC(7, "King of Rohan", "Theoden", 666666666, 66666.6, 0.0, 0, true,0.0, 0, this, 6666.6, "Evil", 100000.0));
+        //addClient(new NPC(6, "Elon", "Musk", 111222333, 1000000000.0, 0.0, 0, true,0.0, 0, this, 10000.0, "Confident", -1000.0));
+        //addClient(new NPC(7, "King of Rohan", "Theoden", 666666666, 66666.6, 0.0, 0, true,0.0, 0, this, 6666.6, "Evil", 100000.0));
 
-        addClient(new NPC(8, "John", "Debtor", 444555666, 0.0, 100000.0, 10, true,0.0, 0, this, 6666.6, "Evil", 100000.0));
+        //addClient(new NPC(8, "John", "Debtor", 444555666, 0.0, 100000.0, 10, true,0.0, 0, this, 6666.6, "Evil", 100000.0));
 
-        saver(database);
+        //saver(database);
 
         loader();
     }
