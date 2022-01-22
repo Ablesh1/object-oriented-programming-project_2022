@@ -24,9 +24,6 @@ public class Writer {
     }
 
     public void readLastTransfers(){
-        Thread tranThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
                 try{
                 File file = new File("Transfer.txt");
                 int n_lines = 10;
@@ -51,16 +48,9 @@ public class Writer {
                 catch (NullPointerException n){
                     return;
                 }
-            }
-        });
-        tranThread.start();
     }
 
     public void readLastWithdraws(){
-        Thread withThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try{
                 File file = new File("Withdraws.txt");
                 int n_lines = 10;
                 int counter = 0;
@@ -81,13 +71,6 @@ public class Writer {
                     counter++;
                 }
                 return;}
-                catch (NullPointerException n){
-                    return;
-                }
-            }
-        });
-        withThread.start();
 
-    }
 
 }
