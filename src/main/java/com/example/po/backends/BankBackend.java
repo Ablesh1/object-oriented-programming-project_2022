@@ -169,7 +169,7 @@ public class BankBackend implements Serializable{
                             //Third step - give the money to receiver
                             receiver.deposit(howMuchFrom);
                             StringBuilder stringBuilder = new StringBuilder();
-                            stringBuilder.append("Od " + from + " do " + to + " " + howMuchFrom);
+                            stringBuilder.append("\t\tFrom\t" + from + " \tto\t " + to + "\t" + howMuchFrom);
                             String finalString = stringBuilder.toString();
 
                             try {
