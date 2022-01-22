@@ -173,6 +173,22 @@ public class SceneController{
         stage.show();
     }
 
+    public void switchToClientReport(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("ClientReport.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToBigStockRate(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("BigStockRate.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void switchToAccounts(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Accounts.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
