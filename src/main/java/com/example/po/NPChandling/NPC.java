@@ -637,7 +637,12 @@ public class NPC extends Thread implements Serializable{
                 //Moving the code to different function
                 //Please bear in mind that it may be suboptimal as invoking a function can be CPU demanding
                 //But in this case it may help with code-readability
-                npcBehaviour(this);
+
+                try{
+                npcBehaviour(this);}
+                catch(IllegalArgumentException i){
+                    ;
+                }
                 //////////////////////////////////////////////
                 //Let`s assume it`s how long one-month takes//
                 //////////////////////////////////////////////
