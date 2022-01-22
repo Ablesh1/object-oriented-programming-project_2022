@@ -123,7 +123,7 @@ public class NPCAccount implements Serializable {
             this.setBankLoan(this.getBankLoan() + bankLoan);
             this.setInstallmentNumber(installmentNumber);
             this.accountMoney += this.bankLoan;
-            this.actualDebt += this.getInstallmentAmount() * this.installmentNumber;
+            this.actualDebt = this.getInstallmentAmount() * this.installmentNumber;
             this.trust = false;
         }
     }
