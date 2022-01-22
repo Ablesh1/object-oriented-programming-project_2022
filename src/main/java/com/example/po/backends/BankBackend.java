@@ -26,7 +26,7 @@ public class BankBackend implements Serializable{
         currencyRate = new CurrencyRateDep();
         stockRate = new StockRateDep();
         reportsDep = new ReportsDep();
-        transfersDep = new TransfersDep();
+        transfersDep = new TransfersDep(this);
         this.database = new HashMap<Integer, NPC>();
         this.randomClient = 2;
         this.thePoorOne = 2;
@@ -52,7 +52,11 @@ public class BankBackend implements Serializable{
         //loader();
     }
 
-    //Dodawanie i usuwanie NPC
+    public static TransfersDep getTransfersDep() {
+        return transfersDep;
+    }
+
+//Dodawanie i usuwanie NPC
 
     public void saver(HashMap<Integer, NPC> database){
 
@@ -134,12 +138,13 @@ public class BankBackend implements Serializable{
         }
     }
 
+    public HashMap<Integer, NPC> getDatabase() {
+        return database;
+    }
+
     //It must do on a separate thread
     //Otherwise might cause bottlenecks
     public void transferMoney(Integer from, Integer to, double howMuchFrom){
-        Thread transferThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
                 NPC giver = getClient(from);
                 NPC receiver = getClient(to);
                 ArrayList<Integer> overseer = new ArrayList<Integer>();
@@ -187,9 +192,6 @@ public class BankBackend implements Serializable{
                         return;
                     }
                 }
-            }
-        });
-        transferThread.start();
     }
 
     public Integer getRandomPerson(){

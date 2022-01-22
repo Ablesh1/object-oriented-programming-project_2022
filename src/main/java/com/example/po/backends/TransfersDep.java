@@ -2,11 +2,20 @@ package com.example.po.backends;
 
 import com.example.po.Department;
 
+import java.util.ArrayList;
+
 public class TransfersDep extends Department{
 
-    public TransfersDep() {
-        super();
-        //System.out.println("Bruuuh");
+    private BankBackend bankBackend;
+    private Writer writer;
+
+    public TransfersDep(BankBackend bankBackend) {
+        super(bankBackend);
+        this.writer = new Writer();
+    }
+
+    public ArrayList<String> showLastTransfers(){
+        return writer.readLastTransfers();
     }
 
     @Override
