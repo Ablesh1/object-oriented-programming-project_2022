@@ -9,7 +9,7 @@
     <children>
         <Button fx:id="ToCounters" layoutX="262" layoutY="300" mnemonicParsing="false" onAction="#switchToCounters" text="To counters" />
         <TextArea fx:id="CurrencyArea" editable="false" layoutX="200" layoutY="75" prefHeight="200" prefWidth="200" text="Trwa ładowanie..." />
-        <Button fx:id="Show" layoutX="280" layoutY="250" mnemonicParsing="false" onAction="#ShowCurrency" text="Show" />
+        <Button fx:id="Show" layoutX="280" layoutY="250" mnemonicParsing="false" onAction="#showCurrency" text="Show" />
         <TextField editable="false" layoutX="100" layoutY="10" prefHeight="40" prefWidth="400" text="You are standing in front of the board. You see currency rates displayed." />
     </children>
 </AnchorPane>
