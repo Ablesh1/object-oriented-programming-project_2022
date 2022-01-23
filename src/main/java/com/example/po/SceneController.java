@@ -347,11 +347,44 @@ public class SceneController{
     /////////////////////////////////////////////////////////////////
 
     public void updateTransfers() {
+        where = 0;
         transfersTextArea.clear();
-        ArrayList<String> transfers = bankBackend.getTransfersDep().showLastTransfers();
+        //ArrayList<String> transfers = bankBackend.getTransfersDep().showLastTransfers();
+        Thread transfersThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(where == 3){
+                    StringBuilder stringBuilder = new StringBuilder();
+                    ArrayList<String> transfers = bankBackend.getTransfersDep().showLastTransfers();
+                    for (int i = 0; i < transfers.size(); i++) {
+                        stringBuilder.append(transfers.get(i) + "\n");
+                        try {
+                            Thread.sleep(50);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    transfersTextArea.setText(String.valueOf(stringBuilder));
+
+                }
+                return;
+            }
+        });
+        /*
         for (int i = 0; i < transfers.size(); i++) {
             transfersTextArea.appendText(transfers.get(i) + "\n");
-        }
+        }*/
+
+        where = 3;
+        transfersThread.start();
+        transfersThread.start();
+    }
+
+    public TextArea getTransfersTextArea(){
+        return transfersTextArea;
+    }
+
+    public void continueUpdateTransfers(){
     }
 
     public void updateAccounts() {
@@ -399,13 +432,17 @@ public class SceneController{
                     TextArea aTA = getaccountsTextArea();
                     NPC sNPC = bankBackend.getClient((Integer) aCB.getSelectionModel().getSelectedItem());
                     if (sNPC != null) {
-                        aTA.clear();
-                        aTA.appendText("\n\t   Mr/Mrs:\t\t\t\t " + sNPC.getPersonName() + " " + sNPC.getSurname()
+
+                        //Sometimes there may be an error here
+                        //Not sure what causes it
+                        //aTA.clear();
+
+                        aTA.setText("\n\t   Mr/Mrs:\t\t\t\t " + sNPC.getPersonName() + " " + sNPC.getSurname()
                                 + "\n\t   Account balance:\t\t " + roundAvoid(sNPC.getAccountMoney(), 2)
                                 + "\n\t   Debt:\t\t\t\t " + roundAvoid(sNPC.getActualDebt(), 2)
                                 + "\n\t   Investment:\t\t\t " + roundAvoid(sNPC.getBankInvestment(), 2));
                         try {
-                            Thread.sleep(2000);
+                            Thread.sleep(200);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }

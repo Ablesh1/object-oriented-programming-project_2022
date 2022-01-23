@@ -28,7 +28,7 @@ public class Writer{
         ArrayList<String> transfers = new ArrayList<>();
                 try{
                 File file = new File("Transfer.txt");
-                int n_lines = 14;
+                int n_lines = 9;
                 int counter = 0;
                 ReversedLinesFileReader object = null;
                 try {
