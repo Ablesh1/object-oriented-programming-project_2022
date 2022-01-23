@@ -11802,3 +11802,13 @@ From 7 to 1 1311285.0
 		From	10 	to	 5	1148804.0
 		From	4 	to	 6	699.0
 		From	10 	to	 1	2130985.0
+		From	10 	to	 2	13042.0
+		From	2 	to	 2	6052.0
+		From	3 	to	 6	1831.0
+		From	2 	to	 8	6961.0
+		From	4 	to	 1	273.0
+		From	2 	to	 8	3314.0
+		From	4 	to	 5	897.0
+		From	10 	to	 5	229942.0
+		From	3 	to	 2	183.0
+		From	2 	to	 2	1357.0
