@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Add cute NPC with behaviour">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Adjust money balance in the bank - unlock some dark methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
@@ -146,28 +146,7 @@
       <workItem from="1642689408289" duration="881000" />
       <workItem from="1642717033758" duration="678000" />
       <workItem from="1642755021822" duration="986000" />
-      <workItem from="1642937377430" duration="3353000" />
-    </task>
-    <task id="LOCAL-00004" summary="Wstępny backend banku">
-      <created>1642435949997</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1642435949997</updated>
-    </task>
-    <task id="LOCAL-00005" summary="POTĘZNY REFACTORING&#10;BACK OZNACZA BACKEND - TAM BĘDĄ WSZYSTKIE OBLICZENIA">
-      <created>1642439512719</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1642439512719</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Refactoring">
-      <created>1642439622009</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1642439622009</updated>
+      <workItem from="1642937377430" duration="8964000" />
     </task>
     <task id="LOCAL-00007" summary="Dodawanie i usuwanie pieniędzy do kąta gracza">
       <created>1642443304184</created>
@@ -491,7 +470,28 @@
       <option name="project" value="LOCAL" />
       <updated>1642940487927</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Prepare workspace for two new characters">
+      <created>1642940785674</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1642940785674</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Unversioned commit">
+      <created>1642940806184</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1642940806184</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Adjust money balance in the bank - unlock some dark methods">
+      <created>1642944151576</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1642944151576</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,8 +511,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add special getters for Loan and Investment variables, upgrade constructor" />
-    <MESSAGE value="Upgrade constructor" />
     <MESSAGE value="Add complete BankLoan.fxml" />
     <MESSAGE value="Add incomplete BankInvestment.fxml" />
     <MESSAGE value="Add access to Loan and Investment fxml files" />
@@ -534,9 +532,11 @@
     <MESSAGE value="Add ClientReport.fxml" />
     <MESSAGE value="GUI - General improvement" />
     <MESSAGE value="Add new NPC with new features" />
-    <MESSAGE value="Unversioned commit" />
     <MESSAGE value="Add cute NPC with behaviour" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add cute NPC with behaviour" />
+    <MESSAGE value="Prepare workspace for two new characters" />
+    <MESSAGE value="Unversioned commit" />
+    <MESSAGE value="Adjust money balance in the bank - unlock some dark methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust money balance in the bank - unlock some dark methods" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
