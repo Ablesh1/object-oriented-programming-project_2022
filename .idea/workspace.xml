@@ -4,17 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Hotfix">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Hotfix v2">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/ClientCreator.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Client.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/Writer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Accounts.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Transfers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Transfers.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Accounts.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Transfers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Transfers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +80,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39310345" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -152,13 +161,6 @@
       <workItem from="1642717033758" duration="678000" />
       <workItem from="1642755021822" duration="986000" />
       <workItem from="1642937377430" duration="9785000" />
-    </task>
-    <task id="LOCAL-00009" summary="Lepsze samobójstwo">
-      <created>1642500362733</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1642500362733</updated>
     </task>
     <task id="LOCAL-00010" summary="Poprawiona kreacja klas">
       <created>1642511298815</created>
@@ -496,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642946739595</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Hotfix v2">
+      <created>1642957001391</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1642957001391</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +525,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add access to Loan and Investment fxml files" />
     <MESSAGE value="Adjust SceneController to new mechanics - plenty of Loan and Investment methods added" />
     <MESSAGE value="https://www.youtube.com/watch?v=enPpRFeQhh4" />
     <MESSAGE value="Sprawdź commity&#10;https://www.youtube.com/watch?v=enPpRFeQhh4&#10;Działa zapisywanie, wczytywanie i nienawidzę Antychrysta" />
@@ -541,7 +549,8 @@
     <MESSAGE value="Add Lucky person behaviour, upgrade logic and change details" />
     <MESSAGE value="Unversioned commit" />
     <MESSAGE value="Hotfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hotfix" />
+    <MESSAGE value="Hotfix v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hotfix v2" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

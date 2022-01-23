@@ -2,7 +2,10 @@ package com.example.po;
 
 import com.example.po.NPChandling.NPC;
 import com.example.po.backends.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -19,6 +22,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class SceneController{
+
+    private int where;
 
     //Bank account
     @FXML
@@ -91,9 +96,30 @@ public class SceneController{
     @FXML
     ComboBox accountsComboBox;
 
-    //private CurrencyRateDepBack currencyRate;
-    //private StockRateDepBack stockRate;
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Create client part
+    @FXML
+    Button clientAddButton;
+    @FXML
+    Button clientDiscardButton;
+    @FXML
+    TextField nameTextField;
+    @FXML
+    TextField surnameTextField;
+    @FXML
+    TextField persBelongsTextField;
+    @FXML
+    TextField peselTextField;
+    @FXML
+    TextField characterComboBox;
+    @FXML
+    TextArea addClientTextArea;
+    @FXML
+    TextField monthlyIncomeTextArea;
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -112,13 +138,13 @@ public class SceneController{
     //Przejściem między scenami
     //Uwaga
 
-    public SceneController(){
+    public SceneController() {
         this.bankBackend = Global.bankBackend;
     }
 
     public void switchToHall(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Hall.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -126,15 +152,16 @@ public class SceneController{
 
     public void switchToOffice(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Office.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        this.where = 0;
     }
 
     public void switchToCounters(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Counters.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -145,7 +172,7 @@ public class SceneController{
 
     public void switchToBankAccount(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("BankAccount.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -153,7 +180,7 @@ public class SceneController{
 
     public void switchToCurrencyRate(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("CurrencyRate.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -161,15 +188,15 @@ public class SceneController{
 
     public void switchToStockRate(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("StockRate.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void switchToATM(ActionEvent event) throws IOException{
+    public void switchToATM(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("ATM.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -177,7 +204,7 @@ public class SceneController{
 
     public void switchToLoan(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("BankLoan.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -185,7 +212,7 @@ public class SceneController{
 
     public void switchToInvestment(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("BankInvestment.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -196,7 +223,7 @@ public class SceneController{
 
     public void switchToTransfers(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Transfers.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -207,7 +234,7 @@ public class SceneController{
 
     public void switchToReports(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Reports.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -215,7 +242,7 @@ public class SceneController{
 
     public void switchToClientReport(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("ClientReport.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -223,7 +250,7 @@ public class SceneController{
 
     public void switchToBigStockRate(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("BigStockRate.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -234,19 +261,47 @@ public class SceneController{
 
     public void switchToAccounts(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Accounts.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        this.where = 1;
+    }
+
+    public void switchToCreation(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("ClientCreator.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        this.where = 2;
+    }
+
+
+    //I don't like this name
+    public void switchToTransferReports(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("TransfersReport.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
-    //I don't like this name
-    public void switchToTransferReports(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("TransfersReport.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public void addClient() {
+        try {
+            String name = nameTextField.getText();
+            String surname = surnameTextField.getText();
+            Integer pesel = Integer.valueOf(peselTextField.getText());
+            Double persBelongs = Double.valueOf(persBelongsTextField.getText());
+            String personality = characterComboBox.getText();
+            Integer idNum = bankBackend.getDatabase().size() + 1;
+            Double monthlyIncome = Double.valueOf(monthlyIncomeTextArea.getText());
+
+            NPC newNPC = new NPC(idNum, name, surname, pesel, 1000.0, 0.0, 1, true, 0.0, 0, bankBackend, persBelongs, personality, monthlyIncome);
+            bankBackend.addClient(newNPC);
+        } catch (NumberFormatException f) {
+            addClientTextArea.setText("Make sure that you have passed correct values \n \nPossible personalities are: \n可愛い\n Charitable\n Madao\n Lucky\n Normal\n");
+        }
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -264,7 +319,7 @@ public class SceneController{
 
     /////////////////////////////////////////////////////////////////
 
-    public void updateCurrentMoney(){
+    public void updateCurrentMoney() {
         NPC player = bankBackend.getClient(1);
         CurrentMoneyArea.setText(String.valueOf(roundAvoid(player.getAccountMoney(), 2)));
     }
@@ -276,12 +331,12 @@ public class SceneController{
 
     public void updateInstallmentAmount() {
         NPC player = bankBackend.getClient(1);
-        InstallmentAmount.setText(String.valueOf(roundAvoid(player.getInstallmentAmount(),2)));
+        InstallmentAmount.setText(String.valueOf(roundAvoid(player.getInstallmentAmount(), 2)));
     }
 
     public void updateActualDebt() {
         NPC player = bankBackend.getClient(1);
-        LoanLeft.setText(String.valueOf(roundAvoid(player.getActualDebt(),2)));
+        LoanLeft.setText(String.valueOf(roundAvoid(player.getActualDebt(), 2)));
     }
 
     public void updateInvestment() {
@@ -291,71 +346,85 @@ public class SceneController{
 
     /////////////////////////////////////////////////////////////////
 
-    public void updateTransfers(){
+    public void updateTransfers() {
         transfersTextArea.clear();
         ArrayList<String> transfers = bankBackend.getTransfersDep().showLastTransfers();
-        for(int i = 0; i < transfers.size(); i++){
+        for (int i = 0; i < transfers.size(); i++) {
             transfersTextArea.appendText(transfers.get(i) + "\n");
         }
     }
 
-    public void updateAccounts(){
-            Runnable updateThread = new Runnable() {
-                @Override
-                public void run() {
-                    accountsComboBox.getItems().clear();
+    public void updateAccounts() {
+        this.where = 0;
+        accountsComboBox.getItems().clear();
 
-                    //bankBackend.getDatabase().forEach((k, v) -> {npcs.add(v); });
+        HashMap<Integer, NPC> npcs = bankBackend.getDatabase();
+        for (int i = 1; i <= npcs.size(); i++) {
+            accountsComboBox.getItems().add(i);
 
-                    HashMap<Integer, NPC> npcs = bankBackend.getDatabase();
-                    for (int i = 1; i <= npcs.size(); i++) {
-                        accountsComboBox.getItems().add(i);
-                    }
+    }
+        this.where = 1;
+    }
+
+    public void killHimNow() {
+        if (bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem()) != null) {
+            NPC serialSucide = bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem());
+            if (serialSucide.getPersonID() != 1) {
+                serialSucide.suicide();
+                try {
+                    updateAccounts();
+                } catch (Exception exception) {
+                    ;
                 }
-
-                //It`s horrible practice
-                //Too bad
-
-            };
-            updateThread.run();
+                //System.out.println(bankBackend.getDatabase());
+            }
         }
+    }
 
-    public void killHimNow(){
-        if(bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem()) != null){
-        NPC serialSucide = bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem());
-        if(serialSucide.getPersonID() != 1){
-        serialSucide.suicide();
-        try{
-        updateAccounts();}
-        catch (Exception exception){
-            ;
-        }
-        //System.out.println(bankBackend.getDatabase());
-        }
-    }}
+    public ComboBox getaccountsComboBox(){
+        return this.accountsComboBox;
+    }
+
+    public TextArea getaccountsTextArea() {
+        return this.accountsTextArea;
+    }
 
     @FXML
-    private void comboAction(ActionEvent event) {
-        NPC sNPC = bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem());
-        if(sNPC != null){
-        accountsTextArea.clear();
-        accountsTextArea.appendText("\n\t   Mr/Mrs:\t\t\t\t " + sNPC.getPersonName() + " " + sNPC.getSurname()
-                                     + "\n\t   Account balance:\t\t " + roundAvoid(sNPC.getAccountMoney(), 2)
-                                     + "\n\t   Debt:\t\t\t\t " + roundAvoid(sNPC.getActualDebt(), 2)
-                                     + "\n\t   Investment:\t\t\t " + roundAvoid(sNPC.getBankInvestment(), 2));
-    }
-        else{
-            accountsTextArea.clear();
-        }
+    private void comboAction(Event event){
+        Thread accountsThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(where == 1){
+                    ComboBox aCB = getaccountsComboBox();
+                    TextArea aTA = getaccountsTextArea();
+                    NPC sNPC = bankBackend.getClient((Integer) aCB.getSelectionModel().getSelectedItem());
+                    if (sNPC != null) {
+                        aTA.clear();
+                        aTA.appendText("\n\t   Mr/Mrs:\t\t\t\t " + sNPC.getPersonName() + " " + sNPC.getSurname()
+                                + "\n\t   Account balance:\t\t " + roundAvoid(sNPC.getAccountMoney(), 2)
+                                + "\n\t   Debt:\t\t\t\t " + roundAvoid(sNPC.getActualDebt(), 2)
+                                + "\n\t   Investment:\t\t\t " + roundAvoid(sNPC.getBankInvestment(), 2));
+                        try {
+                            Thread.sleep(2000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        aTA.clear();
+                        return;
+                    }
+                }}
+        });
+        accountsThread.start();
     }
 
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public void updateEverything(ActionEvent event) throws IOException{
+    public void updateEverything(ActionEvent event) throws IOException {
         NPC player = bankBackend.getClient(1);
-        
+
         updateCurrentMoney();
         updateInvestment();
         updateActualDebt();
@@ -363,36 +432,33 @@ public class SceneController{
         //updateInstallmentAmount();
     }
 
-    public void deposit(ActionEvent event) throws IOException{
+    public void deposit(ActionEvent event) throws IOException {
         NPC player = bankBackend.getClient(1);
-        try{
+        try {
             player.deposit(Integer.valueOf(ATMArea.getText()));
-        }
-        catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             ;
         }
         updateCurrentMoney();
         updatePersonBelongings();
     }
 
-    public void withdraw(ActionEvent event) throws IOException{
+    public void withdraw(ActionEvent event) throws IOException {
         NPC player = bankBackend.getClient(1);
-        try{
+        try {
             player.withdraw(Integer.valueOf(ATMArea.getText()));
-        }
-        catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             ;
         }
         updateCurrentMoney();
         updatePersonBelongings();
     }
 
-    public void loan(ActionEvent event) throws IOException{
+    public void loan(ActionEvent event) throws IOException {
         NPC player = bankBackend.getClient(1);
-        try{
+        try {
             player.takeLoan(Double.valueOf(LoanArea.getText()), Integer.valueOf(InstallmentNumber.getText()));
-        }
-        catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             ;
         }
         updateCurrentMoney();
@@ -402,10 +468,9 @@ public class SceneController{
 
     public void pay(ActionEvent event) throws IOException {
         NPC player = bankBackend.getClient(1);
-        try{
+        try {
             player.payLoan();
-        }
-        catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             ;
         }
         updateCurrentMoney();
@@ -413,24 +478,22 @@ public class SceneController{
         updateActualDebt();
     }
 
-    public void investment(ActionEvent event) throws IOException{
+    public void investment(ActionEvent event) throws IOException {
         NPC player = bankBackend.getClient(1);
-        try{
+        try {
             player.makeInvestment(Double.valueOf(InvestmentArea.getText()), Integer.valueOf(InvestmentDuration.getText()));
-        }
-        catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             ;
         }
         updateCurrentMoney();
         updateInvestment();
     }
 
-    public void close(ActionEvent event) throws IOException{
+    public void close(ActionEvent event) throws IOException {
         NPC player = bankBackend.getClient(1);
-        try{
+        try {
             player.closeInvestment();
-        }
-        catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             ;
         }
         updateCurrentMoney();
@@ -438,22 +501,21 @@ public class SceneController{
     }
 
     //Display Stock and Currencies
-    public void showCurrency() throws IOException{
+    public void showCurrency() throws IOException {
         Thread threadCurrency = new Thread(new Runnable() {
             @Override
             public void run() {
 
                 CurrencyRateDep HelperCurrency = bankBackend.getCurrencyRate();
                 String[] Binder = HelperCurrency.getCurrencyDataBase();
-                while(Binder[7] == null){
-                    try{
+                while (Binder[7] == null) {
+                    try {
                         Thread.sleep(10);
-                    }
-                    catch (InterruptedException i){
+                    } catch (InterruptedException i) {
                         ;
                     }
                 }
-                CurrencyArea.setText(    "\n     " + Binder[0] + "\n");
+                CurrencyArea.setText("\n     " + Binder[0] + "\n");
                 CurrencyArea.appendText("     " + Binder[1] + "\n");
                 CurrencyArea.appendText("     " + Binder[2] + "\n");
                 CurrencyArea.appendText("     " + Binder[3] + "\n");
@@ -473,15 +535,14 @@ public class SceneController{
 
                 StockRateDep HelperStock = bankBackend.getStockRate();
                 String[] Binder = HelperStock.getStockDataBase();
-                while(Binder[7] == null){
-                    try{
+                while (Binder[7] == null) {
+                    try {
                         Thread.sleep(10);
-                    }
-                    catch (InterruptedException i){
+                    } catch (InterruptedException i) {
                         ;
                     }
                 }
-                StockArea.setText(    "\n     " + Binder[0] + "\n");
+                StockArea.setText("\n     " + Binder[0] + "\n");
                 StockArea.appendText("     " + Binder[1] + "\n");
                 StockArea.appendText("     " + Binder[2] + "\n");
                 StockArea.appendText("     " + Binder[3] + "\n");
@@ -498,11 +559,8 @@ public class SceneController{
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //Exit program
-    public void exit(ActionEvent event){
+    public void exit(ActionEvent event) {
+        bankBackend.saver(bankBackend.getDatabase());
         System.exit(2137);
-        accounts.kill();
-        transfers.kill();
-        reports.kill();
-        counters.kill();
     }
 }

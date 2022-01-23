@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Writer {
+public class Writer{
 
     public void writeTransfers(String str)
             throws IOException {
@@ -73,6 +73,5 @@ public class Writer {
                     counter++;
                 }
                 return;}
-
 
 }
