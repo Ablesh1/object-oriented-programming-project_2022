@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class SceneController{
 
@@ -299,25 +300,55 @@ public class SceneController{
     }
 
     public void updateAccounts(){
-        ArrayList<NPC> npcs= new ArrayList<>();
-        accountsComboBox.getItems().clear();
-        bankBackend.getDatabase().forEach((k, v) -> {npcs.add(v); });
-        for(int i = 0; i < npcs.size(); i++ ){
-            //NPC cNPC = npcs.get(i);
-            //accountsTextArea.appendText(cNPC.getPersonName() + " " + cNPC.getSurname() + " o id " + cNPC.getPersonID())
-            accountsComboBox.getItems().add(npcs.get(i).getPersonID());
+            Runnable updateThread = new Runnable() {
+                @Override
+                public void run() {
+                    accountsComboBox.getItems().clear();
+
+                    //bankBackend.getDatabase().forEach((k, v) -> {npcs.add(v); });
+
+                    HashMap<Integer, NPC> npcs = bankBackend.getDatabase();
+                    for (int i = 1; i <= npcs.size(); i++) {
+                        accountsComboBox.getItems().add(i);
+                    }
+                }
+
+                //It`s horrible practice
+                //Too bad
+
+            };
+            updateThread.run();
         }
-    }
+
+    public void killHimNow(){
+        if(bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem()) != null){
+        NPC serialSucide = bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem());
+        if(serialSucide.getPersonID() != 1){
+        serialSucide.suicide();
+        try{
+        updateAccounts();}
+        catch (Exception exception){
+            ;
+        }
+        //System.out.println(bankBackend.getDatabase());
+        }
+    }}
 
     @FXML
     private void comboAction(ActionEvent event) {
         NPC sNPC = bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem());
+        if(sNPC != null){
         accountsTextArea.clear();
         accountsTextArea.appendText("\n\t   Mr/Mrs:\t\t\t\t " + sNPC.getPersonName() + " " + sNPC.getSurname()
                                      + "\n\t   Account balance:\t\t " + roundAvoid(sNPC.getAccountMoney(), 2)
                                      + "\n\t   Debt:\t\t\t\t " + roundAvoid(sNPC.getActualDebt(), 2)
                                      + "\n\t   Investment:\t\t\t " + roundAvoid(sNPC.getBankInvestment(), 2));
     }
+        else{
+            accountsTextArea.clear();
+        }
+    }
+
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -33,7 +33,7 @@ public class BankBackend implements Serializable{
 
 
 
-        addClient(new NPC(1, "Karol", "WoiTiWa", 2137213721, 1000.0,1000.0, 10,true,0.0, 0, this, 10000.0, "Character", 2137.2137));
+        addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 1000.0,1000.0, 10,true,0.0, 0, this, 10000.0, "Character", 2137.2137));
 
         //These clients' data is saved in Client.dat
         addClient(new NPC(2, "Jurij", "Owsienko",797404004,2141.0,  0.0,0, true, 0.0,0,this,500.07,"Charitable",9000.0));
@@ -125,18 +125,27 @@ public class BankBackend implements Serializable{
         database.put(database.size() + 1, npc);
     }
 
+    public void setDatabase(HashMap<Integer, NPC> database) {
+        this.database = database;
+    }
+
     public void removeClient(Integer personID){
         database.remove(personID);
         HashMap<Integer, NPC> replacer = new HashMap<>();
 
-        for(int j = 0; j < personID; j ++){
+        //Update the database loop
+        //As effective as Musk`s hyperloop lol
+
+        //From Player to personID
+        for(int j = 1; j < personID; j ++){
             replacer.put(j, database.get(j));
         }
 
-        for(int i = personID; i < database.size(); i ++){
-            database.get(i).setPersonID(database.get(i).getPersonID() - 1);
-            replacer.put(database.get(i).getPersonID(), database.get(i));
+        for(int i = personID + 1; i <= database.size() + 1; i++){
+            replacer.put(i - 1, database.get(i));
+            database.get(i).setPersonID(i - 1);
         }
+        setDatabase(replacer);
     }
 
     public HashMap<Integer, NPC> getDatabase() {
@@ -155,12 +164,15 @@ public class BankBackend implements Serializable{
                 overseer.add(0);
                 overseer.add(0);
 
-                if(overseer.get(0) == 0){
+                //Cancle transfer in mild case of death
+                if(overseer.get(0) == 0 && giver != null && receiver != null){
 
                     //First step - gather the right amount of money
                     double containerFrom = howMuchFrom;
                     overseer.set(0, 1);
 
+                    //Turn out you have to check it once
+                    //If is null will go to else apparently
                     if(overseer.get(1) == 0){
                         //Second step - take the money from giver
                         giver.withdraw(howMuchFrom);
@@ -168,10 +180,8 @@ public class BankBackend implements Serializable{
 
                         if(overseer.get(0) == 1 && overseer.get(1) == 1){
                             //Third step - give the money to receiver
-                            receiver.deposit(howMuchFrom);
-                            StringBuilder stringBuilder = new StringBuilder();
-                            stringBuilder.append("\t\tFrom\t" + from + " \tto\t " + to + "\t" + howMuchFrom);
-                            String finalString = stringBuilder.toString();
+                            receiver.deposit(containerFrom);
+                            String finalString = "\t\tFrom\t" + from + " \tto\t " + to + "\t" + howMuchFrom;
 
                             try {
                                 writter.writeTransfers(finalString);
@@ -181,6 +191,7 @@ public class BankBackend implements Serializable{
                             return;
                         }
                         else{
+                            System.out.println("Transfer cancelled due to unexpected case of death");
                             //We have to undo the previous move if something happens
                             giver.deposit(howMuchFrom);
 
@@ -189,6 +200,7 @@ public class BankBackend implements Serializable{
                     }
 
                     else{
+                        System.out.println("Transfer cancelled due to urgent will to die");
                         //Here nothing happened yet thankfully
                         return;
                     }
