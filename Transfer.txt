@@ -12474,3 +12474,33 @@ From 7 to 1 1311285.0
 		From	4 	to	 6	3705.0
 		From	3 	to	 1	10407.0
 		From	10 	to	 2	1941723.0
+		From	10 	to	 2	13181.0
+		From	3 	to	 2	548.0
+		From	2 	to	 2	4103.0
+		From	8 	to	 4	122.0
+		From	3 	to	 4	2534.0
+		From	7 	to	 1	8.0
+		From	4 	to	 2	74.0
+		From	6 	to	 3	320.0
+		From	4 	to	 7	375.0
+		From	7 	to	 5	355.0
+		From	4 	to	 1	1886.0
+		From	5 	to	 7	4508.0
+		From	2 	to	 7	13488.0
+		From	4 	to	 6	3664.0
+		From	3 	to	 3	5213.0
+		From	4 	to	 1	6185.0
+		From	6 	to	 7	577.0
+		From	10 	to	 7	512759.0
+		From	3 	to	 6	10911.0
+		From	10 	to	 6	1327820.0
+		From	2 	to	 7	10316.0
+		From	6 	to	 5	396.0
+		From	3 	to	 1	7850.0
+		From	2 	to	 7	24049.0
+		From	4 	to	 1	4935.0
+		From	6 	to	 3	283.0
+		From	3 	to	 6	880.0
+		From	4 	to	 4	3576.0
+		From	10 	to	 6	1441692.0
+		From	4 	to	 2	5912.0

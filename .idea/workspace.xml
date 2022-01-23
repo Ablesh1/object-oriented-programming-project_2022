@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Adjust money balance in the bank - unlock some dark methods">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPChandling/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPChandling/NPC.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,21 +146,7 @@
       <workItem from="1642689408289" duration="881000" />
       <workItem from="1642717033758" duration="678000" />
       <workItem from="1642755021822" duration="986000" />
-      <workItem from="1642937377430" duration="8964000" />
-    </task>
-    <task id="LOCAL-00007" summary="Dodawanie i usuwanie pieniędzy do kąta gracza">
-      <created>1642443304184</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1642443304184</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Dodawanie i usuwanie pieniędzy do kąta gracza">
-      <created>1642443691501</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1642443691501</updated>
+      <workItem from="1642937377430" duration="9785000" />
     </task>
     <task id="LOCAL-00009" summary="Lepsze samobójstwo">
       <created>1642500362733</created>
@@ -491,7 +477,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642944151576</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Add Lucky person behaviour, upgrade logic and change details">
+      <created>1642946725582</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1642946725582</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Unversioned commit">
+      <created>1642946739595</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1642946739595</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +511,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add complete BankLoan.fxml" />
     <MESSAGE value="Add incomplete BankInvestment.fxml" />
     <MESSAGE value="Add access to Loan and Investment fxml files" />
     <MESSAGE value="Adjust SceneController to new mechanics - plenty of Loan and Investment methods added" />
@@ -534,9 +533,10 @@
     <MESSAGE value="Add new NPC with new features" />
     <MESSAGE value="Add cute NPC with behaviour" />
     <MESSAGE value="Prepare workspace for two new characters" />
-    <MESSAGE value="Unversioned commit" />
     <MESSAGE value="Adjust money balance in the bank - unlock some dark methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjust money balance in the bank - unlock some dark methods" />
+    <MESSAGE value="Add Lucky person behaviour, upgrade logic and change details" />
+    <MESSAGE value="Unversioned commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unversioned commit" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
