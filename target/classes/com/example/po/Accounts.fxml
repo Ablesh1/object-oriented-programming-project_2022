@@ -13,6 +13,7 @@
       <ComboBox fx:id="accountsComboBox"   layoutX="225" layoutY="70"  prefHeight="10"  prefWidth="150" onAction="#comboAction" />
       <TextArea fx:id="accountsTextArea"   layoutX="150" layoutY="120" prefHeight="110" prefWidth="300" />
       <Button fx:id="updateAccountsButton" layoutX="245" layoutY="250" mnemonicParsing="false" text="Update Accounts" onAction="#updateAccounts" />
+      <Button layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="600.0" text="Kill the client and seize they properties (gender neutral form)" onAction="#killHimNow" />
 
    </children>
 </AnchorPane>
