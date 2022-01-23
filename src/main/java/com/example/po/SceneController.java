@@ -377,7 +377,6 @@ public class SceneController{
 
         where = 3;
         transfersThread.start();
-        transfersThread.start();
     }
 
     public TextArea getTransfersTextArea(){
@@ -389,7 +388,14 @@ public class SceneController{
 
     public void updateAccounts() {
         this.where = 0;
-        accountsComboBox.getItems().clear();
+        try {
+            accountsComboBox.getItems().clear();
+        }
+
+        catch (Exception e){
+            System.out.println(e);
+            return;
+        }
 
         HashMap<Integer, NPC> npcs = bankBackend.getDatabase();
         for (int i = 1; i <= npcs.size(); i++) {
@@ -397,6 +403,7 @@ public class SceneController{
 
     }
         this.where = 1;
+
     }
 
     public void killHimNow() {
@@ -437,17 +444,21 @@ public class SceneController{
                         //Not sure what causes it
                         //aTA.clear();
 
+                        try{
                         aTA.setText("\n\t   Mr/Mrs:\t\t\t\t " + sNPC.getPersonName() + " " + sNPC.getSurname()
                                 + "\n\t   Account balance:\t\t " + roundAvoid(sNPC.getAccountMoney(), 2)
                                 + "\n\t   Debt:\t\t\t\t " + roundAvoid(sNPC.getActualDebt(), 2)
-                                + "\n\t   Investment:\t\t\t " + roundAvoid(sNPC.getBankInvestment(), 2));
+                                + "\n\t   Investment:\t\t\t " + roundAvoid(sNPC.getBankInvestment(), 2)); }
+                        catch(Exception n){
+                            where = 0;
+                        }
+
                         try {
                             Thread.sleep(200);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     } else {
-                        aTA.clear();
                         return;
                     }
                 }}
