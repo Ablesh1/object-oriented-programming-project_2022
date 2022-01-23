@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
-      <change beforePath="$PROJECT_DIR$/.idea/Programowanie-Obiektowe-Projekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Programowanie-Obiektowe-Projekt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_01_2022_01_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_01_2022_01_23__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="GUI" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +113,6 @@
         <item itemvalue="Application.HallGUI" />
         <item itemvalue="Application.HallGUI" />
         <item itemvalue="Application.HallGUI" />
-        <item itemvalue="Application.HallGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -145,7 +140,62 @@
       <workItem from="1642689408289" duration="881000" />
       <workItem from="1642717033758" duration="678000" />
       <workItem from="1642755021822" duration="986000" />
-      <workItem from="1642937377430" duration="9785000" />
+    </task>
+    <task id="LOCAL-00001" summary="Wstęp do bazy i NPC">
+      <created>1642431352140</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642431352140</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Some refactoring mostly">
+      <created>1642433082841</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642433082841</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Doing God`s work">
+      <created>1642434274441</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642434274441</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Wstępny backend banku">
+      <created>1642435949997</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642435949997</updated>
+    </task>
+    <task id="LOCAL-00005" summary="POTĘZNY REFACTORING&#10;BACK OZNACZA BACKEND - TAM BĘDĄ WSZYSTKIE OBLICZENIA">
+      <created>1642439512719</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642439512719</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactoring">
+      <created>1642439622009</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642439622009</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Dodawanie i usuwanie pieniędzy do kąta gracza">
+      <created>1642443304184</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642443304184</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Dodawanie i usuwanie pieniędzy do kąta gracza">
+      <created>1642443691501</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642443691501</updated>
     </task>
     <task id="LOCAL-00009" summary="Lepsze samobójstwo">
       <created>1642500362733</created>
@@ -413,84 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642876811437</updated>
     </task>
-    <task id="LOCAL-00047" summary="GUI - General improvement">
-      <created>1642890083370</created>
+    <task id="LOCAL-00047" summary="GUI">
+      <created>1642883883268</created>
       <option name="number" value="00047" />
       <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
-      <updated>1642890083370</updated>
+      <updated>1642883883268</updated>
     </task>
-    <task id="LOCAL-00048" summary="Unversioned commit">
-      <created>1642891700364</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1642891700364</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Add new NPC with new features">
-      <created>1642938931452</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1642938931452</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Unversioned commit">
-      <created>1642938944506</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1642938944506</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Unversioned commit">
-      <created>1642940469297</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1642940469297</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Add cute NPC with behaviour">
-      <created>1642940487927</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1642940487927</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Prepare workspace for two new characters">
-      <created>1642940785674</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1642940785674</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Unversioned commit">
-      <created>1642940806184</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1642940806184</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Adjust money balance in the bank - unlock some dark methods">
-      <created>1642944151576</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1642944151576</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Add Lucky person behaviour, upgrade logic and change details">
-      <created>1642946725582</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1642946725582</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Unversioned commit">
-      <created>1642946739595</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1642946739595</updated>
-    </task>
-    <option name="localTasksCounter" value="58" />
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,6 +490,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Pusheł" />
+    <MESSAGE value="Add Loan and Investment mechanics" />
+    <MESSAGE value="Add special getters for Loan and Investment variables, upgrade constructor" />
+    <MESSAGE value="Upgrade constructor" />
+    <MESSAGE value="Add complete BankLoan.fxml" />
     <MESSAGE value="Add incomplete BankInvestment.fxml" />
     <MESSAGE value="Add access to Loan and Investment fxml files" />
     <MESSAGE value="Adjust SceneController to new mechanics - plenty of Loan and Investment methods added" />
@@ -524,20 +509,24 @@
     <MESSAGE value="Add BankAccount.fxml" />
     <MESSAGE value="Add features to check Bank Account" />
     <MESSAGE value="Add access to BankAccount.fxml" />
+    <MESSAGE value="Unversioned commit" />
     <MESSAGE value="Change of details" />
     <MESSAGE value="Add BigStockRate.fxml" />
     <MESSAGE value="Add path BigStockRate.fxml" />
     <MESSAGE value="Add ClientReport.fxml" />
-    <MESSAGE value="GUI - General improvement" />
-    <MESSAGE value="Add new NPC with new features" />
-    <MESSAGE value="Add cute NPC with behaviour" />
-    <MESSAGE value="Prepare workspace for two new characters" />
-    <MESSAGE value="Adjust money balance in the bank - unlock some dark methods" />
-    <MESSAGE value="Add Lucky person behaviour, upgrade logic and change details" />
-    <MESSAGE value="Unversioned commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unversioned commit" />
+    <MESSAGE value="GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java</url>
+          <line>272</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="javafx.event.ActionEvent" memberName="source" />
@@ -550,11 +539,11 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Programowanie_Obiektowe_Projekt_2$HallGUI.ic" NAME="HallGUI Coverage Results" MODIFIED="1642615150623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.po.NPChandling.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/PO$Hol.ic" NAME="Hol Coverage Results" MODIFIED="1641468694821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.po.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Programowanie_Obiektowe_Projekt_2$HallGUI.ic" NAME="HallGUI Coverage Results" MODIFIED="1642615150623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.po.NPChandling.*</FILTER>
     </SUITE>
   </component>
 </project>

@@ -8,11 +8,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
    <children>
-      <Button fx:id="ToOffice"             layoutX="270" layoutY="300" mnemonicParsing="false" onAction="#switchToOffice" text="To office" />
-      <TextField editable="false"          layoutX="210" layoutY="10"  prefHeight="40"  prefWidth="180" text="You decide to check accounts." />
-      <ComboBox fx:id="accountsComboBox"   layoutX="225" layoutY="70"  prefHeight="10"  prefWidth="150" onAction="#comboAction" />
-      <TextArea fx:id="accountsTextArea"   layoutX="150" layoutY="120" prefHeight="110" prefWidth="300" />
-      <Button fx:id="updateAccountsButton" layoutX="245" layoutY="250" mnemonicParsing="false" text="Update Accounts" onAction="#updateAccounts" />
-
+      <Button fx:id="ToOffice" layoutX="268.0" layoutY="349.0" mnemonicParsing="false" onAction="#switchToOffice" text="To office" />
+      <TextField editable="false" layoutX="210" layoutY="10" prefHeight="40" prefWidth="180" text="You decide to check accounts." />
+      <Button fx:id="upadteAccountsButton" layoutX="245.0" layoutY="306.0" mnemonicParsing="false" text="Update Accounts" onAction="#updateAccounts" />
+      <ComboBox fx:id="accountsComboBox" layoutX="228.0" layoutY="56.0" prefWidth="150.0" onAction="#comboAction" />
+      <TextArea fx:id="accountsTextArea" layoutX="63.0" layoutY="92.0" prefHeight="200.0" prefWidth="496.0" />
    </children>
 </AnchorPane>
