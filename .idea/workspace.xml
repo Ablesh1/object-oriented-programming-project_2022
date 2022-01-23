@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="GUI - General improvement">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2022_22_52_[Changes]/CurrencyRate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2022_22_52_[Changes]/SceneController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2022_22_52_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2022_22_52__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Accounts.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/ClientReport.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/ClientReport.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Reports.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Reports.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/StockRate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/StockRate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +150,7 @@
       <workItem from="1642689408289" duration="881000" />
       <workItem from="1642717033758" duration="678000" />
       <workItem from="1642755021822" duration="986000" />
+      <workItem from="1642937377430" duration="1509000" />
     </task>
     <task id="LOCAL-00001" summary="Wstęp do bazy i NPC">
       <created>1642431352140</created>
@@ -480,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642890083370</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Unversioned commit">
+      <created>1642891700364</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1642891700364</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,13 +527,13 @@
     <MESSAGE value="Add BankAccount.fxml" />
     <MESSAGE value="Add features to check Bank Account" />
     <MESSAGE value="Add access to BankAccount.fxml" />
-    <MESSAGE value="Unversioned commit" />
     <MESSAGE value="Change of details" />
     <MESSAGE value="Add BigStockRate.fxml" />
     <MESSAGE value="Add path BigStockRate.fxml" />
     <MESSAGE value="Add ClientReport.fxml" />
     <MESSAGE value="GUI - General improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI - General improvement" />
+    <MESSAGE value="Unversioned commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unversioned commit" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
