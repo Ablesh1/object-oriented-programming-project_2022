@@ -31,21 +31,22 @@ public class BankBackend implements Serializable{
         this.randomClient = 2;
         this.thePoorOne = 2;
 
-        //NPC(Integer idNumber, String name, String surname, Integer pesel, double Debit)
+
 
         addClient(new NPC(1, "Karol", "WoiTiWa", 2137213721, 1000.0,1000.0, 10,true,0.0, 0, this, 10000.0, "Character", 2137.2137));
 
-        //Ci klienci są już zapisani w Client.dat
-        addClient(new NPC(2, "Jurij", "Owsienko", 797404004, 41410.0,0.0, 0,true,0.0, 0, this, 1200.07, "Charitable", 25000.0));
-        addClient(new NPC(3, "Mr", "Two", 854627322, 14210.0,0.0, 0,true,0.0, 0, this, 3000.99, "Normal",     35000.0));
-        addClient(new NPC(4, "Mr", "Six", 364521527, 21352.0,0.0, 0,true,0.0, 0, this, 6200.01, "Normal",     18600.0));;
+        //These clients' data is saved in Client.dat
+        addClient(new NPC(2, "Jurij", "Owsienko",797404004,2141.0,  0.0,0, true, 0.0,0,this,500.07,"Charitable",9000.0));
+        addClient(new NPC(3, "Zero",  "Two",     854627322,1421.0,  0.0,0, true, 0.0,0,this,305.85,"Normal",    3500.0));
+        addClient(new NPC(4, "Kurumi","Tokisaki",364521527,2135.0,  0.0,0, true, 0.0,0,this,246.45,"Normal",    1860.0));
 
-        addClient(new NPC(5, "Test", "Kaminari", 36452152, 1400.0,0.0, 0,true,0.0, 0, this, 640.0, "Test", 25.0));
+        addClient(new NPC(5, "Shinobu", "Oshino",124512389,9560.0,0.0,    0, true, 0.0,0,this,121.0, "可愛い",2000.0));
+        addClient(new NPC(6, "Elon",    "Musk",  987654321,9000.0,0.0,    0, true, 0.0,0,this,1000.0,"Lucky",-1000.0));
+        addClient(new NPC(7, "John",    "Debtor",567356852,1000.0,10000.0,10,true, 0.0,0,this,10.0,  "Madao",400.0));
+        addClient(new NPC(8, "Hasegawa","Taizou",658123567,1000.0,20000.0,5, false,0.0,0,this,2.99,  "Madao",100.0));
+        addClient(new NPC(9,"Test", "Kaminari",  36452152, 1400.0,0.0,    0, true, 0.0,0,this,640.0, "Test", 400.0));
 
-        addClient(new NPC(6, "Elon", "Musk", 111222333, 1000000000.0, 0.0, 0, true,0.0, 0, this, 10000.0, "Confident", -1000.0));
-        addClient(new NPC(7, "King of Rohan", "Theoden", 666666666, 66666.6, 0.0, 0, true,0.0, 0, this, 6666.6, "Evil", 100000.0));
-
-        addClient(new NPC(8, "John", "Debtor", 444555666, 0.0, 100000.0, 10, true,0.0, 0, this, 10.0, "Normal", 100.0));
+        addClient(new NPC(10, "King of Rohan", "Theoden",666666666,66666.6,0.0,0,true,0.0,0,this,6666.6,"Evil",100000.0));
 
         //saver(database);
 
@@ -169,7 +170,7 @@ public class BankBackend implements Serializable{
                             //Third step - give the money to receiver
                             receiver.deposit(howMuchFrom);
                             StringBuilder stringBuilder = new StringBuilder();
-                            stringBuilder.append("Od " + from + " do " + to + " " + howMuchFrom);
+                            stringBuilder.append("\t\tFrom\t" + from + " \tto\t " + to + "\t" + howMuchFrom);
                             String finalString = stringBuilder.toString();
 
                             try {

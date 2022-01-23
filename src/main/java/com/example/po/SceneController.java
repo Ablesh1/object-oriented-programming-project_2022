@@ -19,14 +19,23 @@ import java.util.ArrayList;
 
 public class SceneController{
 
+    //Bank account
     @FXML
     Button UpdateButton;
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Stocks
     @FXML
     TextArea CurrencyArea;
     @FXML
     TextArea StockArea;
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Deposits and withdraws
     @FXML
     TextField ATMArea;
     @FXML
@@ -38,6 +47,10 @@ public class SceneController{
     @FXML
     Button WithdrawButton;
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Loans
     @FXML
     TextField LoanArea;
     @FXML
@@ -51,6 +64,10 @@ public class SceneController{
     @FXML
     Button PayButton;
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Investments
     @FXML
     TextField InvestmentArea;
     @FXML
@@ -62,14 +79,16 @@ public class SceneController{
     @FXML
     Button CloseInvestButton;
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    //Office part
     @FXML
     TextArea transfersTextArea;
-
-    @FXML
-    ComboBox accountsComboBox;
     @FXML
     TextArea accountsTextArea;
+    @FXML
+    ComboBox accountsComboBox;
 
     //private CurrencyRateDepBack currencyRate;
     //private StockRateDepBack stockRate;
@@ -120,6 +139,9 @@ public class SceneController{
         stage.show();
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     public void switchToBankAccount(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("BankAccount.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -168,6 +190,9 @@ public class SceneController{
         stage.show();
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     public void switchToTransfers(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Transfers.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -175,6 +200,9 @@ public class SceneController{
         stage.setScene(scene);
         stage.show();
     }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void switchToReports(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Reports.fxml"));
@@ -200,6 +228,9 @@ public class SceneController{
         stage.show();
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     public void switchToAccounts(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Accounts.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -208,8 +239,9 @@ public class SceneController{
         stage.show();
     }
 
-    public void switchToTansfersReports(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("transfersReport.fxml"));
+    //I don't like this name
+    public void switchToTransferReports(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("TransfersReport.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -219,34 +251,44 @@ public class SceneController{
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    //Method that rounds output to n decimal places
+    public static Double roundAvoid(Double value, int places) {
+        double scale = Math.pow(10, places);
+        return Math.round(value * scale) / scale;
+    }
+
     public void OnClicked(ActionEvent event) throws IOException {
         System.out.println("Something happened");
     }
 
+    /////////////////////////////////////////////////////////////////
+
     public void updateCurrentMoney(){
         NPC player = bankBackend.getClient(1);
-        CurrentMoneyArea.setText(String.valueOf(player.getAccountMoney()));
+        CurrentMoneyArea.setText(String.valueOf(roundAvoid(player.getAccountMoney(), 2)));
     }
 
     public void updatePersonBelongings() {
         NPC player = bankBackend.getClient(1);
-        BelongingsArea.setText(String.valueOf(player.getPersonBelongings()));
+        BelongingsArea.setText(String.valueOf(roundAvoid(player.getPersonBelongings(), 2)));
     }
 
     public void updateInstallmentAmount() {
         NPC player = bankBackend.getClient(1);
-        InstallmentAmount.setText(String.valueOf(player.getInstallmentAmount()));
+        InstallmentAmount.setText(String.valueOf(roundAvoid(player.getInstallmentAmount(),2)));
     }
 
     public void updateActualDebt() {
         NPC player = bankBackend.getClient(1);
-        LoanLeft.setText(String.valueOf(player.getActualDebt()));
+        LoanLeft.setText(String.valueOf(roundAvoid(player.getActualDebt(),2)));
     }
 
     public void updateInvestment() {
         NPC player = bankBackend.getClient(1);
-        InvestmentAmount.setText(String.valueOf(player.getBankInvestment()));
+        InvestmentAmount.setText(String.valueOf(roundAvoid(player.getBankInvestment(), 2)));
     }
+
+    /////////////////////////////////////////////////////////////////
 
     public void updateTransfers(){
         transfersTextArea.clear();
@@ -271,10 +313,10 @@ public class SceneController{
     private void comboAction(ActionEvent event) {
         NPC sNPC = bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem());
         accountsTextArea.clear();
-        accountsTextArea.appendText("Pan/Pani " + sNPC.getPersonName() + " " + sNPC.getSurname()
-        + "\nPosiada na koncie " + Math.round(sNPC.getAccountMoney()) + "\nPosiada kredyt równy " + Math.round(sNPC.getActualDebt())
-        + "\nPosiada akcje o wartości " + sNPC.getBankInvestment()
-        );
+        accountsTextArea.appendText("\n\t   Mr/Mrs:\t\t\t\t " + sNPC.getPersonName() + " " + sNPC.getSurname()
+                                     + "\n\t   Account balance:\t\t " + roundAvoid(sNPC.getAccountMoney(), 2)
+                                     + "\n\t   Debt:\t\t\t\t " + roundAvoid(sNPC.getActualDebt(), 2)
+                                     + "\n\t   Investment:\t\t\t " + roundAvoid(sNPC.getBankInvestment(), 2));
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////

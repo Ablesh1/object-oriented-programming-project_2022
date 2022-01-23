@@ -95,6 +95,10 @@ public class NPC extends Thread implements Serializable{
         return this.npcAccount.getBankInvestment();
     }
 
+    public Double getMonthlyIncome() {
+        return monthlyIncome;
+    }
+
     public void setPersonID(Integer personID) {
         this.personID = personID;
     }
@@ -105,6 +109,10 @@ public class NPC extends Thread implements Serializable{
 
     public void setBankBackend(BankBackend bankBackend) {
         this.bankBackend = bankBackend;
+    }
+
+    public void setMonthlyIncome(Double monthlyIncome) {
+        this.monthlyIncome = monthlyIncome;
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -202,14 +210,14 @@ public class NPC extends Thread implements Serializable{
                     logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " decides to transfer money to the poorest person with ID" + thePoorestOne);
 
                     //Because you send money to ID not person themselves
-                    //Max 80% of what the person have
-                    this.bankBackend.transferMoney(this.personID, thePoorestOne, Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.8 )));
+                    //Max 50% of what the person have
+                    this.bankBackend.transferMoney(this.personID, thePoorestOne, Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.5 )));
                 }
 
                 //Payments - brutal
-                else if(whatToDo == 5 || whatToDo == 6){
+                if(whatToDo == 5 || whatToDo == 6){
 
-                    double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.6);
+                    double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.6 + 100);
 
                     //Pay if you can afford
                     if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses){
@@ -249,34 +257,36 @@ public class NPC extends Thread implements Serializable{
 
                                 this.suicide();
 
-                                logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
+                                writer.write("Charitable person - " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
                             }
                         }
                     }
                 }
 
                 //Mad stuff
-                else if(whatToDo == 7){
-                    if(this.npcAccount.getAccountMoney() > 30000)
+                if(whatToDo == 7){
+                    if(this.npcAccount.getAccountMoney() > 30000) {
 
-                    logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " saved children in Africa and went for whores");
+                        logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " saved children in Africa and went for whores");
 
-                    this.withdraw(10000.0);
-                    this.personBelongings -= 10000.0;
+                        this.withdraw(10000.0);
+                        this.personBelongings -= 10000.0;
 
-                    writer.write("Charitable person - " + this.getPersonName() + " " + this.getSurname() + " saved children in Africa and went for whores");
+                        writer.write("Charitable person - " + this.getPersonName() + " " + this.getSurname() + " saved children in Africa and went for whores");
+                    }
                 }
 
                 //More mad stuff
-                else if(whatToDo == 8){
-                    if(this.npcAccount.getAccountMoney() > 50000)
+                if(whatToDo == 8){
+                    if(this.npcAccount.getAccountMoney() > 50000) {
 
                         logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " prevented genocide in the Middle East");
 
-                    this.withdraw(30000.0);
-                    this.personBelongings -= 30000.0;
+                        this.withdraw(30000.0);
+                        this.personBelongings -= 30000.0;
 
-                    writer.write("Charitable person - " + this.getPersonName() + " " + this.getSurname() + " prevented genocide in the Middle East");
+                        writer.write("Charitable person - " + this.getPersonName() + " " + this.getSurname() + " prevented genocide in the Middle East");
+                    }
                 }
 
                 //More and more mad stuff
@@ -298,7 +308,7 @@ public class NPC extends Thread implements Serializable{
                 this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(3.6)));
 
                 //How much money can you have in pockets really?
-                if(this.personBelongings >= 2000){
+                if(this.personBelongings >= 1000){
 
                     logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
 
@@ -316,7 +326,7 @@ public class NPC extends Thread implements Serializable{
             /////Normal is a balanced person that does not do any hardcore stuff
             /////He is much less charitable, may do some investing
             /////Sends money to family for e.g. and stuff
-            /////he usually takes have some pocket money with him
+            /////He usually takes have some pocket money with him
             case("Normal"):
                 if(whatToDo < 4){
 
@@ -328,9 +338,9 @@ public class NPC extends Thread implements Serializable{
                 }
 
                 //Payments - brutal
-                else if(whatToDo == 5 || whatToDo == 6){
+                if(whatToDo == 5 || whatToDo == 6){
 
-                    double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.6);
+                    double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.6 + 100);
 
                     //Pay if you can afford
                     if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses){
@@ -370,7 +380,7 @@ public class NPC extends Thread implements Serializable{
 
                                 this.suicide();
 
-                                logger.log(Level.INFO, "Normal person - " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
+                                writer.write("Normal person - " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
                             }
                         }
                     }
@@ -379,46 +389,390 @@ public class NPC extends Thread implements Serializable{
                 //Invest some money
                 if(whatToDo == 7){
 
-                    logger.log(Level.INFO, "Normal person " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
+                    logger.log(Level.INFO, "Normal person - " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
 
                     this.npcAccount.makeBankInvestment(10000.0, 1);
 
-                    writer.write("Normal person " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
+                    writer.write("Normal person - " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
                 }
 
                 //More investments
                 if(whatToDo == 8){
 
-                    logger.log(Level.INFO, "Normal person " + this.getPersonName() + " " + this.getSurname() + " managed to earn some extra stuff this month");
+                    logger.log(Level.INFO, "Normal person - " + this.getPersonName() + " " + this.getSurname() + " managed to earn some extra stuff this month");
 
                     Double thisMonthIncomeExtra = (double) Math.round(random.nextDouble(2500.0));
 
                     this.npcAccount.makeBankInvestment(thisMonthIncomeExtra, 1);
 
-                    logger.log(Level.INFO, "Normal person " + this.getPersonName() + " " + this.getSurname() + " managed to earn some extra stuff this month");
+                    writer.write("Normal person - " + this.getPersonName() + " " + this.getSurname() + " managed to earn some extra stuff this month");
                 }
 
                 //Close an investment
                 if(whatToDo == 9){
 
-                    logger.log(Level.INFO, "Normal person " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
+                    logger.log(Level.INFO, "Normal person - " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
 
                     this.npcAccount.closeInvestment();
 
-                    logger.log(Level.INFO, "Normal person " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
+                    writer.write("Normal person - " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
                 }
 
                 //Let them have some chance to earn more or less
                 //Taxes included so why bother
                 this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
 
-                if(this.personBelongings >= 3600){
+                if(this.personBelongings >= 1000){
 
                     logger.log(Level.INFO, "Normal person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
 
                     this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
 
                     writer.write("Normal person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
+                }
+
+                break;
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            /////可愛い is a partly balanced person that omits payments and other obligations due to her cuteness
+            /////She has many simps that send her money on her OnlyFans
+            /////Sends money to family, and may do some investing
+            /////She is addicted to heroin due to overwhelming popularity
+            /////She usually takes have some pocket money with her
+            case("可愛い"):
+                if(whatToDo < 2){
+
+                    logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some money");
+
+                    this.bankBackend.transferMoney(this.getPersonID(), this.bankBackend.getRandomPerson(), Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.4)));
+
+                    writer.write("可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some money");
+                }
+
+                //OnlyFans
+                if(whatToDo == 3 || whatToDo == 4){
+
+                    logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " updated her profile on OnlyFans");
+
+                    Double thisMonthIncomeExtra = (double) Math.round(random.nextDouble(2500.0));
+
+                    this.npcAccount.makeBankInvestment(thisMonthIncomeExtra, 1);
+
+                    writer.write("可愛い person - " + this.getPersonName() + " " + this.getSurname() + " updated her profile on OnlyFans");
+                }
+
+                //Send money to family
+                if(whatToDo == 5){
+
+                    double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.4 + 100);
+
+                    if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses){
+
+                        logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " supported her family this month");
+
+                        this.npcAccount.payTaxes(thisMonthRandExpenses);
+
+                        writer.write("s可愛い person - " + this.getPersonName() + " " + this.getSurname() + " supported her family this month");
+                    }
+                    else{
+                        logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " could not support her family this month");
+                        writer.write("s可愛い person - " + this.getPersonName() + " " + this.getSurname() + " could not support her family this month");
+                    }
+                }
+
+                //Take some cocaine
+                if(whatToDo == 6){
+                    if(this.npcAccount.getAccountMoney() > 25000) {
+
+                        logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " took her monthly dose of cocaine");
+
+                        this.withdraw(20000.0);
+                        this.personBelongings -= 20000.0;
+
+                        writer.write("可愛い person - " + this.getPersonName() + " " + this.getSurname() + " took her monthly dose of cocaine");
+                    }
+                }
+
+                //Invest some money
+                if(whatToDo == 7 || whatToDo == 8){
+
+                    logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
+
+                    this.npcAccount.makeBankInvestment(10000.0, 1);
+
+                    writer.write("可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
+                }
+
+                //Close an investment
+                if(whatToDo == 9){
+
+                    logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
+
+                    this.npcAccount.closeInvestment();
+
+                    writer.write("可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
+                }
+
+                //Let them have some chance to earn more or less
+                //Taxes included so why bother
+                this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+
+                if(this.personBelongings >= 1000){
+
+                    logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
+
+                    this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
+
+                    writer.write("可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
+                }
+
+                break;
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            /////Lucky is a quite balanced person that has more luck than the others
+            /////He does more investing
+            /////Money magically appear on his account when  on debt
+            /////Sends money to family for e.g. and stuff
+            /////He usually takes have some pocket money with him
+            case("Lucky"):
+                if(whatToDo < 2){
+
+                    logger.log(Level.INFO, "Lucky " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some money");
+
+                    this.bankBackend.transferMoney(this.getPersonID(), this.bankBackend.getRandomPerson(), Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.4)));
+
+                    writer.write("Lucky " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some money");
+                }
+
+                //Payments - brutal
+                if(whatToDo < 4){
+
+                    double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.6 + 100);
+
+                    //Pay if you can afford
+                    if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses){
+
+                        logger.log(Level.INFO, "Normal person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+
+                        this.npcAccount.payTaxes(thisMonthRandExpenses);
+
+                        writer.write("Normal person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                    }
+                    //Debts or miracle?
+                    else{
+                        logger.log(Level.INFO, "Lucky " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes due to the miraculous source of money");
+
+                        this.npcAccount.setAccountMoney(this.npcAccount.getAccountMoney() + thisMonthRandExpenses + 100);
+                        this.npcAccount.payTaxes(thisMonthRandExpenses);
+
+                        writer.write("Lucky " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes due to the miraculous source of money");
+                    }
+                }
+
+                //Invest some money
+                if(whatToDo == 5 || whatToDo == 6){
+
+                    logger.log(Level.INFO, "Lucky " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
+
+                    this.npcAccount.makeBankInvestment(10000.0, 1);
+
+                    writer.write("Lucky " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
+                }
+
+                //More investments
+                if(whatToDo == 7 || whatToDo == 8){
+
+                    logger.log(Level.INFO, "Lucky " + this.getPersonName() + " " + this.getSurname() + " manipulated the stock this month");
+
+                    Double thisMonthIncomeExtra = (double) Math.round(random.nextDouble(2500.0));
+                    this.npcAccount.makeBankInvestment(thisMonthIncomeExtra, 1);
+
+                    writer.write("Lucky " + this.getPersonName() + " " + this.getSurname() + " manipulated the stock this month");
+                }
+
+                //Close an investment
+                if(whatToDo == 9){
+
+                    logger.log(Level.INFO, "Lucky " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
+
+                    this.npcAccount.closeInvestment();
+
+                    writer.write("Lucky " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
+                }
+
+                //Let them have some chance to earn more or less
+                //Taxes included so why bother
+                //Elon Musk has +/- income
+
+                if(this.getMonthlyIncome() >= 0){
+
+                    this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+                }
+                else if(this.npcAccount.getAccountMoney() + this.getMonthlyIncome() >= 0){
+
+                    this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+                }
+                else{
+                    logger.log(Level.INFO, "Lucky " + this.getPersonName() + " " + this.getSurname() + " miraculously reversed his income");
+
+                    this.setMonthlyIncome(getMonthlyIncome() * (-1));
+                    this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+
+                    writer.write("Lucky " + this.getPersonName() + " " + this.getSurname() + " miraculously reversed his income");
+                }
+
+                //Sometimes revere income
+                if(whatToDo >= 7){
+
+                    logger.log(Level.INFO, "Lucky " + this.getPersonName() + " " + this.getSurname() + " miraculously reversed his income");
+
+                    this.setMonthlyIncome(getMonthlyIncome() * (-1));
+
+                    writer.write("Lucky " + this.getPersonName() + " " + this.getSurname() + " miraculously reversed his income");
+                }
+
+                if(this.personBelongings >= 1000){
+
+                    logger.log(Level.INFO, "Lucky " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
+
+                    this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
+
+                    writer.write("Lucky " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
+                }
+
+                break;
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            /////Madao is a looser with huge debts, low income and more payments
+            /////He is one step away from bankruptcy, must take next loans to survive
+            /////He does not send money to family since he has been inherited
+            /////He seldom does investments, he is eager to spend money on alcohol
+            /////He usually takes have some pocket money with him
+            case("Madao"):
+
+                //Payments - brutal
+                if(whatToDo >= 4){
+
+                    double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.6 + 100);
+
+                    //Pay if you can afford
+                    if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses){
+
+                        logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+
+                        this.npcAccount.payTaxes(thisMonthRandExpenses);
+
+                        writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                    }
+                    //Debts
+                    else{
+                        //Pay if you can take a loan
+                        if(this.npcAccount.getTrust()) {
+                            logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
+
+                            this.npcAccount.takeBankLoan(thisMonthRandExpenses - this.npcAccount.getAccountMoney() + 1000.0, 5);
+                            this.npcAccount.payTaxes(thisMonthRandExpenses);
+
+                            writer.write("Madao - " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
+                        }
+                        //Die if you cant
+                        else{
+                            //An investment is your last chance
+                            this.npcAccount.closeInvestment();
+
+                            if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses) {
+
+                                logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+
+                                this.npcAccount.payTaxes(thisMonthRandExpenses);
+
+                                writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                            }
+                            else {
+                                logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
+
+                                this.suicide();
+
+                                writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
+                            }
+                        }
+                    }
+                }
+
+                //Take a loan
+                if(whatToDo == 5){
+                    if(this.npcAccount.getTrust()) {
+
+                        logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " took an additional loan for 5 months.");
+
+                        this.takeLoan(50000.0, 5);
+
+                        writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " took an additional loan for 5 months.");
+                    }
+                }
+
+                //Buy some alcohol
+                if(whatToDo == 6){
+                    if(this.npcAccount.getAccountMoney() > 5000) {
+
+                        logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " drowns his sorrows in alcohol.");
+
+                        this.withdraw(1000.0);
+                        this.personBelongings -= 1000.0;
+
+                        writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " drowns his sorrows in alcohol.");
+                    }
+                }
+
+                if(whatToDo == 7){
+
+                    logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some money");
+
+                    this.bankBackend.transferMoney(this.getPersonID(), this.bankBackend.getRandomPerson(), Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.4)));
+
+                    writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some money");
+                }
+
+                //Invest some money
+                if(whatToDo == 8){
+
+                    logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
+
+                    this.npcAccount.makeBankInvestment(10000.0, 1);
+
+                    writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
+                }
+
+                //Close an investment
+                if(whatToDo == 9){
+
+                    logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
+
+                    this.npcAccount.closeInvestment();
+
+                    writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
+                }
+
+                //Do not let Madao have some chance to earn more or less
+                //Taxes included so why bother
+                //this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+
+                if(this.personBelongings >= 1000){
+
+                    logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
+
+                    this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
+
+                    writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
                 }
 
                 break;
@@ -434,37 +788,37 @@ public class NPC extends Thread implements Serializable{
             case("Evil"):
                 if(whatToDo < 2){
 
-                    logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some stolen money");
+                    logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some stolen money");
 
                     this.bankBackend.transferMoney(this.getPersonID(), this.bankBackend.getRandomPerson(), Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.4)));
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some stolen money");
+                    writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some stolen money");
                 }
 
                 //Payments - brutal
                 else if(whatToDo == 3){
 
-                    double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.6);
+                    double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.6 + 100);
 
                     //Pay if you can afford
                     if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses){
 
-                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
 
                         this.npcAccount.payTaxes(thisMonthRandExpenses);
 
-                        writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                        writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
                     }
                     //Debts
                     else{
                         //Pay if you can take a loan
                         if(this.npcAccount.getTrust()) {
-                            logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
+                            logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
 
                             this.npcAccount.takeBankLoan(thisMonthRandExpenses - this.npcAccount.getAccountMoney() + 1000.0, 5);
                             this.npcAccount.payTaxes(thisMonthRandExpenses);
 
-                            writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
+                            writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
                         }
                         //Die if you cant
                         else{
@@ -473,18 +827,18 @@ public class NPC extends Thread implements Serializable{
 
                             if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses) {
 
-                                logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                                logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
 
                                 this.npcAccount.payTaxes(thisMonthRandExpenses);
 
-                                writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                                writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
                             }
                             else {
-                                logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
+                                logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
 
                                 this.suicide();
 
-                                logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
+                                writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
                             }
                         }
                     }
@@ -493,95 +847,89 @@ public class NPC extends Thread implements Serializable{
                 //Invest some stolen money
                 if(whatToDo == 4){
 
-                    logger.log(Level.INFO, "Evil person " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
+                    logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
 
                     Double thisMonthIncomeExtra = (double) Math.round(random.nextDouble(2500.0));
 
                     this.npcAccount.makeBankInvestment(thisMonthIncomeExtra, 1);
 
-                    logger.log(Level.INFO, "Evil person " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
+                    writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
                 }
 
                 //Close an investment
                 if(whatToDo == 5){
 
-                    logger.log(Level.INFO, "Evil person " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
+                    logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
 
                     this.npcAccount.closeInvestment();
 
-                    logger.log(Level.INFO, "Evil person " + this.getPersonName() + " " + this.getSurname() + "decided to close an investment this month");
+                    writer.write("Evil person " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
                 }
 
                 //War crimes
                 if(whatToDo == 6){
-                    if(this.npcAccount.getAccountMoney() > 50000)
+                    if(this.npcAccount.getAccountMoney() > 50000) {
 
-                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " conquered Isengard");
+                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " conquered Isengard");
 
-                    this.withdraw(30000.0);
-                    this.personBelongings -= 30000.0;
+                        this.withdraw(30000.0);
+                        this.personBelongings -= 30000.0;
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " conquered Isengard");
+                        writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " conquered Isengard");
+                    }
                 }
 
                 //Cheating
                 if(whatToDo == 7){
-                    if(this.npcAccount.getAccountMoney() > 1000)
+                    if(this.npcAccount.getAccountMoney() > 1000) {
 
-                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " cheated in the casino");
+                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " cheated in the casino");
 
-                    this.withdraw(1000.0);
-                    this.personBelongings += 30000.0;
+                        this.withdraw(1000.0);
+                        this.personBelongings += 40000.0;
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " cheated in the casino");
+                        writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " cheated in the casino");
+                    }
                 }
 
                 //Wasting money
                 if(whatToDo == 8){
-                    if(this.npcAccount.getAccountMoney() > 100000)
+                    if(this.npcAccount.getAccountMoney() > 100000) {
 
-                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " splurged money on stupid things");
+                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " splurged money on stupid things");
 
-                    this.withdraw(100000.0);
-                    this.personBelongings -= 100000.0;
+                        this.withdraw(100000.0);
+                        this.personBelongings -= 100000.0;
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " splurged money on stupid things");
+                        writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " splurged money on stupid things");
+                    }
                 }
 
                 //War crimes
                 if(whatToDo == 9){
-                    if(this.npcAccount.getAccountMoney() > 10000)
+                    if(this.npcAccount.getAccountMoney() > 10000) {
 
-                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
+                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
 
-                    this.withdraw(10000.0);
-                    this.personBelongings += 20000.0;
+                        this.withdraw(10000.0);
+                        this.personBelongings += 20000.0;
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
+                        writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
+                    }
                 }
 
                 //Let them have some chance to earn more or less
                 //Taxes included so why bother
                 this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(2, 6)));
 
-                if(this.personBelongings >= 3600){
+                if(this.personBelongings >= 1000){
 
-                    logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
+                    logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
 
                     this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
+                    writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
                 }
-
-                break;
-
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-            ////Investor does a lot of investing mostly. Rarely do any other stuff
-            case("Investor"):
-                logger.log(Level.INFO, "Investor person " + this.getPersonName() + " " + this.getSurname() + " did nothing in particular");
 
                 break;
 
