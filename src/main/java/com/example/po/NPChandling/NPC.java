@@ -525,6 +525,26 @@ public class NPC extends Thread implements Serializable{
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+            ////Investor does a lot of investing mostly. Rarely do any other stuff
+            case("Lucky"):
+                logger.log(Level.INFO, "Lucky " + this.getPersonName() + " " + this.getSurname() + " did nothing in particular");
+
+                break;
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            ////Investor does a lot of investing mostly. Rarely do any other stuff
+            case("Madao"):
+                logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " did nothing in particular");
+
+                break;
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
             /////Evil is not balanced person that does do hardcore stuff
             /////He is aggressive
             /////Spends money on committing war crimes
@@ -532,11 +552,11 @@ public class NPC extends Thread implements Serializable{
             case("Evil"):
                 if(whatToDo < 2){
 
-                    logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some stolen money");
+                    logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some stolen money");
 
                     this.bankBackend.transferMoney(this.getPersonID(), this.bankBackend.getRandomPerson(), Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.4)));
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some stolen money");
+                    writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some stolen money");
                 }
 
                 //Payments - brutal
@@ -547,22 +567,22 @@ public class NPC extends Thread implements Serializable{
                     //Pay if you can afford
                     if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses){
 
-                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
 
                         this.npcAccount.payTaxes(thisMonthRandExpenses);
 
-                        writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                        writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
                     }
                     //Debts
                     else{
                         //Pay if you can take a loan
                         if(this.npcAccount.getTrust()) {
-                            logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
+                            logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
 
                             this.npcAccount.takeBankLoan(thisMonthRandExpenses - this.npcAccount.getAccountMoney() + 1000.0, 5);
                             this.npcAccount.payTaxes(thisMonthRandExpenses);
 
-                            writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
+                            writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " took a loan for 5 months and paid monthly taxes");
                         }
                         //Die if you cant
                         else{
@@ -571,18 +591,18 @@ public class NPC extends Thread implements Serializable{
 
                             if(this.npcAccount.getAccountMoney() >= thisMonthRandExpenses) {
 
-                                logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                                logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
 
                                 this.npcAccount.payTaxes(thisMonthRandExpenses);
 
-                                writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
+                                writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " paid monthly taxes");
                             }
                             else {
-                                logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
+                                logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
 
                                 this.suicide();
 
-                                logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
+                                logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
                             }
                         }
                     }
@@ -591,19 +611,19 @@ public class NPC extends Thread implements Serializable{
                 //Invest some stolen money
                 if(whatToDo == 4){
 
-                    logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
+                    logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
 
                     Double thisMonthIncomeExtra = (double) Math.round(random.nextDouble(2500.0));
 
                     this.npcAccount.makeBankInvestment(thisMonthIncomeExtra, 1);
 
-                    logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
+                    logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
                 }
 
                 //Close an investment
                 if(whatToDo == 5){
 
-                    logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
+                    logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
 
                     this.npcAccount.closeInvestment();
 
@@ -614,48 +634,48 @@ public class NPC extends Thread implements Serializable{
                 if(whatToDo == 6){
                     if(this.npcAccount.getAccountMoney() > 50000)
 
-                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " conquered Isengard");
+                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " conquered Isengard");
 
                     this.withdraw(30000.0);
                     this.personBelongings -= 30000.0;
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " conquered Isengard");
+                    writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " conquered Isengard");
                 }
 
                 //Cheating
                 if(whatToDo == 7){
                     if(this.npcAccount.getAccountMoney() > 1000)
 
-                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " cheated in the casino");
+                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " cheated in the casino");
 
                     this.withdraw(1000.0);
-                    this.personBelongings += 30000.0;
+                    this.personBelongings += 40000.0;
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " cheated in the casino");
+                    writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " cheated in the casino");
                 }
 
                 //Wasting money
                 if(whatToDo == 8){
                     if(this.npcAccount.getAccountMoney() > 100000)
 
-                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " splurged money on stupid things");
+                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " splurged money on stupid things");
 
                     this.withdraw(100000.0);
                     this.personBelongings -= 100000.0;
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " splurged money on stupid things");
+                    writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " splurged money on stupid things");
                 }
 
                 //War crimes
                 if(whatToDo == 9){
                     if(this.npcAccount.getAccountMoney() > 10000)
 
-                        logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
+                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
 
                     this.withdraw(10000.0);
                     this.personBelongings += 20000.0;
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
+                    writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
                 }
 
                 //Let them have some chance to earn more or less
@@ -664,22 +684,12 @@ public class NPC extends Thread implements Serializable{
 
                 if(this.personBelongings >= 3600){
 
-                    logger.log(Level.INFO, "Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
+                    logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
 
                     this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
 
-                    writer.write("Evil person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
+                    writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
                 }
-
-                break;
-
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-            ////Investor does a lot of investing mostly. Rarely do any other stuff
-            case("Investor"):
-                logger.log(Level.INFO, "Investor person " + this.getPersonName() + " " + this.getSurname() + " did nothing in particular");
 
                 break;
 
