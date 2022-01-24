@@ -158,6 +158,12 @@ public class NPC extends Thread implements Serializable{
         npcAccount.setAccountMoney(npcAccount.getAccountMoney() + income);
     }
 
+    //Method that rounds output to n decimal places
+    public static Double roundAvoid(Double value, int places) {
+        double scale = Math.pow(10, places);
+        return Math.round(value * scale) / scale;
+    }
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -305,7 +311,7 @@ public class NPC extends Thread implements Serializable{
 
                 //Let them have some chance to earn more or less
                 //Taxes included so why bother
-                this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(3.6)));
+                this.incomeOnAccount(roundAvoid((monthlyIncome * random.nextDouble(3.6)),2));
 
                 //How much money can you have in pockets really?
                 if(this.personBelongings >= 1000){
@@ -420,7 +426,7 @@ public class NPC extends Thread implements Serializable{
 
                 //Let them have some chance to earn more or less
                 //Taxes included so why bother
-                this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+                this.incomeOnAccount(roundAvoid((monthlyIncome * random.nextDouble(0.6, 1.8)),2));
 
                 if(this.personBelongings >= 1000){
 
@@ -518,7 +524,7 @@ public class NPC extends Thread implements Serializable{
 
                 //Let them have some chance to earn more or less
                 //Taxes included so why bother
-                this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+                this.incomeOnAccount(roundAvoid((monthlyIncome * random.nextDouble(0.6, 1.8)),2));
 
                 if(this.personBelongings >= 1000){
 
@@ -612,17 +618,17 @@ public class NPC extends Thread implements Serializable{
 
                 if(this.getMonthlyIncome() >= 0){
 
-                    this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+                    this.incomeOnAccount(roundAvoid((monthlyIncome * random.nextDouble(0.6, 1.8)),2));
                 }
                 else if(this.npcAccount.getAccountMoney() + this.getMonthlyIncome() >= 0){
 
-                    this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+                    this.incomeOnAccount(roundAvoid((monthlyIncome * random.nextDouble(0.6, 1.8)),2));
                 }
                 else{
                     logger.log(Level.INFO, "Lucky " + this.getPersonName() + " " + this.getSurname() + " miraculously reversed his income");
 
                     this.setMonthlyIncome(getMonthlyIncome() * (-1));
-                    this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+                    this.incomeOnAccount(roundAvoid((monthlyIncome * random.nextDouble(0.6, 1.8)),2));
 
                     writer.write("Lucky " + this.getPersonName() + " " + this.getSurname() + " miraculously reversed his income");
                 }
@@ -700,7 +706,7 @@ public class NPC extends Thread implements Serializable{
                             else {
                                 logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
 
-                                //this.suicide();
+                                this.suicide();
 
                                 writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
                             }
@@ -764,7 +770,7 @@ public class NPC extends Thread implements Serializable{
 
                 //Do not let Madao have some chance to earn more or less
                 //Taxes included so why bother
-                this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+                this.incomeOnAccount(roundAvoid((monthlyIncome * random.nextDouble(0.4, 1.0)),2));
 
                 if(this.personBelongings >= 1000){
 
@@ -920,7 +926,7 @@ public class NPC extends Thread implements Serializable{
 
                 //Let them have some chance to earn more or less
                 //Taxes included so why bother
-                this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(2, 6)));
+                this.incomeOnAccount(roundAvoid((monthlyIncome * random.nextDouble(0.6, 1.8)),2));
 
                 if(this.personBelongings >= 1000){
 
@@ -964,13 +970,6 @@ public class NPC extends Thread implements Serializable{
 
             writer.write(this.getPersonName() + " " + this.getSurname() + " tried to pay an obligatory installment");
 
-        }
-        else{
-            logger.log(Level.INFO, this.getPersonName() + " " + this.getSurname() + " managed to pay off the debt");
-
-            //System.out.println(this.npcAccount.getTrust());
-
-            writer.write(this.getPersonName() + " " + this.getSurname() + " managed to pay off the debt");
         }
     }
 

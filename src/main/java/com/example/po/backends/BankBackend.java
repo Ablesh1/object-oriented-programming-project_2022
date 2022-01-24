@@ -36,19 +36,19 @@ public class BankBackend implements Serializable{
         addClient(new NPC(1, "Anon", "Anonimowy", 2137213721, 1000.0,1000.0, 10,true,0.0, 0, this, 10000.0, "Character", 2137.2137));
 
         //These clients' data is saved in Client.dat
-        /*addClient(new NPC(2, "Jurij", "Owsienko",797404004,2141.0,  0.0,0, true, 0.0,0,this,500.07,"Charitable",9000.0));
+       /* addClient(new NPC(2, "Jurij", "Owsienko",797404004,2141.0,  0.0,0, true, 0.0,0,this,500.07,"Charitable",9000.0));
         addClient(new NPC(3, "Zero",  "Two",     854627322,1421.0,  0.0,0, true, 0.0,0,this,305.85,"Normal",    3500.0));
         addClient(new NPC(4, "Kurumi","Tokisaki",364521527,2135.0,  0.0,0, true, 0.0,0,this,246.45,"Normal",    1860.0));
 
         addClient(new NPC(5, "Shinobu", "Oshino",124512389,9560.0,0.0,    0, true, 0.0,0,this,121.0, "可愛い",2000.0));
         addClient(new NPC(6, "Elon",    "Musk",  987654321,9000.0,0.0,    0, true, 0.0,0,this,1000.0,"Lucky",-1000.0));
-        addClient(new NPC(7, "John",    "Debtor",567356852,1000.0,10000.0,20,true,0.0,0,this,10.0,  "Madao",1000.0));
-        addClient(new NPC(8, "Hasegawa","Taizou",658123567,1000.0,10000.0,20,true,0.0,0,this,2.99,  "Madao",1000.0));
+        addClient(new NPC(7, "John",    "Debtor",567356852,1000.0,5000.0,20,true,0.0,0,this,10.0,  "Madao",1000.0));
+        addClient(new NPC(8, "Hasegawa","Taizou",658123567,1000.0,5000.0,20,true,0.0,0,this,2.99,  "Madao",1000.0));
         addClient(new NPC(9,"Test", "Kaminari",  36452152, 1400.0,0.0,    0, true, 0.0,0,this,640.0, "Test", 400.0));
 
         addClient(new NPC(10, "King of Rohan", "Theoden",666666666,66666.6,0.0,0,true,0.0,0,this,6666.6,"Evil",100000.0));
 */
-        saver(database);
+        //saver(database);
 
         loader();
     }
