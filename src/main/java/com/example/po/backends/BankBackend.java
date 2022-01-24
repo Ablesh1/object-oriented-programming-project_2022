@@ -34,7 +34,7 @@ public class BankBackend implements Serializable{
         this.randomClient = 2;
         this.thePoorOne = 2;
 
-        addClient(new NPC(1, "Anon", "Anonymous", 2137213721, 1000.0,1000.0, 10,true,0.0, 0, this, 10000.0, "Character", 2137.2137));
+        addClient(new NPC(1, "Donald", "Trump", 2137213721, 1000.0,1000.0, 10,true,0.0, 0, this, 10000.0, "Character", 2137.2137));
 
         //These clients' data is saved in Client.dat
         addClient(new NPC(2, "Jurij", "Owsienko",797404004,2141.0,  0.0,0, true, 0.0,0,this,500.07,"Charitable",9000.0));
