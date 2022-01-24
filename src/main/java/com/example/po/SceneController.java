@@ -2,8 +2,6 @@ package com.example.po;
 
 import com.example.po.NPChandling.NPC;
 import com.example.po.backends.*;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -314,6 +312,7 @@ public class SceneController{
         return Math.round(value * scale) / scale;
     }
 
+    //Temporary method for the buttons
     public void OnClicked(ActionEvent event) throws IOException {
         System.out.println("Something happened");
     }
@@ -380,38 +379,31 @@ public class SceneController{
         transfersThread.start();
     }
 
-    public TextArea getTransfersTextArea(){
-        return transfersTextArea;
-    }
-
-    public void continueUpdateTransfers(){
-    }
+    /////////////////////////////////////////////////////////////////
 
     public void updateAccounts() {
         this.where = 0;
         try {
             accountsComboBox.getItems().clear();
         }
-
         catch (Exception e){
             System.out.println(e);
             return;
         }
 
         HashMap<Integer, NPC> npcs = bankBackend.getDatabase();
+
         for (int i = 1; i <= npcs.size(); i++) {
             accountsComboBox.getItems().add(i);
-
     }
         this.where = 1;
-
     }
 
     public void killHimNow() {
         if (bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem()) != null) {
-            NPC serialSucide = bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem());
-            if (serialSucide.getPersonID() != 1) {
-                serialSucide.suicide();
+            NPC serialSuicide = bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem());
+            if (serialSuicide.getPersonID() != 1) {
+                serialSuicide.suicide();
                 try {
                     updateAccounts();
                 } catch (Exception exception) {
@@ -422,11 +414,11 @@ public class SceneController{
         }
     }
 
-    public ComboBox getaccountsComboBox(){
+    public ComboBox getAccountComboBox(){
         return this.accountsComboBox;
     }
 
-    public TextArea getaccountsTextArea() {
+    public TextArea getAccountTextArea() {
         return this.accountsTextArea;
     }
 
@@ -436,9 +428,10 @@ public class SceneController{
             @Override
             public void run() {
                 while(where == 1){
-                    ComboBox aCB = getaccountsComboBox();
-                    TextArea aTA = getaccountsTextArea();
+                    ComboBox aCB = getAccountComboBox();
+                    TextArea aTA = getAccountTextArea();
                     NPC sNPC = bankBackend.getClient((Integer) aCB.getSelectionModel().getSelectedItem());
+
                     if (sNPC != null) {
 
                         //Sometimes there may be an error here
@@ -456,17 +449,18 @@ public class SceneController{
 
                         try {
                             Thread.sleep(200);
-                        } catch (InterruptedException e) {
+                        }
+                        catch (InterruptedException e) {
                             e.printStackTrace();
                         }
-                    } else {
+                    }
+                    else {
                         return;
                     }
                 }}
         });
         accountsThread.start();
     }
-
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -477,8 +471,6 @@ public class SceneController{
         updateCurrentMoney();
         updateInvestment();
         updateActualDebt();
-        //updatePersonBelongings();
-        //updateInstallmentAmount();
     }
 
     public void deposit(ActionEvent event) throws IOException {
