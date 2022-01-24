@@ -98,6 +98,7 @@ public class SceneController{
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     //Create client part
     @FXML
     Button clientAddButton;
@@ -277,30 +278,30 @@ public class SceneController{
         this.where = 2;
     }
 
-
-    //I don't like this name
-    public void switchToTransferReports(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("TransfersReport.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void addClient() {
         try {
             String name = nameTextField.getText();
             String surname = surnameTextField.getText();
             Integer pesel = Integer.valueOf(peselTextField.getText());
-            Double persBelongs = Double.valueOf(persBelongsTextField.getText());
+            Double personBelongs = Double.valueOf(persBelongsTextField.getText());
             String personality = characterComboBox.getText();
             Integer idNum = bankBackend.getDatabase().size() + 1;
             Double monthlyIncome = Double.valueOf(monthlyIncomeTextArea.getText());
 
-            NPC newNPC = new NPC(idNum, name, surname, pesel, 1000.0, 0.0, 1, true, 0.0, 0, bankBackend, persBelongs, personality, monthlyIncome);
+            NPC newNPC = new NPC(idNum, name, surname, pesel, 1000.0, 0.0, 1, true, 0.0, 0, bankBackend, personBelongs, personality, monthlyIncome);
             bankBackend.addClient(newNPC);
         } catch (NumberFormatException f) {
-            addClientTextArea.setText("Make sure that you have passed correct values \n \nPossible personalities are: \nNormal \nCharitable \nLucky \nEvil \n可愛い \nMadao");
+            addClientTextArea.setText("\n       Pass the correct values: \n\n" +
+                                      "    Possible personalities are:\n\n" +
+                                      "\t\t  Normal\n" +
+                                      "\t\t  Charitable\n" +
+                                      "\t\t  Lucky\n" +
+                                      "\t\t  Evil\n" +
+                                      "\t\t  可愛い\n" +
+                                      "\t\t  Madao");
         }
     }
 
