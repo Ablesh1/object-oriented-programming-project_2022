@@ -120,6 +120,18 @@ public class NPC extends Thread implements Serializable{
 
     public void deposit(double deposit){
         npcAccount.depositOnAccount(deposit);
+        Writer writer = new Writer();
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("\t" + this.getSurname() + "\t\t    deposits\t\t" + deposit);
+        String finalString = stringBuilder.toString();
+
+        try {
+            writer.writeDeposits(finalString);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void withdraw(double withdraw) {
