@@ -45,3 +45,34 @@
 	Itsuka		   withdraws		18481.0
 	Theoden		   withdraws		30000.0
 	Owsienko		   withdraws		50000.0
+	Itsuka		   withdraws		21778.0
+	Oshino		   withdraws		4629.0
+	Owsienko		   withdraws		22118.0
+	Taizou		   withdraws		1156.0
+	Musk		   withdraws		36.0
+	Theoden		   withdraws		100000.0
+	Owsienko		   withdraws		33044.0
+	Musk		   withdraws		197.0
+	Tokisaki		   withdraws		1969.0
+	Itsuka		   withdraws		30563.0
+	Owsienko		   withdraws		30000.0
+	Theoden		   withdraws		10000.0
+	Tokisaki		   withdraws		1100.0
+	Owsienko		   withdraws		10000.0
+	Tokisaki		   withdraws		1940.0
+	Owsienko		   withdraws		6888.0
+	Owsienko		   withdraws		50000.0
+	Theoden		   withdraws		100000.0
+	Oshino		   withdraws		4837.0
+	Itsuka		   withdraws		4014.0
+	Owsienko		   withdraws		26145.0
+	Musk		   withdraws		337.0
+	Itsuka		   withdraws		8804.0
+	Owsienko		   withdraws		9266.0
+	Theoden		   withdraws		100000.0
+	Musk		   withdraws		937.0
+	Owsienko		   withdraws		50000.0
+	Tokisaki		   withdraws		188.0
+	Oshino		   withdraws		8085.0
+	Musk		   withdraws		1368.0
+	Itsuka		   withdraws		12778.0

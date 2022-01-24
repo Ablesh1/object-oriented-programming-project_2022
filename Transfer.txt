@@ -33,3 +33,26 @@
 		From	4 	to	 2	13656.0
 		From	9 	to	 7	570504.0
 		From	3 	to	 6	18481.0
+		From	5 	to	 2	4629.0
+		From	3 	to	 2	21778.0
+		From	2 	to	 2	22118.0
+		From	8 	to	 2	1156.0
+		From	6 	to	 8	36.0
+		From	2 	to	 6	33044.0
+		From	6 	to	 7	197.0
+		From	4 	to	 7	1969.0
+		From	3 	to	 7	30563.0
+		From	4 	to	 2	1100.0
+		From	4 	to	 2	1940.0
+		From	2 	to	 1	6888.0
+		From	5 	to	 7	4837.0
+		From	3 	to	 7	4014.0
+		From	2 	to	 6	26145.0
+		From	6 	to	 6	337.0
+		From	3 	to	 5	8804.0
+		From	2 	to	 6	9266.0
+		From	6 	to	 4	937.0
+		From	4 	to	 7	188.0
+		From	5 	to	 2	8085.0
+		From	6 	to	 7	1368.0
+		From	3 	to	 1	12778.0

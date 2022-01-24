@@ -631,7 +631,7 @@ public class SceneController{
                         ;
                     }
                 }
-                CurrencyArea.appendText("\n     " + Binder[0] + "\n");
+                CurrencyArea.setText("\n     " + Binder[0] + "\n");
                 CurrencyArea.appendText("     " + Binder[1] + "\n");
                 CurrencyArea.appendText("     " + Binder[2] + "\n");
                 CurrencyArea.appendText("     " + Binder[3] + "\n");

@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Client.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deposits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Deposits.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/AccountsDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/AccountsDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CountersDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CountersDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CurrencyRateDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CurrencyRateDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/ReportsDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/ReportsDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/StockRateDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/StockRateDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/TransfersDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/TransfersDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
-    </list>
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Last one?" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,8 +68,8 @@
       <recent name="C:\Users\teamg\Desktop\Isekaites\Programowanie-Obiektowe-Projekt_2\src\main\java\com\example\po\NPChandling" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.po.NPChandling" />
       <recent name="com.example.po.backends" />
+      <recent name="com.example.po.NPChandling" />
       <recent name="com.example.po" />
       <recent name="com.example.po.GUI" />
     </key>
@@ -161,13 +144,6 @@
       <workItem from="1642937377430" duration="9785000" />
       <workItem from="1642970708764" duration="5134000" />
       <workItem from="1643035301130" duration="11648000" />
-    </task>
-    <task id="LOCAL-00035" summary="Add BankAccount.fxml">
-      <created>1642807647516</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1642807647516</updated>
     </task>
     <task id="LOCAL-00036" summary="Add features to check Bank Account">
       <created>1642807705628</created>
@@ -505,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643045815810</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Last one?">
+      <created>1643057505445</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1643057505445</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +508,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Prepare workspace for two new characters" />
     <MESSAGE value="Adjust money balance in the bank - unlock some dark methods" />
     <MESSAGE value="Add Lucky person behaviour, upgrade logic and change details" />
     <MESSAGE value="Hotfix" />
@@ -550,7 +532,8 @@
     <MESSAGE value="Rebuild deposit method" />
     <MESSAGE value="Change reports.fxml" />
     <MESSAGE value="Unversioned commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unversioned commit" />
+    <MESSAGE value="Last one?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last one?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -33,3 +33,26 @@
 	Owsienko		    deposits		13656.0
 	Debtor		    deposits		570504.0
 	Musk		    deposits		18481.0
+	Owsienko		    deposits		21778.0
+	Owsienko		    deposits		4629.0
+	Owsienko		    deposits		22118.0
+	Owsienko		    deposits		1156.0
+	Taizou		    deposits		36.0
+	Musk		    deposits		33044.0
+	Debtor		    deposits		197.0
+	Debtor		    deposits		1969.0
+	Debtor		    deposits		30563.0
+	Owsienko		    deposits		1100.0
+	Owsienko		    deposits		1940.0
+	Trump		    deposits		6888.0
+	Debtor		    deposits		4837.0
+	Debtor		    deposits		4014.0
+	Musk		    deposits		26145.0
+	Musk		    deposits		337.0
+	Oshino		    deposits		8804.0
+	Musk		    deposits		9266.0
+	Tokisaki		    deposits		937.0
+	Debtor		    deposits		188.0
+	Owsienko		    deposits		8085.0
+	Debtor		    deposits		1368.0
+	Trump		    deposits		12778.0
