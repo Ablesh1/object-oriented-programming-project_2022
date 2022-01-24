@@ -88,7 +88,9 @@ public class SceneController{
 
     //Office part
     @FXML
-    TextArea reportsTextArea;
+    TextArea depositsTextArea;
+    @FXML
+    TextArea withdrawsTextArea;
     @FXML
     TextArea transfersTextArea;
     @FXML
@@ -241,8 +243,16 @@ public class SceneController{
         stage.show();
     }
 
-    public void switchToClientReport(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("ClientReport.fxml"));
+    public void switchToDepositsReport(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("DepositsReport.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToWithdrawsReport(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("WithdrawsReport.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -381,35 +391,66 @@ public class SceneController{
 
     /////////////////////////////////////////////////////////////////
 
-    public void updateReports() {
+    public void updateDeposits() {
         where = 0;
-        reportsTextArea.clear();
-        //ArrayList<String> transfers = bankBackend.getTransfersDep().showLastTransfers();
-        Thread reportsThread = new Thread(new Runnable() {
+        depositsTextArea.clear();
+        //ArrayList<String> deposits = bankBackend.getTransfersDep().showLastDeposits();
+        Thread depositsThread = new Thread(new Runnable() {
             @Override
             public void run() {
                 while(where == 3){
                     StringBuilder stringBuilder = new StringBuilder();
-                    ArrayList<String> reports = bankBackend.getReportsDep().showLastWithdraws();
-                    for (int i = 0; i < reports.size(); i++) {
-                        stringBuilder.append(reports.get(i) + "\n");
+                    ArrayList<String> deposits = bankBackend.getReportsDep().showLastDeposits();
+                    for (int i = 0; i < deposits.size(); i++) {
+                        stringBuilder.append(deposits.get(i) + "\n");
                         try {
                             Thread.sleep(50);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     }
-                    reportsTextArea.setText(String.valueOf(stringBuilder));
+                    depositsTextArea.setText(String.valueOf(stringBuilder));
                 }
                 return;
             }
         });
         /*
-        for (int i = 0; i < transfers.size(); i++) {
-            transfersTextArea.appendText(transfers.get(i) + "\n");
+        for (int i = 0; i < deposits.size(); i++) {
+            depositsTextArea.appendText(deposits.get(i) + "\n");
         }*/
         where = 3;
-        reportsThread.start();
+        depositsThread.start();
+    }
+
+    public void updateWithdraws() {
+        where = 0;
+        withdrawsTextArea.clear();
+        //ArrayList<String> withdraws = bankBackend.getTransfersDep().showLastWithdraws();
+        Thread withdrawsThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(where == 3){
+                    StringBuilder stringBuilder = new StringBuilder();
+                    ArrayList<String> withdraws = bankBackend.getReportsDep().showLastWithdraws();
+                    for (int i = 0; i < withdraws.size(); i++) {
+                        stringBuilder.append(withdraws.get(i) + "\n");
+                        try {
+                            Thread.sleep(50);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    withdrawsTextArea.setText(String.valueOf(stringBuilder));
+                }
+                return;
+            }
+        });
+        /*
+        for (int i = 0; i < withdraws.size(); i++) {
+            withdrawsTextArea.appendText(withdraws.get(i) + "\n");
+        }*/
+        where = 3;
+        withdrawsThread.start();
     }
 
     /////////////////////////////////////////////////////////////////
