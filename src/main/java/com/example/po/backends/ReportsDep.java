@@ -13,6 +13,10 @@ public class ReportsDep extends Department{
         this.writer = new Writer();
     }
 
+    public ArrayList<String> showLastDeposits(){
+        return writer.readLastDeposits();
+    }
+
     public ArrayList<String> showLastWithdraws(){
         return writer.readLastWithdraws();
     }
