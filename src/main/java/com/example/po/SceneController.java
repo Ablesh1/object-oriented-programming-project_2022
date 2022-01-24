@@ -88,6 +88,8 @@ public class SceneController{
 
     //Office part
     @FXML
+    TextArea reportsTextArea;
+    @FXML
     TextArea transfersTextArea;
     @FXML
     TextArea accountsTextArea;
@@ -365,7 +367,6 @@ public class SceneController{
                         }
                     }
                     transfersTextArea.setText(String.valueOf(stringBuilder));
-
                 }
                 return;
             }
@@ -374,9 +375,41 @@ public class SceneController{
         for (int i = 0; i < transfers.size(); i++) {
             transfersTextArea.appendText(transfers.get(i) + "\n");
         }*/
-
         where = 3;
         transfersThread.start();
+    }
+
+    /////////////////////////////////////////////////////////////////
+
+    public void updateReports() {
+        where = 0;
+        reportsTextArea.clear();
+        //ArrayList<String> transfers = bankBackend.getTransfersDep().showLastTransfers();
+        Thread reportsThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(where == 3){
+                    StringBuilder stringBuilder = new StringBuilder();
+                    ArrayList<String> reports = bankBackend.getReportsDep().showLastWithdraws();
+                    for (int i = 0; i < reports.size(); i++) {
+                        stringBuilder.append(reports.get(i) + "\n");
+                        try {
+                            Thread.sleep(50);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    reportsTextArea.setText(String.valueOf(stringBuilder));
+                }
+                return;
+            }
+        });
+        /*
+        for (int i = 0; i < transfers.size(); i++) {
+            transfersTextArea.appendText(transfers.get(i) + "\n");
+        }*/
+        where = 3;
+        reportsThread.start();
     }
 
     /////////////////////////////////////////////////////////////////
