@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Rebuild deposit method">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Client.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Deposits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Deposits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Reports.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Reports.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/ClientReport.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Reports.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Reports.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/ReportsDep.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/ReportsDep.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/Writer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/Writer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,21 +152,7 @@
       <workItem from="1642755021822" duration="986000" />
       <workItem from="1642937377430" duration="9785000" />
       <workItem from="1642970708764" duration="5134000" />
-      <workItem from="1643035301130" duration="10428000" />
-    </task>
-    <task id="LOCAL-00033" summary="Upgrade some logic">
-      <created>1642802607086</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1642802607086</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Unversioned commit">
-      <created>1642802665221</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1642802665221</updated>
+      <workItem from="1643035301130" duration="11648000" />
     </task>
     <task id="LOCAL-00035" summary="Add BankAccount.fxml">
       <created>1642807647516</created>
@@ -501,7 +483,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643044992328</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Change reports.fxml">
+      <created>1643045797639</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1643045797639</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Unversioned commit">
+      <created>1643045815810</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1643045815810</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +517,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add cute NPC with behaviour" />
     <MESSAGE value="Prepare workspace for two new characters" />
     <MESSAGE value="Adjust money balance in the bank - unlock some dark methods" />
     <MESSAGE value="Add Lucky person behaviour, upgrade logic and change details" />
@@ -537,7 +532,6 @@
     <MESSAGE value="Create method updateReports" />
     <MESSAGE value="Upgrade ClientReport.fxml and Transfers.fxml" />
     <MESSAGE value="Add getReportsDep and put everything in order" />
-    <MESSAGE value="Unversioned commit" />
     <MESSAGE value="Add writeDeposits method and readLastDeposits method" />
     <MESSAGE value="Add showLastDeposits method" />
     <MESSAGE value="Create method updateDeposits and method updateWithdraws and add access to new fxml files" />
@@ -546,7 +540,9 @@
     <MESSAGE value="Add Deposits.fxml" />
     <MESSAGE value="Add DepositsReport.fxml and WithdrawsReport.fxml" />
     <MESSAGE value="Rebuild deposit method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuild deposit method" />
+    <MESSAGE value="Change reports.fxml" />
+    <MESSAGE value="Unversioned commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unversioned commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

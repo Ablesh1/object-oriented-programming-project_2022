@@ -37,7 +37,7 @@ public class BankBackend implements Serializable{
         addClient(new NPC(1, "Donald", "Trump", 2137213721, 1000.0,1000.0, 10,true,0.0, 0, this, 10000.0, "Character", 2137.2137));
 
         //These clients' data is saved in Client.dat
-        addClient(new NPC(2, "Jurij", "Owsienko",797404004,2141.0,  0.0,0, true, 0.0,0,this,500.07,"Charitable",9000.0));
+        /*addClient(new NPC(2, "Jurij", "Owsienko",797404004,2141.0,  0.0,0, true, 0.0,0,this,500.07,"Charitable",9000.0));
         addClient(new NPC(3, "Kotori",  "Itsuka",854627322,1421.0,  0.0,0, true, 0.0,0,this,305.85,"Normal",    3500.0));
         addClient(new NPC(4, "Kurumi","Tokisaki",364521527,2135.0,  0.0,0, true, 0.0,0,this,246.45,"Normal",    1860.0));
 
@@ -49,8 +49,8 @@ public class BankBackend implements Serializable{
 
         addClient(new NPC(10, "King of Rohan", "Theoden",666666666,66666.6,0.0,0,true,0.0,0,this,6666.6,"Evil",100000.0));
 
-        //saver(database);
-
+        saver(database);
+        */
         loader();
     }
 
