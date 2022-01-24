@@ -471,6 +471,7 @@ public class SceneController{
             accountsComboBox.getItems().add(i);
     }
         this.where = 1;
+        comboAction();
     }
 
     public void killHimNow() {
@@ -496,8 +497,28 @@ public class SceneController{
         return this.accountsTextArea;
     }
 
+
+    //Event event
     @FXML
-    private void comboAction(Event event){
+    private void comboAction(){
+
+        NPC sNPC = bankBackend.getClient((Integer) 1);
+
+        if (sNPC != null) {
+
+            //Sometimes there may be an error here
+            //Not sure what causes it
+            //aTA.clear();
+
+            try{
+                accountsTextArea.setText("\n\t   Mr/Mrs:\t\t\t\t " + sNPC.getPersonName() + " " + sNPC.getSurname()
+                        + "\n\t   Account balance:\t\t " + roundAvoid(sNPC.getAccountMoney(), 2)
+                        + "\n\t   Debt:\t\t\t\t " + roundAvoid(sNPC.getActualDebt(), 2)
+                        + "\n\t   Investment:\t\t\t " + roundAvoid(sNPC.getBankInvestment(), 2)); }
+            catch(Exception n){
+                where = 0;
+            }}
+
         Thread accountsThread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -517,15 +538,16 @@ public class SceneController{
                                 + "\n\t   Account balance:\t\t " + roundAvoid(sNPC.getAccountMoney(), 2)
                                 + "\n\t   Debt:\t\t\t\t " + roundAvoid(sNPC.getActualDebt(), 2)
                                 + "\n\t   Investment:\t\t\t " + roundAvoid(sNPC.getBankInvestment(), 2)); }
-                        catch(Exception n){
+                        catch(IndexOutOfBoundsException n){
                             where = 0;
+                            return;
                         }
 
                         try {
                             Thread.sleep(200);
                         }
                         catch (InterruptedException e) {
-                            e.printStackTrace();
+                            return;
                         }
                     }
                     else {
