@@ -1,7 +1,5 @@
 package com.example.po.backends;
 
-import com.example.po.Department;
-
 public class CountersDep extends Department{
 
     public CountersDep() {

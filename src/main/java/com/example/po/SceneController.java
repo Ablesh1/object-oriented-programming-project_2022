@@ -534,6 +534,7 @@ public class SceneController{
                 }}
         });
         accountsThread.start();
+
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -630,7 +631,7 @@ public class SceneController{
                         ;
                     }
                 }
-                CurrencyArea.setText("\n     " + Binder[0] + "\n");
+                CurrencyArea.appendText("\n     " + Binder[0] + "\n");
                 CurrencyArea.appendText("     " + Binder[1] + "\n");
                 CurrencyArea.appendText("     " + Binder[2] + "\n");
                 CurrencyArea.appendText("     " + Binder[3] + "\n");
@@ -675,6 +676,10 @@ public class SceneController{
 
     //Exit program
     public void exit(ActionEvent event) {
+        if(bankBackend == null){
+            this.bankBackend = Global.bankBackend;
+        }
+
         bankBackend.saver(bankBackend.getDatabase());
         System.exit(2137);
     }

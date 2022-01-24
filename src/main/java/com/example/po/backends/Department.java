@@ -1,10 +1,10 @@
 package com.example.po.backends;
 
+import com.example.po.backends.BankBackend;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
-public abstract class Department {
+public abstract class Department{
 
     //Departemant musi wiedzieć w którym jest banku
     BankBackend bankBackend;
@@ -31,8 +31,12 @@ public abstract class Department {
         }
     });
 
+    public Department(){
+        thread.start();
+    }
+
     public Department(BankBackend bankBackend){
-        this.bankBackend = bankBackend;;
+        this.bankBackend = bankBackend;
         thread.start();
     }
 

@@ -1,6 +1,5 @@
 package com.example.po.backends;
 
-import com.example.po.Department;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,6 +24,7 @@ public class CurrencyRateDep extends Department{
         try{
             //System.out.println("Counters do calculations");
             Thread.sleep(5);
+            return;
         } catch (InterruptedException interruptedException) {
             return;
         }
