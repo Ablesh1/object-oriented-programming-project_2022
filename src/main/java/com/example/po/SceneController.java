@@ -464,6 +464,7 @@ public class SceneController{
                 }}
         });
         accountsThread.start();
+
     }
 
 
