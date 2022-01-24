@@ -29,7 +29,7 @@ public class Writer{
                 try{
                 File file = new File("Transfer.txt");
                 int n_lines = 9;
-                int counter = 0;
+                int counter1 = 0;
                 ReversedLinesFileReader object = null;
                 try {
                     object = new ReversedLinesFileReader(file);
@@ -37,41 +37,48 @@ public class Writer{
                     e.printStackTrace();
                     return transfers;
                 }
-                while(counter < n_lines) {
+                while(counter1 < n_lines) {
                     try {
                         transfers.add(object.readLine());
                     } catch (IOException e) {
                         e.printStackTrace();
                         return transfers;
                     }
-                    counter++;
+                    counter1 ++;
                 }
-                return transfers;}
+                return transfers;
+                }
                 catch (NullPointerException n){
                     return transfers;
                 }
     }
 
-    public void readLastWithdraws(){
+    public ArrayList<String> readLastWithdraws(){
+        ArrayList<String> withdraws = new ArrayList<>();
+                try{
                 File file = new File("Withdraws.txt");
                 int n_lines = 10;
-                int counter = 0;
+                int counter2 = 0;
                 ReversedLinesFileReader object = null;
                 try {
                     object = new ReversedLinesFileReader(file);
                 } catch (IOException e) {
                     e.printStackTrace();
-                    return;
+                    return withdraws;
                 }
-                while(counter < n_lines) {
+                while(counter2 < n_lines) {
                     try {
-                        System.out.println(object.readLine());
+                        withdraws.add(object.readLine());
                     } catch (IOException e) {
                         e.printStackTrace();
-                        return;
+                        return withdraws;
                     }
-                    counter++;
+                    counter2 ++;
                 }
-                return;}
-
+                return withdraws;
+                }
+                catch (NullPointerException n){
+                    return withdraws;
+                }
+    }
 }
