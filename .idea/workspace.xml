@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Restore the balance v2">
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Add Client GUI improvement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Client.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/Accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/Accounts.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/ClientCreator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/ClientCreator.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,20 +156,7 @@
       <workItem from="1642755021822" duration="986000" />
       <workItem from="1642937377430" duration="9785000" />
       <workItem from="1642970708764" duration="5134000" />
-    </task>
-    <task id="LOCAL-00014" summary="Add Loan and Investment mechanics">
-      <created>1642557682680</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1642557682680</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Add special getters for Loan and Investment variables, upgrade constructor">
-      <created>1642557745186</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1642557745186</updated>
+      <workItem from="1643035301130" duration="3675000" />
     </task>
     <task id="LOCAL-00016" summary="Upgrade constructor">
       <created>1642557760826</created>
@@ -493,7 +487,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642985667770</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Unversioned commit">
+      <created>1642985779447</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1642985779447</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Add Client GUI improvement">
+      <created>1643038982530</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1643038982530</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +521,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Zapisywanie do plików" />
     <MESSAGE value="change of details" />
     <MESSAGE value="Add new clients" />
     <MESSAGE value="Add more features to NPCs, create abilities to pay taxes, to take loans, to invest, to close investment and to commit suicide" />
@@ -531,14 +538,15 @@
     <MESSAGE value="Prepare workspace for two new characters" />
     <MESSAGE value="Adjust money balance in the bank - unlock some dark methods" />
     <MESSAGE value="Add Lucky person behaviour, upgrade logic and change details" />
-    <MESSAGE value="Unversioned commit" />
     <MESSAGE value="Hotfix" />
     <MESSAGE value="Hotfix v2" />
     <MESSAGE value="Zapisywanie to jest coś czym możemy się pochwalić. Przesunąłem zapisywanie na wyjście z programu. Działa dodawanie klientów, działa dynamiczny update logów postaci, mam załamanie nerwowe" />
     <MESSAGE value="Transfery" />
     <MESSAGE value="Restore the balance of suicides, loans and investments" />
     <MESSAGE value="Restore the balance v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restore the balance v2" />
+    <MESSAGE value="Unversioned commit" />
+    <MESSAGE value="Add Client GUI improvement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Client GUI improvement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
