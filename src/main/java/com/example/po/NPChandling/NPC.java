@@ -127,7 +127,7 @@ public class NPC extends Thread implements Serializable{
         Writer writer = new Writer();
 
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(this.getPersonName() + " " + this.getPersonName() + " withdraws " + withdraw);
+        stringBuilder.append("\t" + this.getSurname() + "\t\t   withdraws\t\t" + withdraw);
         String finalString = stringBuilder.toString();
 
         try {
