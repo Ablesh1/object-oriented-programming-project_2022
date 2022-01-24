@@ -26,9 +26,10 @@ public class BankBackend implements Serializable{
 
     public BankBackend(){
         currencyRate = new CurrencyRateDep();
-        stockRate = new StockRateDep();
-        reportsDep = new ReportsDep();
+        stockRate    = new StockRateDep();
+        reportsDep   = new ReportsDep(this);
         transfersDep = new TransfersDep(this);
+
         this.database = new HashMap<Integer, NPC>();
         this.randomClient = 2;
         this.thePoorOne = 2;
@@ -47,17 +48,46 @@ public class BankBackend implements Serializable{
         addClient(new NPC(9,"Test", "Kaminari",  36452152, 1400.0,0.0,    0, true, 0.0,0,this,640.0, "Test", 400.0));
 
         addClient(new NPC(10, "King of Rohan", "Theoden",666666666,66666.6,0.0,0,true,0.0,0,this,6666.6,"Evil",100000.0));
-*/
+        */
         //saver(database);
 
         loader();
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public static ReportsDep getReportsDep() {
+        return reportsDep;
     }
 
     public static TransfersDep getTransfersDep() {
         return transfersDep;
     }
 
-//Dodawanie i usuwanie NPC
+    public CurrencyRateDep getCurrencyRate() {
+        return currencyRate;
+    }
+
+    public StockRateDep getStockRate() {
+        return stockRate;
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public void setDatabase(HashMap<Integer, NPC> database) {
+        this.database = database;
+    }
+
+    public HashMap<Integer, NPC> getDatabase() {
+        return database;
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Adding or removing NPC
 
     public void saver(HashMap<Integer, NPC> database){
 
@@ -79,10 +109,6 @@ public class BankBackend implements Serializable{
             ex.printStackTrace();
         }
     }
-
-
-    //I HATE THE ANTICHRIST
-    //DON`T YOU EVER DARE TO LOOK HERE
 
     //Pierwsze dwie linijki zczytują wartości z pliku i tworzą listę NPCtów
     //Następnie każdy NPC jest dodawany do banku i agregujemy bank do NPC
@@ -125,10 +151,6 @@ public class BankBackend implements Serializable{
         database.put(database.size() + 1, npc);
     }
 
-    public void setDatabase(HashMap<Integer, NPC> database) {
-        this.database = database;
-    }
-
     public void removeClient(Integer personID){
         database.remove(personID);
         HashMap<Integer, NPC> replacer = new HashMap<>();
@@ -148,64 +170,9 @@ public class BankBackend implements Serializable{
         setDatabase(replacer);
     }
 
-    public HashMap<Integer, NPC> getDatabase() {
-        return database;
-    }
-
-    //It must do on a separate thread
-    //Otherwise might cause bottlenecks
-    public void transferMoney(Integer from, Integer to, double howMuchFrom){
-                NPC giver = getClient(from);
-                NPC receiver = getClient(to);
-                ArrayList<Integer> overseer = new ArrayList<Integer>();
-
-                //0 means that we have not received money
-                //1 means that transaction is ready from one side
-                overseer.add(0);
-                overseer.add(0);
-
-                //Cancle transfer in mild case of death
-                if(overseer.get(0) == 0 && giver != null && receiver != null){
-
-                    //First step - gather the right amount of money
-                    double containerFrom = howMuchFrom;
-                    overseer.set(0, 1);
-
-                    //Turn out you have to check it once
-                    //If is null will go to else apparently
-                    if(overseer.get(1) == 0){
-                        //Second step - take the money from giver
-                        giver.withdraw(howMuchFrom);
-                        overseer.set(1, 1);
-
-                        if(overseer.get(0) == 1 && overseer.get(1) == 1){
-                            //Third step - give the money to receiver
-                            receiver.deposit(containerFrom);
-                            String finalString = "\t\tFrom\t" + from + " \tto\t " + to + "\t" + howMuchFrom;
-
-                            try {
-                                writter.writeTransfers(finalString);
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                            return;
-                        }
-                        else{
-                            System.out.println("Transfer cancelled due to unexpected case of death");
-                            //We have to undo the previous move if something happens
-                            giver.deposit(howMuchFrom);
-
-                            return;
-                        }
-                    }
-
-                    else{
-                        System.out.println("Transfer cancelled due to urgent will to die");
-                        //Here nothing happened yet thankfully
-                        return;
-                    }
-                }
-    }
+    public NPC getClient(Integer personID){
+        return database.get(personID);
+    };
 
     public Integer getRandomPerson(){
         Thread randomThread = new Thread(new Runnable() {
@@ -227,10 +194,63 @@ public class BankBackend implements Serializable{
         return randomClient;
     }
 
-    public NPC getClient(Integer personID){
-        return database.get(personID);
-    };
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    //It must do on a separate thread
+    //Otherwise might cause bottlenecks
+    public void transferMoney(Integer from, Integer to, double howMuchFrom){
+        NPC giver = getClient(from);
+        NPC receiver = getClient(to);
+        ArrayList<Integer> overseer = new ArrayList<Integer>();
+
+        //0 means that we have not received money
+        //1 means that transaction is ready from one side
+        overseer.add(0);
+        overseer.add(0);
+
+        //Cancle transfer in mild case of death
+        if(overseer.get(0) == 0 && giver != null && receiver != null){
+
+            //First step - gather the right amount of money
+            double containerFrom = howMuchFrom;
+            overseer.set(0, 1);
+
+            //Turn out you have to check it once
+            //If is null will go to else apparently
+            if(overseer.get(1) == 0){
+                //Second step - take the money from giver
+                giver.withdraw(howMuchFrom);
+                overseer.set(1, 1);
+
+                if(overseer.get(0) == 1 && overseer.get(1) == 1){
+                    //Third step - give the money to receiver
+                    receiver.deposit(containerFrom);
+                    String finalString = "\t\tFrom\t" + from + " \tto\t " + to + "\t" + howMuchFrom;
+
+                    try {
+                        writter.writeTransfers(finalString);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    return;
+                }
+                else{
+                    System.out.println("Transfer cancelled due to unexpected case of death");
+                    //We have to undo the previous move if something happens
+                    giver.deposit(howMuchFrom);
+
+                    return;
+                }
+            }
+
+            else{
+                System.out.println("Transfer cancelled due to urgent will to die");
+                //Here nothing happened yet thankfully
+                return;
+            }
+        }
+    }
 
     //I have no heart to try if this abomination works
     //I lied. It actually works pretty well
@@ -266,11 +286,4 @@ public class BankBackend implements Serializable{
         return key;
     }
 
-    public CurrencyRateDep getCurrencyRate() {
-        return currencyRate;
-    }
-
-    public StockRateDep getStockRate() {
-        return stockRate;
-    }
 }
