@@ -1,7 +1,5 @@
 package com.example.po.backends;
 
-import com.example.po.Department;
-
 public class AccountsDep extends Department{
 
     public AccountsDep(){
