@@ -210,8 +210,8 @@ public class NPC extends Thread implements Serializable{
                     logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " decides to transfer money to the poorest person with ID" + thePoorestOne);
 
                     //Because you send money to ID not person themselves
-                    //Max 50% of what the person have
-                    this.bankBackend.transferMoney(this.personID, thePoorestOne, Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.5 )));
+                    //Max 80% of what the person have
+                    this.bankBackend.transferMoney(this.personID, thePoorestOne, Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.8 )));
                 }
 
                 //Payments - brutal
@@ -391,7 +391,7 @@ public class NPC extends Thread implements Serializable{
 
                     logger.log(Level.INFO, "Normal person - " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
 
-                    this.npcAccount.makeBankInvestment(10000.0, 1);
+                    this.npcAccount.makeBankInvestment(5000.0, 1);
 
                     writer.write("Normal person - " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
                 }
@@ -501,7 +501,7 @@ public class NPC extends Thread implements Serializable{
 
                     logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
 
-                    this.npcAccount.makeBankInvestment(10000.0, 1);
+                    this.npcAccount.makeBankInvestment(5000.0, 1);
 
                     writer.write("可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
                 }
@@ -660,7 +660,7 @@ public class NPC extends Thread implements Serializable{
             case("Madao"):
 
                 //Payments - brutal
-                if(whatToDo >= 4){
+                if(whatToDo >= 3){
 
                     double thisMonthRandExpenses = random.nextDouble(this.npcAccount.getAccountMoney() * 0.6 + 100);
 
@@ -700,7 +700,7 @@ public class NPC extends Thread implements Serializable{
                             else {
                                 logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
 
-                                this.suicide();
+                                //this.suicide();
 
                                 writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " committed suicide on purpose");
                             }
@@ -709,12 +709,12 @@ public class NPC extends Thread implements Serializable{
                 }
 
                 //Take a loan
-                if(whatToDo == 5){
+                if(whatToDo == 4 || whatToDo == 5){
                     if(this.npcAccount.getTrust()) {
 
                         logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " took an additional loan for 5 months.");
 
-                        this.takeLoan(50000.0, 5);
+                        this.takeLoan(5000.0, 20);
 
                         writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " took an additional loan for 5 months.");
                     }
@@ -737,7 +737,7 @@ public class NPC extends Thread implements Serializable{
 
                     logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some money");
 
-                    this.bankBackend.transferMoney(this.getPersonID(), this.bankBackend.getRandomPerson(), Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.4)));
+                    this.bankBackend.transferMoney(this.getPersonID(), this.bankBackend.getRandomPerson(), Math.round(random.nextDouble(this.npcAccount.getAccountMoney() * 0.8)));
 
                     writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " decided to transfer some money");
                 }
@@ -747,7 +747,7 @@ public class NPC extends Thread implements Serializable{
 
                     logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
 
-                    this.npcAccount.makeBankInvestment(10000.0, 1);
+                    this.npcAccount.makeBankInvestment(1000.0, 1);
 
                     writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " decided to invest some money");
                 }
@@ -764,7 +764,7 @@ public class NPC extends Thread implements Serializable{
 
                 //Do not let Madao have some chance to earn more or less
                 //Taxes included so why bother
-                //this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
+                this.incomeOnAccount((double) Math.round(monthlyIncome * random.nextDouble(0.6, 1.8)));
 
                 if(this.personBelongings >= 1000){
 
@@ -963,6 +963,14 @@ public class NPC extends Thread implements Serializable{
             this.npcAccount.payInstallment();
 
             writer.write(this.getPersonName() + " " + this.getSurname() + " tried to pay an obligatory installment");
+
+        }
+        else{
+            logger.log(Level.INFO, this.getPersonName() + " " + this.getSurname() + " managed to pay off the debt");
+
+            //System.out.println(this.npcAccount.getTrust());
+
+            writer.write(this.getPersonName() + " " + this.getSurname() + " managed to pay off the debt");
         }
     }
 

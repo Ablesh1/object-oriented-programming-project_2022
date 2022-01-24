@@ -300,7 +300,7 @@ public class SceneController{
             NPC newNPC = new NPC(idNum, name, surname, pesel, 1000.0, 0.0, 1, true, 0.0, 0, bankBackend, persBelongs, personality, monthlyIncome);
             bankBackend.addClient(newNPC);
         } catch (NumberFormatException f) {
-            addClientTextArea.setText("Make sure that you have passed correct values \n \nPossible personalities are: \n可愛い\n Charitable\n Madao\n Lucky\n Normal\n");
+            addClientTextArea.setText("Make sure that you have passed correct values \n \nPossible personalities are: \nNormal \nCharitable \nLucky \nEvil \n可愛い \nMadao");
         }
     }
 

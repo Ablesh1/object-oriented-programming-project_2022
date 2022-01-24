@@ -129,7 +129,7 @@ public class NPCAccount implements Serializable {
     }
 
     public void payInstallment() {
-        if (this.accountMoney - this.getInstallmentAmount() >= 0 &&this.actualDebt > 0 && this.counter < this.installmentNumber) {
+        if (this.accountMoney - this.getInstallmentAmount() >= 0 &&  this.actualDebt > 0 && this.counter < this.installmentNumber) {
             this.accountMoney -= this.getInstallmentAmount();
             this.actualDebt -= this.getInstallmentAmount();
             this.counter ++;
@@ -138,7 +138,7 @@ public class NPCAccount implements Serializable {
             }
         }
 
-        else if (this.accountMoney - this.getInstallmentAmount() < 0 &&this.actualDebt > 0 && this.counter < this.installmentNumber) {
+        else if (this.accountMoney - this.getInstallmentAmount() < 0 && this.actualDebt > 0 && this.counter < this.installmentNumber) {
             //Closes investment when does not have money for monthly installments
             this.closeInvestment();
             if(this.accountMoney - this.getInstallmentAmount() >= 0) {
@@ -151,19 +151,16 @@ public class NPCAccount implements Serializable {
                 }
             }
             else {
-                System.out.println("Ara ara, we are spending more mooney than we have");
+                //System.out.println("Ara ara, we are spending more money than we have");
+                System.out.println("Ara ara, we are having serious debt problems");
             }
         }
 
-        else if((this.actualDebt < 0.01 && this.actualDebt > 0.001) || this.actualDebt == 0){
+        if((this.actualDebt < 0.01 && this.actualDebt > 0.001) || this.actualDebt == 0.0){
             this.actualDebt = 0.0;
             this.bankLoan = 0.0;
             this.counter = 0;
             this.trust = true;
-        }
-
-        else{
-            System.out.println("Ara ara, we are having serious debt problems");
         }
     }
 
