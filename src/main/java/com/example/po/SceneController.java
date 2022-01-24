@@ -2,8 +2,6 @@ package com.example.po;
 
 import com.example.po.NPChandling.NPC;
 import com.example.po.backends.*;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -90,6 +88,10 @@ public class SceneController{
 
     //Office part
     @FXML
+    TextArea depositsTextArea;
+    @FXML
+    TextArea withdrawsTextArea;
+    @FXML
     TextArea transfersTextArea;
     @FXML
     TextArea accountsTextArea;
@@ -98,6 +100,7 @@ public class SceneController{
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     //Create client part
     @FXML
     Button clientAddButton;
@@ -240,8 +243,16 @@ public class SceneController{
         stage.show();
     }
 
-    public void switchToClientReport(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("ClientReport.fxml"));
+    public void switchToDepositsReport(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("DepositsReport.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToWithdrawsReport(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("WithdrawsReport.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -277,30 +288,30 @@ public class SceneController{
         this.where = 2;
     }
 
-
-    //I don't like this name
-    public void switchToTransferReports(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("TransfersReport.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void addClient() {
         try {
             String name = nameTextField.getText();
             String surname = surnameTextField.getText();
             Integer pesel = Integer.valueOf(peselTextField.getText());
-            Double persBelongs = Double.valueOf(persBelongsTextField.getText());
+            Double personBelongs = Double.valueOf(persBelongsTextField.getText());
             String personality = characterComboBox.getText();
             Integer idNum = bankBackend.getDatabase().size() + 1;
             Double monthlyIncome = Double.valueOf(monthlyIncomeTextArea.getText());
 
-            NPC newNPC = new NPC(idNum, name, surname, pesel, 1000.0, 0.0, 1, true, 0.0, 0, bankBackend, persBelongs, personality, monthlyIncome);
+            NPC newNPC = new NPC(idNum, name, surname, pesel, 1000.0, 0.0, 1, true, 0.0, 0, bankBackend, personBelongs, personality, monthlyIncome);
             bankBackend.addClient(newNPC);
         } catch (NumberFormatException f) {
-            addClientTextArea.setText("Make sure that you have passed correct values \n \nPossible personalities are: \n可愛い\n Charitable\n Madao\n Lucky\n Normal\n");
+            addClientTextArea.setText("\n       Pass the correct values: \n\n" +
+                                      "    Possible personalities are:\n\n" +
+                                      "\t\t  Normal\n" +
+                                      "\t\t  Charitable\n" +
+                                      "\t\t  Lucky\n" +
+                                      "\t\t  Evil\n" +
+                                      "\t\t  可愛い\n" +
+                                      "\t\t  Madao");
         }
     }
 
@@ -313,6 +324,7 @@ public class SceneController{
         return Math.round(value * scale) / scale;
     }
 
+    //Temporary method for the buttons
     public void OnClicked(ActionEvent event) throws IOException {
         System.out.println("Something happened");
     }
@@ -365,7 +377,6 @@ public class SceneController{
                         }
                     }
                     transfersTextArea.setText(String.valueOf(stringBuilder));
-
                 }
                 return;
             }
@@ -374,43 +385,99 @@ public class SceneController{
         for (int i = 0; i < transfers.size(); i++) {
             transfersTextArea.appendText(transfers.get(i) + "\n");
         }*/
-
         where = 3;
         transfersThread.start();
     }
 
-    public TextArea getTransfersTextArea(){
-        return transfersTextArea;
+    /////////////////////////////////////////////////////////////////
+
+    public void updateDeposits() {
+        where = 0;
+        depositsTextArea.clear();
+        //ArrayList<String> deposits = bankBackend.getTransfersDep().showLastDeposits();
+        Thread depositsThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(where == 3){
+                    StringBuilder stringBuilder = new StringBuilder();
+                    ArrayList<String> deposits = bankBackend.getReportsDep().showLastDeposits();
+                    for (int i = 0; i < deposits.size(); i++) {
+                        stringBuilder.append(deposits.get(i) + "\n");
+                        try {
+                            Thread.sleep(50);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    depositsTextArea.setText(String.valueOf(stringBuilder));
+                }
+                return;
+            }
+        });
+        /*
+        for (int i = 0; i < deposits.size(); i++) {
+            depositsTextArea.appendText(deposits.get(i) + "\n");
+        }*/
+        where = 3;
+        depositsThread.start();
     }
 
-    public void continueUpdateTransfers(){
+    public void updateWithdraws() {
+        where = 0;
+        withdrawsTextArea.clear();
+        //ArrayList<String> withdraws = bankBackend.getTransfersDep().showLastWithdraws();
+        Thread withdrawsThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(where == 3){
+                    StringBuilder stringBuilder = new StringBuilder();
+                    ArrayList<String> withdraws = bankBackend.getReportsDep().showLastWithdraws();
+                    for (int i = 0; i < withdraws.size(); i++) {
+                        stringBuilder.append(withdraws.get(i) + "\n");
+                        try {
+                            Thread.sleep(50);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    withdrawsTextArea.setText(String.valueOf(stringBuilder));
+                }
+                return;
+            }
+        });
+        /*
+        for (int i = 0; i < withdraws.size(); i++) {
+            withdrawsTextArea.appendText(withdraws.get(i) + "\n");
+        }*/
+        where = 3;
+        withdrawsThread.start();
     }
+
+    /////////////////////////////////////////////////////////////////
 
     public void updateAccounts() {
         this.where = 0;
         try {
             accountsComboBox.getItems().clear();
         }
-
         catch (Exception e){
             System.out.println(e);
             return;
         }
 
         HashMap<Integer, NPC> npcs = bankBackend.getDatabase();
+
         for (int i = 1; i <= npcs.size(); i++) {
             accountsComboBox.getItems().add(i);
-
     }
         this.where = 1;
-
     }
 
     public void killHimNow() {
         if (bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem()) != null) {
-            NPC serialSucide = bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem());
-            if (serialSucide.getPersonID() != 1) {
-                serialSucide.suicide();
+            NPC serialSuicide = bankBackend.getClient((Integer) accountsComboBox.getSelectionModel().getSelectedItem());
+            if (serialSuicide.getPersonID() != 1) {
+                serialSuicide.suicide();
                 try {
                     updateAccounts();
                 } catch (Exception exception) {
@@ -421,11 +488,11 @@ public class SceneController{
         }
     }
 
-    public ComboBox getaccountsComboBox(){
+    public ComboBox getAccountComboBox(){
         return this.accountsComboBox;
     }
 
-    public TextArea getaccountsTextArea() {
+    public TextArea getAccountTextArea() {
         return this.accountsTextArea;
     }
 
@@ -435,9 +502,10 @@ public class SceneController{
             @Override
             public void run() {
                 while(where == 1){
-                    ComboBox aCB = getaccountsComboBox();
-                    TextArea aTA = getaccountsTextArea();
+                    ComboBox aCB = getAccountComboBox();
+                    TextArea aTA = getAccountTextArea();
                     NPC sNPC = bankBackend.getClient((Integer) aCB.getSelectionModel().getSelectedItem());
+
                     if (sNPC != null) {
 
                         //Sometimes there may be an error here
@@ -455,10 +523,12 @@ public class SceneController{
 
                         try {
                             Thread.sleep(200);
-                        } catch (InterruptedException e) {
+                        }
+                        catch (InterruptedException e) {
                             e.printStackTrace();
                         }
-                    } else {
+                    }
+                    else {
                         return;
                     }
                 }}
@@ -466,7 +536,6 @@ public class SceneController{
         accountsThread.start();
 
     }
-
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -477,8 +546,6 @@ public class SceneController{
         updateCurrentMoney();
         updateInvestment();
         updateActualDebt();
-        //updatePersonBelongings();
-        //updateInstallmentAmount();
     }
 
     public void deposit(ActionEvent event) throws IOException {
