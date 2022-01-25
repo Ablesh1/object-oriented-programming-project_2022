@@ -3,6 +3,8 @@ import com.example.po.backends.BankBackend;
 import com.example.po.backends.Writer;
 
 import java.io.*;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Random;
@@ -123,7 +125,8 @@ public class NPC extends Thread implements Serializable{
         Writer writer = new Writer();
 
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("\t" + this.getSurname() + "\t\t    deposits\t\t" + deposit);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        stringBuilder.append( LocalTime.now().format(formatter) +"\t " + this.getSurname() + "\t  deposits \t" + deposit);
         String finalString = stringBuilder.toString();
 
         try {
@@ -139,7 +142,8 @@ public class NPC extends Thread implements Serializable{
         Writer writer = new Writer();
 
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("\t" + this.getSurname() + "\t\t   withdraws\t\t" + withdraw);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        stringBuilder.append(LocalTime.now().format(formatter) + "\t" + this.getSurname() + "\t\t   withdraws\t\t" + withdraw);
         String finalString = stringBuilder.toString();
 
         try {
@@ -330,7 +334,7 @@ public class NPC extends Thread implements Serializable{
 
                     logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
 
-                    this.npcAccount.depositOnAccount((double) (Math.round(personBelongings * random.nextDouble(0.3, 1))));
+                    this.deposit((double) (Math.round(personBelongings * random.nextDouble(0.3, 1))));
 
                     writer.write("Charitable person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
                 }
@@ -444,7 +448,7 @@ public class NPC extends Thread implements Serializable{
 
                     logger.log(Level.INFO, "Normal person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
 
-                    this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
+                    this.deposit((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
 
                     writer.write("Normal person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
                 }
@@ -542,7 +546,7 @@ public class NPC extends Thread implements Serializable{
 
                     logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
 
-                    this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
+                    this.deposit((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
 
                     writer.write("可愛い person - " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
                 }
@@ -659,7 +663,7 @@ public class NPC extends Thread implements Serializable{
 
                     logger.log(Level.INFO, "Lucky " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
 
-                    this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
+                    this.deposit((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
 
                     writer.write("Lucky " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
                 }
@@ -788,7 +792,7 @@ public class NPC extends Thread implements Serializable{
 
                     logger.log(Level.INFO, "Madao " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
 
-                    this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
+                    this.deposit((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
 
                     writer.write("Madao " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some pocket money");
                 }
@@ -944,7 +948,7 @@ public class NPC extends Thread implements Serializable{
 
                     logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
 
-                    this.npcAccount.depositOnAccount((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
+                    this.deposit((double) Math.round(personBelongings * random.nextDouble(0.3, 0.6)));
 
                     writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " decided to deposit some stolen money");
                 }

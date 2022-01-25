@@ -8,13 +8,13 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
    <children>
-      <Button fx:id="ToOffice"             layoutX="270" layoutY="300" mnemonicParsing="false" onAction="#switchToOffice" text="To office" />
-      <TextField editable="false"          layoutX="210" layoutY="10"  prefHeight="40"  prefWidth="180" text="You decide to check accounts." />
-      <ComboBox fx:id="accountsComboBox"   layoutX="225" layoutY="70"  prefHeight="10"  prefWidth="150" onMouseClicked="#comboAction"  />
-      <TextArea fx:id="accountsTextArea"   layoutX="150" layoutY="120" prefHeight="110" prefWidth="300" />
+      <Button fx:id="ToOffice" layoutX="270" layoutY="300" mnemonicParsing="false" onAction="#switchToOffice" text="To office" />
+      <TextField editable="false" layoutX="210" layoutY="10" prefHeight="40" prefWidth="180" text="You decide to check accounts." />
+      <ComboBox fx:id="accountsComboBox" layoutX="225" layoutY="70" onMouseClicked="#comboAction" prefHeight="10" prefWidth="150" />
+      <TextArea fx:id="accountsTextArea" editable="false" layoutX="150" layoutY="120" prefHeight="110" prefWidth="300" />
       <Button fx:id="updateAccountsButton" layoutX="245" layoutY="250" mnemonicParsing="false" onAction="#updateAccounts" text="Update Accounts" />
 
-      <Button layoutX="195" layoutY="350" mnemonicParsing="false"  onAction="#switchToCreation" text="Add the client"/>
-      <Button layoutX="315" layoutY="350" mnemonicParsing="false" onAction="#killHimNow"        text="Kill the client" />
+      <Button layoutX="195" layoutY="350" mnemonicParsing="false" onAction="#switchToCreation" text="Add the client" />
+      <Button layoutX="315" layoutY="350" mnemonicParsing="false" onAction="#killHimNow" text="Kill the client" />
    </children>
 </AnchorPane>
