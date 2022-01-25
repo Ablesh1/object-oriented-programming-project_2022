@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_01_2022_13_38__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Client.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Deposits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Deposits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
@@ -153,27 +153,6 @@
       <workItem from="1642970708764" duration="5134000" />
       <workItem from="1643035301130" duration="11986000" />
       <workItem from="1643051544242" duration="594000" />
-    </task>
-    <task id="LOCAL-00038" summary="Add access to BankAccount.fxml">
-      <created>1642807779083</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1642807779083</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Unversioned commit">
-      <created>1642807794734</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1642807794734</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Unversioned commit">
-      <created>1642807806029</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1642807806029</updated>
     </task>
     <task id="LOCAL-00041" summary="Unversioned commit">
       <created>1642807812710</created>
@@ -497,7 +476,28 @@
       <option name="project" value="LOCAL" />
       <updated>1643113742222</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Unversioned commit">
+      <created>1643114574220</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1643114574220</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Unversioned commit">
+      <created>1643114591356</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1643114591356</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Unversioned commit">
+      <created>1643114602817</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1643114602817</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +508,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="75" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="115" />
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="63" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
