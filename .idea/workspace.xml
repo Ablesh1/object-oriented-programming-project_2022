@@ -11,16 +11,6 @@
       <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Department.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/AccountsDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/AccountsDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CountersDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CountersDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CurrencyRateDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/CurrencyRateDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/ReportsDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/ReportsDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/StockRateDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/StockRateDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/TransfersDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/TransfersDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -573,11 +563,11 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PO$Hol.ic" NAME="Hol Coverage Results" MODIFIED="1641468694821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.po.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/Programowanie_Obiektowe_Projekt_2$HallGUI.ic" NAME="HallGUI Coverage Results" MODIFIED="1642615150623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.po.NPChandling.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/PO$Hol.ic" NAME="Hol Coverage Results" MODIFIED="1641468694821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.po.*</FILTER>
     </SUITE>
   </component>
 </project>
