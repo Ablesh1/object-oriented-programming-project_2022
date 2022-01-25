@@ -289,12 +289,12 @@ public class NPC extends Thread implements Serializable{
                 if(whatToDo == 7){
                     if(this.npcAccount.getAccountMoney() > 30000) {
 
-                        logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " saved children in Africa and went for whores");
+                        logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " saved children in Africa");
 
                         this.withdraw(10000.0);
                         this.personBelongings -= 10000.0;
 
-                        writer.write("Charitable person - " + this.getPersonName() + " " + this.getSurname() + " saved children in Africa and went for whores");
+                        writer.write("Charitable person - " + this.getPersonName() + " " + this.getSurname() + " saved children in Africa");
                     }
                 }
 
@@ -302,12 +302,12 @@ public class NPC extends Thread implements Serializable{
                 if(whatToDo == 8){
                     if(this.npcAccount.getAccountMoney() > 50000) {
 
-                        logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " prevented genocide in the Middle East");
+                        logger.log(Level.INFO, "Charitable person - " + this.getPersonName() + " " + this.getSurname() + " prevented hunger in the Middle East");
 
                         this.withdraw(30000.0);
                         this.personBelongings -= 30000.0;
 
-                        writer.write("Charitable person - " + this.getPersonName() + " " + this.getSurname() + " prevented genocide in the Middle East");
+                        writer.write("Charitable person - " + this.getPersonName() + " " + this.getSurname() + " prevented hunger in the Middle East");
                     }
                 }
 
@@ -509,12 +509,12 @@ public class NPC extends Thread implements Serializable{
                 if(whatToDo == 6){
                     if(this.npcAccount.getAccountMoney() > 25000) {
 
-                        logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " took her monthly dose of cocaine");
+                        logger.log(Level.INFO, "可愛い person - " + this.getPersonName() + " " + this.getSurname() + " took her monthly dose of pills");
 
                         this.withdraw(20000.0);
                         this.personBelongings -= 20000.0;
 
-                        writer.write("可愛い person - " + this.getPersonName() + " " + this.getSurname() + " took her monthly dose of cocaine");
+                        writer.write("可愛い person - " + this.getPersonName() + " " + this.getSurname() + " took her monthly dose of pills");
                     }
                 }
 
@@ -559,7 +559,7 @@ public class NPC extends Thread implements Serializable{
 
             /////Lucky is a quite balanced person that has more luck than the others
             /////He does more investing
-            /////Money magically appear on his account when  on debt
+            /////Money magically appear on his account when on debt
             /////Sends money to family for e.g. and stuff
             /////He usually takes have some pocket money with him
             case("Lucky"):
@@ -804,8 +804,8 @@ public class NPC extends Thread implements Serializable{
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
             /////Evil is not balanced person that does do hardcore stuff
-            /////He is aggressive
-            /////Spends money on committing war crimes
+            /////
+            /////
             /////He usually takes have some stolen money with him
             case("Evil"):
                 if(whatToDo < 2){
@@ -869,13 +869,13 @@ public class NPC extends Thread implements Serializable{
                 //Invest some stolen money
                 if(whatToDo == 4){
 
-                    logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
+                    logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra banks this month");
 
                     Double thisMonthIncomeExtra = (double) Math.round(random.nextDouble(2500.0));
 
                     this.npcAccount.makeBankInvestment(thisMonthIncomeExtra, 1);
 
-                    writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra poor families this month");
+                    writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " managed to rob some extra banks this month");
                 }
 
                 //Close an investment
@@ -888,7 +888,7 @@ public class NPC extends Thread implements Serializable{
                     writer.write("Evil person " + this.getPersonName() + " " + this.getSurname() + " decided to close an investment this month");
                 }
 
-                //War crimes
+
                 if(whatToDo == 6){
                     if(this.npcAccount.getAccountMoney() > 50000) {
 
@@ -927,16 +927,16 @@ public class NPC extends Thread implements Serializable{
                     }
                 }
 
-                //War crimes
+
                 if(whatToDo == 9){
                     if(this.npcAccount.getAccountMoney() > 10000) {
 
-                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
+                        logger.log(Level.INFO, "Evil " + this.getPersonName() + " " + this.getSurname() + " committed some extra sth this month");
 
                         this.withdraw(10000.0);
                         this.personBelongings += 20000.0;
 
-                        writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " committed some extra war crimes this month");
+                        writer.write("Evil " + this.getPersonName() + " " + this.getSurname() + " committed some extra sth this month");
                     }
                 }
 
