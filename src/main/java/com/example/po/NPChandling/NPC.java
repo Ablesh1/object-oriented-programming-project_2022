@@ -126,7 +126,7 @@ public class NPC extends Thread implements Serializable{
 
         StringBuilder stringBuilder = new StringBuilder();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-        stringBuilder.append( LocalTime.now().format(formatter) +"\t " + this.getSurname() + "\t  deposits \t" + deposit);
+        stringBuilder.append( LocalTime.now().format(formatter) +"\t" + this.getSurname() + "\t\t   deposits        " + deposit);
         String finalString = stringBuilder.toString();
 
         try {
@@ -143,7 +143,7 @@ public class NPC extends Thread implements Serializable{
 
         StringBuilder stringBuilder = new StringBuilder();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-        stringBuilder.append(LocalTime.now().format(formatter) + "\t" + this.getSurname() + "\t\t   withdraws\t\t" + withdraw);
+        stringBuilder.append(LocalTime.now().format(formatter) + "\t" + this.getSurname() + "\t\t   withdraws       " + withdraw);
         String finalString = stringBuilder.toString();
 
         try {

@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Ready">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Client.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Deposits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Deposits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -551,37 +550,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java</url>
-          <line>540</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java</url>
-          <line>545</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java</url>
-          <line>336</line>
+          <line>340</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java</url>
-          <line>128</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java</url>
-          <line>129</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/po/NPChandling/NPC.java</url>
-          <line>122</line>
-          <properties class="com.example.po.NPChandling.NPC" method="deposit">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -597,11 +568,11 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PO$Hol.ic" NAME="Hol Coverage Results" MODIFIED="1641468694821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.po.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/Programowanie_Obiektowe_Projekt_2$HallGUI.ic" NAME="HallGUI Coverage Results" MODIFIED="1642615150623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.po.NPChandling.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/PO$Hol.ic" NAME="Hol Coverage Results" MODIFIED="1641468694821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.po.*</FILTER>
     </SUITE>
   </component>
 </project>
