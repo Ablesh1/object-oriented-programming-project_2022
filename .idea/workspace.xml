@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="bruh">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Client.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deposits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Deposits.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/po/Accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/po/Accounts.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="bruh2">
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$4.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,14 +146,7 @@
       <workItem from="1642937377430" duration="9785000" />
       <workItem from="1642970708764" duration="5134000" />
       <workItem from="1643035301130" duration="11648000" />
-      <workItem from="1643065413693" duration="1011000" />
-    </task>
-    <task id="LOCAL-00037" summary="Change of details">
-      <created>1642807750222</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1642807750222</updated>
+      <workItem from="1643065413693" duration="1030000" />
     </task>
     <task id="LOCAL-00038" summary="Add access to BankAccount.fxml">
       <created>1642807779083</created>
@@ -501,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643065513296</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="bruh2">
+      <created>1643066448003</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1643066448003</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +511,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add Lucky person behaviour, upgrade logic and change details" />
     <MESSAGE value="Hotfix" />
     <MESSAGE value="Hotfix v2" />
     <MESSAGE value="Zapisywanie to jest coś czym możemy się pochwalić. Przesunąłem zapisywanie na wyjście z programu. Działa dodawanie klientów, działa dynamiczny update logów postaci, mam załamanie nerwowe" />
@@ -546,7 +535,8 @@
     <MESSAGE value="Unversioned commit" />
     <MESSAGE value="Last one?" />
     <MESSAGE value="bruh" />
-    <option name="LAST_COMMIT_MESSAGE" value="bruh" />
+    <MESSAGE value="bruh2" />
+    <option name="LAST_COMMIT_MESSAGE" value="bruh2" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
