@@ -2,6 +2,9 @@ package com.example.po.backends;
 
 import com.example.po.NPChandling.NPC;
 import java.io.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 //This class is about keeping database of clients
@@ -225,8 +228,8 @@ public class BankBackend implements Serializable{
 
                 if(overseer.get(0) == 1 && overseer.get(1) == 1){
                     //Third step - give the money to receiver
-                    receiver.deposit(containerFrom);
-                    String finalString = "\t\tFrom\t" + from + " \tto\t " + to + "\t" + howMuchFrom;
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+                    String finalString = LocalTime.now().format(formatter) + "\t\tFrom\t" + from + " \tto\t " + to + "\t" + howMuchFrom;
 
                     try {
                         writter.writeTransfers(finalString);

@@ -471,7 +471,12 @@ public class SceneController{
             accountsComboBox.getItems().add(i);
     }
         this.where = 1;
-        comboAction();
+        try{
+        comboAction();}
+        catch (NegativeArraySizeException n){
+            accountsComboBox.getItems().clear();
+            updateAccounts();
+        }
     }
 
     public void killHimNow() {
@@ -502,7 +507,7 @@ public class SceneController{
     @FXML
     private void comboAction(){
 
-        NPC sNPC = bankBackend.getClient((Integer) 1);
+       /* NPC sNPC = bankBackend.getClient((Integer) 1);
 
         if (sNPC != null) {
 
@@ -517,12 +522,12 @@ public class SceneController{
                         + "\n\t   Investment:\t\t\t " + roundAvoid(sNPC.getBankInvestment(), 2)); }
             catch(Exception n){
                 where = 0;
-            }}
+            }} */
 
         Thread accountsThread = new Thread(new Runnable() {
             @Override
             public void run() {
-                while(where == 1){
+                while(where == 6){
                     ComboBox aCB = getAccountComboBox();
                     TextArea aTA = getAccountTextArea();
                     NPC sNPC = bankBackend.getClient((Integer) aCB.getSelectionModel().getSelectedItem());
@@ -538,7 +543,7 @@ public class SceneController{
                                 + "\n\t   Account balance:\t\t " + roundAvoid(sNPC.getAccountMoney(), 2)
                                 + "\n\t   Debt:\t\t\t\t " + roundAvoid(sNPC.getActualDebt(), 2)
                                 + "\n\t   Investment:\t\t\t " + roundAvoid(sNPC.getBankInvestment(), 2)); }
-                        catch(IndexOutOfBoundsException n){
+                        catch(NegativeArraySizeException | IndexOutOfBoundsException n){
                             where = 0;
                             return;
                         }
@@ -555,8 +560,11 @@ public class SceneController{
                     }
                 }}
         });
-        accountsThread.start();
 
+        //It`s to ensure that only one thread exist
+        if(where != 6)
+        where = 6;
+        accountsThread.start();
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
