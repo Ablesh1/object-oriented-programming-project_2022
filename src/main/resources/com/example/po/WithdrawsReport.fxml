@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
+    <children>
+        <Button fx:id="ToReports"           layoutX="270" layoutY="300" mnemonicParsing="false" onAction="#switchToReports" text="To reports" />
+        <Button fx:id="updateWithdrawsButton" layoutX="249" layoutY="250" mnemonicParsing="false" onAction="#updateWithdraws" prefHeight="10" text="Update withdraws" />
+        <TextArea fx:id="withdrawsTextArea"   layoutX="150" layoutY="70" prefHeight="160" prefWidth="300.0" />
+        <TextField editable="false"         layoutX="210" layoutY="10" prefHeight="40"  prefWidth="180" text="You decide to check withdraws." />
+    </children>
+</AnchorPane>

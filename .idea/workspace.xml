@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Unversioned commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Deposits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Deposits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPChandling/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPChandling/NPC.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +67,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39310345" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -147,209 +148,9 @@
       <workItem from="1642717033758" duration="678000" />
       <workItem from="1642755021822" duration="986000" />
       <workItem from="1642937377430" duration="9785000" />
-    </task>
-    <task id="LOCAL-00009" summary="Lepsze samobójstwo">
-      <created>1642500362733</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1642500362733</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Poprawiona kreacja klas">
-      <created>1642511298815</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1642511298815</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Szybka giełda">
-      <created>1642520255602</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1642520255602</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Refactoring">
-      <created>1642530784630</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1642530784630</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Fxml refactoring">
-      <created>1642533537782</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1642533537782</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Add Loan and Investment mechanics">
-      <created>1642557682680</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1642557682680</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Add special getters for Loan and Investment variables, upgrade constructor">
-      <created>1642557745186</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1642557745186</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Upgrade constructor">
-      <created>1642557760826</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1642557760826</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Add complete BankLoan.fxml">
-      <created>1642557801650</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1642557801650</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Add incomplete BankInvestment.fxml">
-      <created>1642557826946</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1642557826946</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Add access to Loan and Investment fxml files">
-      <created>1642557884561</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1642557884561</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Adjust SceneController to new mechanics - plenty of Loan and Investment methods added">
-      <created>1642557975808</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1642557975808</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Unversioned commit">
-      <created>1642557990597</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1642557990597</updated>
-    </task>
-    <task id="LOCAL-00022" summary="https://www.youtube.com/watch?v=enPpRFeQhh4">
-      <created>1642595670743</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1642595670743</updated>
-    </task>
-    <task id="LOCAL-00023" summary="https://www.youtube.com/watch?v=enPpRFeQhh4">
-      <created>1642597537080</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1642597537080</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Sprawdź commity&#10;https://www.youtube.com/watch?v=enPpRFeQhh4&#10;Działa zapisywanie, wczytywanie i nienawidzę Antychrysta">
-      <created>1642626567900</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1642626567900</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Sprawdź commity&#10;https://www.youtube.com/watch?v=enPpRFeQhh4&#10;Działa zapisywanie, wczytywanie i nienawidzę Antychrysta">
-      <created>1642626656930</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1642626656930</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Lepsze zapisywanie">
-      <created>1642678681677</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1642678681677</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Zapisywanie do plików">
-      <created>1642682243404</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1642682243404</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Zapisywanie do plików">
-      <created>1642682252282</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1642682252282</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Zapisywanie do plików">
-      <created>1642690260644</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1642690260644</updated>
-    </task>
-    <task id="LOCAL-00030" summary="change of details">
-      <created>1642802401656</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1642802401656</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Add new clients">
-      <created>1642802458060</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1642802458060</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Add more features to NPCs, create abilities to pay taxes, to take loans, to invest, to close investment and to commit suicide">
-      <created>1642802582847</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1642802582847</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Upgrade some logic">
-      <created>1642802607086</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1642802607086</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Unversioned commit">
-      <created>1642802665221</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1642802665221</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Add BankAccount.fxml">
-      <created>1642807647516</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1642807647516</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Add features to check Bank Account">
-      <created>1642807705628</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1642807705628</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Change of details">
-      <created>1642807750222</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1642807750222</updated>
+      <workItem from="1642970708764" duration="5134000" />
+      <workItem from="1643035301130" duration="11986000" />
+      <workItem from="1643051544242" duration="594000" />
     </task>
     <task id="LOCAL-00038" summary="Add access to BankAccount.fxml">
       <created>1642807779083</created>
@@ -491,7 +292,210 @@
       <option name="project" value="LOCAL" />
       <updated>1642946739595</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Hotfix v2">
+      <created>1642957001391</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1642957001391</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Zapisywanie to jest coś czym możemy się pochwalić. Przesunąłem zapisywanie na wyjście z programu. Działa dodawanie klientów, działa dynamiczny update logów postaci, mam załamanie nerwowe">
+      <created>1642966510835</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1642966510835</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Transfery">
+      <created>1642974681098</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1642974681098</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Restore the balance of suicides, loans and investments">
+      <created>1642982962248</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1642982962248</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Restore the balance v2">
+      <created>1642985667770</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1642985667770</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Unversioned commit">
+      <created>1642985779447</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1642985779447</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Add Client GUI improvement">
+      <created>1643038982530</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1643038982530</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Unversioned commit">
+      <created>1643039015502</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1643039015502</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Change of details">
+      <created>1643039461772</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1643039461772</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Modify readLastWithdraws method">
+      <created>1643040122525</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1643040122525</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Modify TransfersDep.java and ReportsDep.java classes">
+      <created>1643040169757</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1643040169757</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Create method updateReports">
+      <created>1643041586669</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1643041586669</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Upgrade ClientReport.fxml and Transfers.fxml">
+      <created>1643041632849</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1643041632849</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Add getReportsDep and put everything in order">
+      <created>1643041691314</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1643041691314</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Unversioned commit">
+      <created>1643041713467</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1643041713467</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Change of details">
+      <created>1643042588680</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1643042588680</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Add writeDeposits method and readLastDeposits method">
+      <created>1643043347940</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1643043347940</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Add showLastDeposits method">
+      <created>1643043437569</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1643043437569</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Create method updateDeposits and method updateWithdraws and add access to new fxml files">
+      <created>1643044786768</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1643044786768</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Change of details">
+      <created>1643044869514</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1643044869514</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Add Deposits.txt">
+      <created>1643044890268</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1643044890268</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Add Deposits.fxml">
+      <created>1643044913602</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1643044913602</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Add DepositsReport.fxml and WithdrawsReport.fxml">
+      <created>1643044951413</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1643044951413</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Rebuild deposit method">
+      <created>1643044992328</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1643044992328</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Change reports.fxml">
+      <created>1643045797639</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1643045797639</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Unversioned commit">
+      <created>1643045815810</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1643045815810</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Ready">
+      <created>1643047032909</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1643047032909</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Unversioned commit">
+      <created>1643112970460</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1643112970460</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Unversioned commit">
+      <created>1643113742222</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1643113742222</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,30 +515,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add incomplete BankInvestment.fxml" />
-    <MESSAGE value="Add access to Loan and Investment fxml files" />
-    <MESSAGE value="Adjust SceneController to new mechanics - plenty of Loan and Investment methods added" />
-    <MESSAGE value="https://www.youtube.com/watch?v=enPpRFeQhh4" />
-    <MESSAGE value="Sprawdź commity&#10;https://www.youtube.com/watch?v=enPpRFeQhh4&#10;Działa zapisywanie, wczytywanie i nienawidzę Antychrysta" />
-    <MESSAGE value="Lepsze zapisywanie" />
-    <MESSAGE value="Zapisywanie do plików" />
-    <MESSAGE value="change of details" />
-    <MESSAGE value="Add new clients" />
-    <MESSAGE value="Add more features to NPCs, create abilities to pay taxes, to take loans, to invest, to close investment and to commit suicide" />
-    <MESSAGE value="Upgrade some logic" />
-    <MESSAGE value="Add BankAccount.fxml" />
-    <MESSAGE value="Add features to check Bank Account" />
-    <MESSAGE value="Add access to BankAccount.fxml" />
-    <MESSAGE value="Change of details" />
-    <MESSAGE value="Add BigStockRate.fxml" />
-    <MESSAGE value="Add path BigStockRate.fxml" />
-    <MESSAGE value="Add ClientReport.fxml" />
-    <MESSAGE value="GUI - General improvement" />
-    <MESSAGE value="Add new NPC with new features" />
-    <MESSAGE value="Add cute NPC with behaviour" />
-    <MESSAGE value="Prepare workspace for two new characters" />
     <MESSAGE value="Adjust money balance in the bank - unlock some dark methods" />
     <MESSAGE value="Add Lucky person behaviour, upgrade logic and change details" />
+    <MESSAGE value="Hotfix" />
+    <MESSAGE value="Hotfix v2" />
+    <MESSAGE value="Zapisywanie to jest coś czym możemy się pochwalić. Przesunąłem zapisywanie na wyjście z programu. Działa dodawanie klientów, działa dynamiczny update logów postaci, mam załamanie nerwowe" />
+    <MESSAGE value="Transfery" />
+    <MESSAGE value="Restore the balance of suicides, loans and investments" />
+    <MESSAGE value="Restore the balance v2" />
+    <MESSAGE value="Add Client GUI improvement" />
+    <MESSAGE value="Modify readLastWithdraws method" />
+    <MESSAGE value="Modify TransfersDep.java and ReportsDep.java classes" />
+    <MESSAGE value="Create method updateReports" />
+    <MESSAGE value="Upgrade ClientReport.fxml and Transfers.fxml" />
+    <MESSAGE value="Add getReportsDep and put everything in order" />
+    <MESSAGE value="Add writeDeposits method and readLastDeposits method" />
+    <MESSAGE value="Add showLastDeposits method" />
+    <MESSAGE value="Create method updateDeposits and method updateWithdraws and add access to new fxml files" />
+    <MESSAGE value="Change of details" />
+    <MESSAGE value="Add Deposits.txt" />
+    <MESSAGE value="Add Deposits.fxml" />
+    <MESSAGE value="Add DepositsReport.fxml and WithdrawsReport.fxml" />
+    <MESSAGE value="Rebuild deposit method" />
+    <MESSAGE value="Change reports.fxml" />
+    <MESSAGE value="Ready" />
     <MESSAGE value="Unversioned commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Unversioned commit" />
   </component>
