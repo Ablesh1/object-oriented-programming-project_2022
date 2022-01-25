@@ -30,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="new-master" />
+        <entry key="$PROJECT_DIR$" value="new-Michał" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -117,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HallGUI" />
         <item itemvalue="Application.HallGUI" />
         <item itemvalue="Application.HallGUI" />
         <item itemvalue="Application.HallGUI" />
