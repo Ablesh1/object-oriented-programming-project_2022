@@ -4,15 +4,15 @@ import com.example.po.backends.BankBackend;
 import java.io.IOException;
 import java.io.Serializable;
 
-//Each NPC has his own account
+// Each NPC has his own account
 public class NPCAccount implements Serializable {
     NPC owner;
     BankBackend bankBackend;
 
-    //Account tracks how in debt or rich is NPC
+    // Account tracks how in debt or rich is NPC
     private Double accountMoney;
 
-    //Loan & investment stuff
+    // Loan & investment stuff
 
     private Double bankLoan;
     private Integer installmentNumber;
@@ -46,9 +46,6 @@ public class NPCAccount implements Serializable {
         this.accountMoney = accountMoney;
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     public Double getBankInvestment() {
         return bankInvestment;
     }
@@ -64,9 +61,6 @@ public class NPCAccount implements Serializable {
     public void setInvestmentDuration(Integer investmentDuration) {
         this.investmentDuration = investmentDuration;
     }
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public Double getInstallmentAmount() {
 
@@ -100,9 +94,6 @@ public class NPCAccount implements Serializable {
     public void setInstallmentNumber(Integer installmentNumber) {
         this.installmentNumber = installmentNumber;
     }
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void depositOnAccount(Double toDeposit){
         if (owner.getPersonBelongings() >= toDeposit){
@@ -139,7 +130,7 @@ public class NPCAccount implements Serializable {
         }
 
         else if (this.accountMoney - this.getInstallmentAmount() < 0 && this.actualDebt > 0 && this.counter < this.installmentNumber) {
-            //Closes investment when does not have money for monthly installments
+            // Closes investment when does not have money for monthly installments
             this.closeInvestment();
             if(this.accountMoney - this.getInstallmentAmount() >= 0) {
                 this.accountMoney -= this.getInstallmentAmount();
@@ -151,7 +142,7 @@ public class NPCAccount implements Serializable {
                 }
             }
             else {
-                //System.out.println("Ara ara, we are spending more money than we have");
+                // System.out.println("Ara ara, we are spending more money than we have");
                 System.out.println("Ara ara, we are having serious debt problems");
             }
         }
@@ -180,7 +171,4 @@ public class NPCAccount implements Serializable {
     public void payTaxes(double taxes){
         this.accountMoney -= taxes;
     }
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
