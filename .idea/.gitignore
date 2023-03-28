@@ -7,9 +7,9 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 # Ignored .txt files
-./Client.dat
-./Deposits.txt
-./NPClogging
-./NPClogging.txt
-./Transfer.txt
-./Withdraws.txt
+../Client.dat
+../Deposits.txt
+../NPClogging
+../NPClogging.txt
+../Transfer.txt
+../Withdraws.txt
