@@ -18,7 +18,7 @@ public class HallGUI extends Application {
         stage.show();
     }
 
-    //W holu program się zaczyna
+    // The app starts here
     public static void main(String[] args) {
         launch();
     }

@@ -6,15 +6,15 @@ import java.io.IOException;
 
 public abstract class Department{
 
-    //Departemant musi wiedzieć w którym jest banku
+    // Department must know which bank it is in
     BankBackend bankBackend;
 
     public BankBackend getBankBackend() {
         return bankBackend;
     }
 
-    //Każdy departament ma własny wątek
-    //Nie dziedziczymy po thread bo już dziedziczymy po Application
+    // Each department has its own thread
+    // We do not inherit from thread since we already inherit from Application
     private Thread thread = new Thread(new Runnable() {
         @Override
         public void run() {
@@ -45,13 +45,11 @@ public abstract class Department{
 
     }
 
-    //Tutaj panele będą się aktualizować oraz zbierać dane z innych klas
-    //Które będą cały czas działały w tle
-    //Np. Bazy danych klinetów
+    // This is where the panels will update themselves and collect data from other classes
+    // Which will run in the background all the time
+    // E.g. Client databases
     public void refresh() throws IOException {
         System.out.println("Bruh");
-        //Do something
-        ;
     }
 
     public int kill(){

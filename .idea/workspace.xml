@@ -4,109 +4,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="Ready">
+    <list default="true" id="ce4a8f7c-3cc2-4090-9c05-c75c4027e041" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Deposits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Deposits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NPClogging" beforeDir="false" afterPath="$PROJECT_DIR$/NPClogging" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transfer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transfer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Withdraws.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Withdraws.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/HallGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/BankBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/po/backends/StockRateDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/po/backends/StockRateDep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/NPChandling/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/NPChandling/NPC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/AccountsDep.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/AccountsDep.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/BankBackend.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/CountersDep.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/CountersDep.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/CurrencyRateDep.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/CurrencyRateDep.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/po/backends/StockRateDep.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/po/backends/StockRateDep.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="FxmlFile" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/new-Kuba" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="new-Michał" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="ProjectId" id="23kURNTwFnTPdYkwyqzyFOt9Eua" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2NeXGJMq848bybj8rdoxi9hG1bG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/json-simple-1.1.1.jar" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.39310345" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\teamg\Desktop\Isekaites\Programowanie-Obiektowe-Projekt_2\src\main\java\com\example\po\NPChandling" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.po.NPChandling" />
-      <recent name="com.example.po.backends" />
-      <recent name="com.example.po" />
-      <recent name="com.example.po.GUI" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.po" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////" />
-    </option>
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RunManager">
     <configuration name="HallGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.po.HallGUI" />
-      <module name="Programowanie-Obiektowe-Projekt" />
+      <module name="PO" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.po.NPChandling.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HallGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.po.HallGUI" />
-      <module name="Programowanie-Obiektowe-Projekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.po.backends.*" />
+          <option name="PATTERN" value="com.example.po.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,385 +77,19 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.HallGUI" />
-        <item itemvalue="Application.HallGUI" />
-        <item itemvalue="Application.HallGUI" />
-        <item itemvalue="Application.HallGUI" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="db4a6882-6c60-4a71-b249-a397c69ed18a" name="Changes" comment="" />
-      <created>1642277569307</created>
+      <changelist id="ce4a8f7c-3cc2-4090-9c05-c75c4027e041" name="Changes" comment="" />
+      <created>1680025425833</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1642277569307</updated>
-      <workItem from="1642277570551" duration="3554000" />
-      <workItem from="1642283379149" duration="63000" />
-      <workItem from="1642285426648" duration="3413000" />
-      <workItem from="1642288975206" duration="555000" />
-      <workItem from="1642289608440" duration="130000" />
-      <workItem from="1642289874813" duration="1778000" />
-      <workItem from="1642430264538" duration="13331000" />
-      <workItem from="1642499423101" duration="962000" />
-      <workItem from="1642507319740" duration="5330000" />
-      <workItem from="1642518672660" duration="2645000" />
-      <workItem from="1642595758392" duration="1962000" />
-      <workItem from="1642610767528" duration="15763000" />
-      <workItem from="1642674376010" duration="7820000" />
-      <workItem from="1642689408289" duration="881000" />
-      <workItem from="1642717033758" duration="678000" />
-      <workItem from="1642755021822" duration="986000" />
-      <workItem from="1642937377430" duration="9785000" />
-      <workItem from="1642970708764" duration="5134000" />
-      <workItem from="1643035301130" duration="11986000" />
-      <workItem from="1643051544242" duration="594000" />
+      <updated>1680025425833</updated>
+      <workItem from="1680025428176" duration="1467000" />
     </task>
-    <task id="LOCAL-00045" summary="Add path BigStockRate.fxml">
-      <created>1642876676938</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1642876676938</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Add ClientReport.fxml">
-      <created>1642876811437</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1642876811437</updated>
-    </task>
-    <task id="LOCAL-00047" summary="GUI - General improvement">
-      <created>1642890083370</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1642890083370</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Unversioned commit">
-      <created>1642891700364</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1642891700364</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Add new NPC with new features">
-      <created>1642938931452</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1642938931452</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Unversioned commit">
-      <created>1642938944506</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1642938944506</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Unversioned commit">
-      <created>1642940469297</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1642940469297</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Add cute NPC with behaviour">
-      <created>1642940487927</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1642940487927</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Prepare workspace for two new characters">
-      <created>1642940785674</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1642940785674</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Unversioned commit">
-      <created>1642940806184</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1642940806184</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Adjust money balance in the bank - unlock some dark methods">
-      <created>1642944151576</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1642944151576</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Add Lucky person behaviour, upgrade logic and change details">
-      <created>1642946725582</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1642946725582</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Unversioned commit">
-      <created>1642946739595</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1642946739595</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Hotfix v2">
-      <created>1642957001391</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1642957001391</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Zapisywanie to jest coś czym możemy się pochwalić. Przesunąłem zapisywanie na wyjście z programu. Działa dodawanie klientów, działa dynamiczny update logów postaci, mam załamanie nerwowe">
-      <created>1642966510835</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1642966510835</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Transfery">
-      <created>1642974681098</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1642974681098</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Restore the balance of suicides, loans and investments">
-      <created>1642982962248</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1642982962248</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Restore the balance v2">
-      <created>1642985667770</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1642985667770</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Unversioned commit">
-      <created>1642985779447</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1642985779447</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Add Client GUI improvement">
-      <created>1643038982530</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1643038982530</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Unversioned commit">
-      <created>1643039015502</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1643039015502</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Change of details">
-      <created>1643039461772</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1643039461772</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Modify readLastWithdraws method">
-      <created>1643040122525</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1643040122525</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Modify TransfersDep.java and ReportsDep.java classes">
-      <created>1643040169757</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1643040169757</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Create method updateReports">
-      <created>1643041586669</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1643041586669</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Upgrade ClientReport.fxml and Transfers.fxml">
-      <created>1643041632849</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1643041632849</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Add getReportsDep and put everything in order">
-      <created>1643041691314</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1643041691314</updated>
-    </task>
-    <task id="LOCAL-00072" summary="Unversioned commit">
-      <created>1643041713467</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1643041713467</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Change of details">
-      <created>1643042588680</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1643042588680</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Add writeDeposits method and readLastDeposits method">
-      <created>1643043347940</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1643043347940</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Add showLastDeposits method">
-      <created>1643043437569</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1643043437569</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Create method updateDeposits and method updateWithdraws and add access to new fxml files">
-      <created>1643044786768</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1643044786768</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Change of details">
-      <created>1643044869514</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1643044869514</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Add Deposits.txt">
-      <created>1643044890268</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1643044890268</updated>
-    </task>
-    <task id="LOCAL-00079" summary="Add Deposits.fxml">
-      <created>1643044913602</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1643044913602</updated>
-    </task>
-    <task id="LOCAL-00080" summary="Add DepositsReport.fxml and WithdrawsReport.fxml">
-      <created>1643044951413</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1643044951413</updated>
-    </task>
-    <task id="LOCAL-00081" summary="Rebuild deposit method">
-      <created>1643044992328</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1643044992328</updated>
-    </task>
-    <task id="LOCAL-00082" summary="Change reports.fxml">
-      <created>1643045797639</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1643045797639</updated>
-    </task>
-    <task id="LOCAL-00083" summary="Unversioned commit">
-      <created>1643045815810</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1643045815810</updated>
-    </task>
-    <task id="LOCAL-00084" summary="Ready">
-      <created>1643047032909</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1643047032909</updated>
-    </task>
-    <task id="LOCAL-00085" summary="Unversioned commit">
-      <created>1643112970460</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1643112970460</updated>
-    </task>
-    <task id="LOCAL-00086" summary="Unversioned commit">
-      <created>1643113742222</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1643113742222</updated>
-    </task>
-    <task id="LOCAL-00087" summary="Unversioned commit">
-      <created>1643114574220</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1643114574220</updated>
-    </task>
-    <task id="LOCAL-00088" summary="Unversioned commit">
-      <created>1643114591356</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1643114591356</updated>
-    </task>
-    <task id="LOCAL-00089" summary="Unversioned commit">
-      <created>1643114602817</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1643114602817</updated>
-    </task>
-    <task id="LOCAL-00090" summary="Unversioned commit">
-      <created>1643115404883</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1643115404883</updated>
-    </task>
-    <task id="LOCAL-00091" summary="Unversioned commit">
-      <created>1643115415922</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1643115415922</updated>
-    </task>
-    <task id="LOCAL-00092" summary="Unversioned commit">
-      <created>1643115449633</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1643115449633</updated>
-    </task>
-    <task id="LOCAL-00093" summary="Ready">
-      <created>1643116242946</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1643116242946</updated>
-    </task>
-    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,68 +100,10 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ID_WIDTH">
-                <map>
-                  <entry key="Table.Default.Author.ColumnIdWidth" value="75" />
-                  <entry key="Table.Default.Date.ColumnIdWidth" value="115" />
-                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="63" />
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Adjust money balance in the bank - unlock some dark methods" />
-    <MESSAGE value="Add Lucky person behaviour, upgrade logic and change details" />
-    <MESSAGE value="Hotfix" />
-    <MESSAGE value="Hotfix v2" />
-    <MESSAGE value="Zapisywanie to jest coś czym możemy się pochwalić. Przesunąłem zapisywanie na wyjście z programu. Działa dodawanie klientów, działa dynamiczny update logów postaci, mam załamanie nerwowe" />
-    <MESSAGE value="Transfery" />
-    <MESSAGE value="Restore the balance of suicides, loans and investments" />
-    <MESSAGE value="Restore the balance v2" />
-    <MESSAGE value="Add Client GUI improvement" />
-    <MESSAGE value="Modify readLastWithdraws method" />
-    <MESSAGE value="Modify TransfersDep.java and ReportsDep.java classes" />
-    <MESSAGE value="Create method updateReports" />
-    <MESSAGE value="Upgrade ClientReport.fxml and Transfers.fxml" />
-    <MESSAGE value="Add getReportsDep and put everything in order" />
-    <MESSAGE value="Add writeDeposits method and readLastDeposits method" />
-    <MESSAGE value="Add showLastDeposits method" />
-    <MESSAGE value="Create method updateDeposits and method updateWithdraws and add access to new fxml files" />
-    <MESSAGE value="Change of details" />
-    <MESSAGE value="Add Deposits.txt" />
-    <MESSAGE value="Add Deposits.fxml" />
-    <MESSAGE value="Add DepositsReport.fxml and WithdrawsReport.fxml" />
-    <MESSAGE value="Rebuild deposit method" />
-    <MESSAGE value="Change reports.fxml" />
-    <MESSAGE value="Unversioned commit" />
-    <MESSAGE value="Ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ready" />
-  </component>
-  <component name="XDebuggerManager">
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="javafx.event.ActionEvent" memberName="source" />
-        <PinnedItemInfo parentTag="java.lang.Integer" memberName="value" />
-      </pinned-members>
-    </pin-to-top-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Programowanie_Obiektowe_Projekt_2$HallGUI.ic" NAME="HallGUI Coverage Results" MODIFIED="1642615150623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.po.NPChandling.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/PO$Hol.ic" NAME="Hol Coverage Results" MODIFIED="1641468694821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.po.*</FILTER>
-    </SUITE>
   </component>
 </project>

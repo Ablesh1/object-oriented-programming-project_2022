@@ -43,7 +43,6 @@ public class StockRateDep extends Department{
         while(line != null) {
             int target = line.indexOf(key);
             if(line.contains(key)) {
-                ///////////////////////////////////////////////////////////////////
                 int deci = line.indexOf(".", target);
                 int start = deci;
 
@@ -54,7 +53,6 @@ public class StockRateDep extends Department{
                 if(price.contains(",")) {
                     price = price.substring(0, price.length()- 1) + "0";
                 }
-                ///////////////////////////////////////////////////////////////////
                 int quot = line.indexOf("[\"", target);
                 int end = quot;
 
@@ -62,7 +60,6 @@ public class StockRateDep extends Department{
                     end ++;
                 }
                 title = line.substring(quot + 2, end - 1);
-                ///////////////////////////////////////////////////////////////////
             }
             line = bufferedReader.readLine();
         }

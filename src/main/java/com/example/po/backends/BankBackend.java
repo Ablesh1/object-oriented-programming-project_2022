@@ -23,7 +23,6 @@ public class BankBackend implements Serializable{
     //We can assume that the player will be the first client
     private HashMap<Integer, NPC> database;
 
-    //I hate it. I really do.
     private Integer thePoorOne;
     private Integer randomClient;
 
@@ -57,9 +56,6 @@ public class BankBackend implements Serializable{
         loader();
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     public static ReportsDep getReportsDep() {
         return reportsDep;
     }
@@ -76,9 +72,6 @@ public class BankBackend implements Serializable{
         return stockRate;
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     public void setDatabase(HashMap<Integer, NPC> database) {
         this.database = database;
     }
@@ -87,35 +80,28 @@ public class BankBackend implements Serializable{
         return database;
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     //Adding or removing NPC
-
     public void saver(HashMap<Integer, NPC> database){
 
         try (FileOutputStream fos = new FileOutputStream("Client.dat");
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
 
-            ArrayList<NPC> saviour = new ArrayList<>();
+                ArrayList<NPC> saviour = new ArrayList<>();
+                database.forEach((k, v) -> {saviour.add(v); });
+                saviour.remove(0);
 
-            database.forEach((k, v) -> {saviour.add(v); });
-
-            saviour.remove(0);
-
-            // write list of objects to file
-            oos.writeObject(saviour);
-            oos.close();
-
+                // Write list of objects to file
+                oos.writeObject(saviour);
+                oos.close();
         }
         catch (IOException ex) {
             ex.printStackTrace();
         }
     }
 
-    //Pierwsze dwie linijki zczytują wartości z pliku i tworzą listę NPCtów
-    //Następnie każdy NPC jest dodawany do banku i agregujemy bank do NPC
-    //Na zaś zostaje odpalony wątek
+    // First two lines read the values from the file and create a list of NPCs
+    // Then each NPC is added to the bank, and we aggregate the bank to NPCs
+    // Then the thread is started
     public void loader(){
         try {
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("Client.dat"));
@@ -130,24 +116,6 @@ public class BankBackend implements Serializable{
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        /*
-         ░░░░░░░░░░░░░░░░░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄░░░░░░░░
-         ░░░░░░░░░░░░░░░░░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄░░░░
-         ░░░░░░░░░░░░░░░░░░░░█░░░▒▒▒▒▒▒░░░░░░░░▒▒▒░░█░░░
-         ░░░░░░░░░░░░░░░░░░░█░░░░░░▄██▀▄▄░░░░░▄▄▄░░░░█░░
-         ░░░░░░░░░░░░░░░░░▄▀▒▄▄▄▒░█▀▀▀▀▄▄█░░░██▄▄█░░░░█░
-         ░░░░░░░░░░░░░░░░█░▒█▒▄░▀▄▄▄▀░░░░░░░░█░░░▒▒▒▒▒░█
-         ░░░░░░░░░░░░░░░░█░▒█░█▀▄▄░░░░░█▀░░░░▀▄░░▄▀▀▀▄▒█
-         ░░░░░░░░░░░░░░░░░█░▀▄░█▄░█▀▄▄░▀░▀▀░▄▄▀░░░░█░░█░
-         ░░░░░░░░░░░░░░░░░░█░░░▀▄▀█▄▄░█▀▀▀▄▄▄▄▀▀█▀██░█░░
-         ░░░░░░░░░░░░░░░░░░░█░░░░██░░▀█▄▄▄█▄▄█▄████░█░░░
-         ░░░░░░░░░░░░░░░░░░░░█░░░░▀▀▄░█░░░█░█▀██████░█░░
-         ░░░░░░░░░░░░░░░░░░░░░▀▄░░░░░▀▀▄▄▄█▄█▄█▄█▄▀░░█░░
-        ░░░░░░░░░░░░░░░░░░░░░░░▀▄▄░▒▒▒▒░░░░░░░░░░▒░░░█░░
-        ░I hate the Antichrist░░░▀▀▄▄░▒▒▒▒▒▒▒▒▒▒░░░░█░░░
-        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░░░░█░░░░
-        */
-
     }
 
     public void addClient(NPC npc){
@@ -158,10 +126,8 @@ public class BankBackend implements Serializable{
         database.remove(personID);
         HashMap<Integer, NPC> replacer = new HashMap<>();
 
-        //Update the database loop
-        //As effective as Musk`s hyperloop lol
-
-        //From Player to personID
+        // Update the database loop
+        // From Player to personID
         for(int j = 1; j < personID; j ++){
             replacer.put(j, database.get(j));
         }
@@ -184,11 +150,8 @@ public class BankBackend implements Serializable{
                 Random random = new Random();
                 Set<Integer> randomClients = database.keySet();
                 Integer helper = random.nextInt(1, randomClients.size());
-                //Intellij claims that collection method is SUS
                 NPC chosencClient = database.get(helper);
-                //Tu te randomowe cyferki wypisywało
                 //System.out.println(helper);
-                //AMOGUS XD
                 randomClient = chosencClient.getPersonID();
                 return;
             }
@@ -197,37 +160,34 @@ public class BankBackend implements Serializable{
         return randomClient;
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    //It must do on a separate thread
-    //Otherwise might cause bottlenecks
+    // It must be done on a separate thread
+    // Otherwise might cause bottlenecks
     public void transferMoney(Integer from, Integer to, double howMuchFrom){
         NPC giver = getClient(from);
         NPC receiver = getClient(to);
         ArrayList<Integer> overseer = new ArrayList<Integer>();
 
-        //0 means that we have not received money
-        //1 means that transaction is ready from one side
+        // 0 means that we have not received money
+        // 1 means that transaction is ready from one side
         overseer.add(0);
         overseer.add(0);
 
-        //Cancle transfer in mild case of death
+        // Cancel transfer in mild case of death
         if(overseer.get(0) == 0 && giver != null && receiver != null){
 
             //First step - gather the right amount of money
             double containerFrom = howMuchFrom;
             overseer.set(0, 1);
 
-            //Turn out you have to check it once
-            //If is null will go to else apparently
+            // Turn out you have to check it once
+            // If is null will go to else apparently
             if(overseer.get(1) == 0){
-                //Second step - take the money from giver
+                // Second step - take the money from giver
                 giver.withdraw(howMuchFrom);
                 overseer.set(1, 1);
 
                 if(overseer.get(0) == 1 && overseer.get(1) == 1){
-                    //Third step - give the money to receiver
+                    // Third step - give the money to receiver
                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
                     String finalString = LocalTime.now().format(formatter) + "\t\tFrom\t" + from + " \tto\t " + to + "\t" + howMuchFrom;
 
@@ -240,35 +200,29 @@ public class BankBackend implements Serializable{
                 }
                 else{
                     System.out.println("Transfer cancelled due to unexpected case of death");
-                    //We have to undo the previous move if something happens
+                    // We have to undo the previous move if something happens
                     giver.deposit(howMuchFrom);
-
                     return;
                 }
             }
-
             else{
                 System.out.println("Transfer cancelled due to urgent will to die");
-                //Here nothing happened yet thankfully
+                // Here nothing happened yet thankfully
                 return;
             }
         }
     }
 
-    //I have no heart to try if this abomination works
-    //I lied. It actually works pretty well
+    // I have no heart to try if this abomination works
+    // I lied. It actually works pretty well
     public Integer askForPoor(){
         Thread poorThread = new Thread(new Runnable() {
             @Override
             public void run() {
                 HashMap<Double, Integer> poorClients = new HashMap();
 
-                //For lambdas there are some points too
                 database.forEach((k,v) -> poorClients.put(v.getAccountMoney(), k));
-                //FOR COLLECTIONS TOO
 
-                //Big brain time so large I can`t comprehend
-                //Thanks Tzzentch
                 Double min = Collections.min(poorClients.keySet());
                 Integer minId = poorClients.get(min);
                 NPC thePoorOneNpc = database.get(minId);
@@ -278,15 +232,14 @@ public class BankBackend implements Serializable{
                     //Warning - potential money laundering
                     return;
                 }
-                }
+            }
         });
         poorThread.start();
         return this.thePoorOne;
     }
 
-    //It`s effectively a getter just for one function only
+    // It`s effectively a getter just for one function only
     public Integer tellThePoor(Integer key){
         return key;
     }
-
 }

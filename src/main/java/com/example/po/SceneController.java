@@ -23,23 +23,17 @@ public class SceneController{
 
     private int where;
 
-    //Bank account
+    // Bank account
     @FXML
     Button UpdateButton;
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    //Stocks
+    // Stocks
     @FXML
     TextArea CurrencyArea;
     @FXML
     TextArea StockArea;
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    //Deposits and withdraws
+    // Deposits and withdraws
     @FXML
     TextField ATMArea;
     @FXML
@@ -51,10 +45,7 @@ public class SceneController{
     @FXML
     Button WithdrawButton;
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    //Loans
+    // Loans
     @FXML
     TextField LoanArea;
     @FXML
@@ -68,10 +59,7 @@ public class SceneController{
     @FXML
     Button PayButton;
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    //Investments
+    // Investments
     @FXML
     TextField InvestmentArea;
     @FXML
@@ -83,10 +71,7 @@ public class SceneController{
     @FXML
     Button CloseInvestButton;
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    //Office part
+    // Office part
     @FXML
     TextArea depositsTextArea;
     @FXML
@@ -98,10 +83,7 @@ public class SceneController{
     @FXML
     ComboBox accountsComboBox;
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    //Create client part
+    // Create client part
     @FXML
     Button clientAddButton;
     @FXML
@@ -121,25 +103,22 @@ public class SceneController{
     @FXML
     TextField monthlyIncomeTextArea;
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     private Stage stage;
     private Scene scene;
     private Parent root;
 
-    //This is the least convoluted and safest way of
-    //Assigning the bank to the GUI
+    // This is the least convoluted and safest way of
+    // Assigning the bank to the GUI
     private BankBackend bankBackend;
-    //Kontrolne do wyłączania
+    // Controls to turn off
     private TransfersDep transfers;
     private AccountsDep accounts;
     private ReportsDep reports;
     private OfficeGUI office;
     private CountersDep counters;
 
-    //Kontroler SceneController odpala się za każdym
-    //Przejściem między scenami
-    //Uwaga
+    // SceneController fires after each scene transition
+    // Warning
 
     public SceneController() {
         this.bankBackend = Global.bankBackend;
@@ -169,9 +148,6 @@ public class SceneController{
         stage.setScene(scene);
         stage.show();
     }
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void switchToBankAccount(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("BankAccount.fxml"));
@@ -221,9 +197,6 @@ public class SceneController{
         stage.show();
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     public void switchToTransfers(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Transfers.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -231,9 +204,6 @@ public class SceneController{
         stage.setScene(scene);
         stage.show();
     }
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void switchToReports(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Reports.fxml"));
@@ -267,9 +237,6 @@ public class SceneController{
         stage.show();
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     public void switchToAccounts(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Accounts.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -287,9 +254,6 @@ public class SceneController{
         stage.show();
         this.where = 2;
     }
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void addClient() {
         try {
@@ -315,21 +279,16 @@ public class SceneController{
         }
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    //Method that rounds output to n decimal places
+    // Method that rounds output to n decimal places
     public static Double roundAvoid(Double value, int places) {
         double scale = Math.pow(10, places);
         return Math.round(value * scale) / scale;
     }
 
-    //Temporary method for the buttons
+    // Temporary method for the buttons
     public void OnClicked(ActionEvent event) throws IOException {
         System.out.println("Something happened");
     }
-
-    /////////////////////////////////////////////////////////////////
 
     public void updateCurrentMoney() {
         NPC player = bankBackend.getClient(1);
@@ -355,8 +314,6 @@ public class SceneController{
         NPC player = bankBackend.getClient(1);
         InvestmentAmount.setText(String.valueOf(roundAvoid(player.getBankInvestment(), 2)));
     }
-
-    /////////////////////////////////////////////////////////////////
 
     public void updateTransfers() {
         where = 0;
@@ -388,8 +345,6 @@ public class SceneController{
         where = 3;
         transfersThread.start();
     }
-
-    /////////////////////////////////////////////////////////////////
 
     public void updateDeposits() {
         where = 0;
@@ -453,8 +408,6 @@ public class SceneController{
         withdrawsThread.start();
     }
 
-    /////////////////////////////////////////////////////////////////
-
     public void updateAccounts() {
         this.where = 0;
         try {
@@ -503,7 +456,7 @@ public class SceneController{
     }
 
 
-    //Event event
+    // Event
     @FXML
     private void comboAction(){
 
@@ -534,9 +487,9 @@ public class SceneController{
 
                     if (sNPC != null) {
 
-                        //Sometimes there may be an error here
-                        //Not sure what causes it
-                        //aTA.clear();
+                        // Sometimes there may be an error here
+                        // Not sure what causes it
+                        // aTA.clear();
 
                         try{
                         aTA.setText("\n\t   Mr/Mrs:\t\t\t\t " + sNPC.getPersonName() + " " + sNPC.getSurname()
@@ -566,9 +519,6 @@ public class SceneController{
         where = 6;
         accountsThread.start();
     }
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void updateEverything(ActionEvent event) throws IOException {
         NPC player = bankBackend.getClient(1);
@@ -701,10 +651,7 @@ public class SceneController{
         threadStock.start();
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    //Exit program
+    // Exit program
     public void exit(ActionEvent event) {
         if(bankBackend == null){
             this.bankBackend = Global.bankBackend;
