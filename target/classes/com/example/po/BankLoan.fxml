@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.po.SceneController">
+    <children>
+        <Button fx:id="LoanButton"     layoutX="190" layoutY="290" mnemonicParsing="false" onAction="#loan"             text="Take a loan" />
+        <Button fx:id="PayButton"      layoutX="300" layoutY="290" mnemonicParsing="false" onAction="#pay"              text="Pay an installment" />
+        <Button fx:id="BackToCounters" layoutX="272" layoutY="340" mnemonicParsing="false" onAction="#switchToCounters" text="Go back" />
+        <TextField editable="false"    layoutX="50" layoutY="100"  prefHeight="40" prefWidth="250" text="You're taking a 12% loan. Enter the amount:" />
+        <TextField editable="false"    layoutX="325" layoutY="100" prefHeight="40" prefWidth="200" text="Enter the number of installments:" />
+        <TextField editable="false"    layoutX="135" layoutY="190" prefHeight="40" prefWidth="80" text="Your debt is:" />
+        <TextField editable="false"    layoutX="355" layoutY="190" prefHeight="40" prefWidth="140" text="One loan installment is:" />
+
+        <TextField fx:id="LoanArea"          layoutX="100" layoutY="155"  prefHeight="20" prefWidth="150"/>
+        <TextField fx:id="InstallmentNumber" layoutX="350" layoutY="155" prefHeight="20" prefWidth="150"/>
+        <TextField fx:id="LoanLeft"          layoutX="100" layoutY="245" prefHeight="20" prefWidth="150" editable="false" />
+        <TextField fx:id="InstallmentAmount" layoutX="350" layoutY="245" prefHeight="20" prefWidth="150" editable="false" />
+
+        <TextField editable="false"         layoutX="170" layoutY="10"  prefHeight="40" prefWidth="260"  text="You currently have this much on your account:" />
+        <TextField fx:id="CurrentMoneyArea" layoutX="225" layoutY="65"  prefHeight="20" prefWidth="150" editable="false"/>
+    </children>
+</AnchorPane>

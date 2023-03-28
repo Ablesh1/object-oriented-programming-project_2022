@@ -1,0 +1,15 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Ignored .txt files
+../Client.dat
+../Deposits.txt
+../NPClogging
+../NPClogging.txt
+../Transfer.txt
+../Withdraws.txt
