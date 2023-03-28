@@ -1,0 +1,10 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Ignored .txt files
+Client.dat
+Deposits.txt
+NPClogging
+NPClogging.txt
+Transfer.txt
+Withdraws.txt
